@@ -7,16 +7,31 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
 `;
-export const Logo = styled.button`
+export const LogoIcon = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+  @media (max-width: 880px) {
+    display: none;
+  }
+`;
+
+export const MenuIcon = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  @media (min-width: 880px) {
+    display: none;
+  }
 `;
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
-  @media (max-width: 870px) {
+  @media (max-width: 880px) {
     display: none;
   }
 `;

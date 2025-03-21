@@ -3,6 +3,7 @@
 import "./globals.css";
 import { useEffect } from "react";
 import { metadata } from "./metadata";
+import { Layout } from "@/components";
 
 export default function RootLayout({
   children,
@@ -26,7 +27,9 @@ export default function RootLayout({
         <title>{metadata.title as string}</title>
         <meta name="description" content={metadata.description as string} />
       </head>
-      <body>{children}</body>
+      <body>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }

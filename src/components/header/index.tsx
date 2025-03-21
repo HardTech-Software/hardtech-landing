@@ -1,28 +1,25 @@
 "use client";
 import React from "react";
-import { Container, Item, Logo, Nav } from "./styles";
+import { Container, Item, LogoIcon, MenuIcon, Nav } from "./styles";
 import Typography from "../typography";
-import Image from "next/image";
+import Icon from "../icon";
+import { navItems } from "@/utils/constants";
 
 const Header = () => {
   return (
     <Container>
-      <Logo>
-        <Image src="/logo.svg" width={88} height={97} alt="" />
-      </Logo>
+      <LogoIcon>
+        <Icon name="logo" />
+      </LogoIcon>
+      <MenuIcon>
+        <Icon name="menu" />
+      </MenuIcon>
       <Nav>
-        <Item>
-          <Typography variant="title">HOME</Typography>
-        </Item>
-        <Item>
-          <Typography variant="title">NUESTROS PROYECTOS</Typography>
-        </Item>
-        <Item>
-          <Typography variant="title">Q&A</Typography>
-        </Item>
-        <Item>
-          <Typography variant="title">CONTACTO</Typography>
-        </Item>
+        {navItems.map((item, index) => (
+          <Item key={index}>
+            <Typography variant="title">{item.label}</Typography>
+          </Item>
+        ))}
       </Nav>
     </Container>
   );
