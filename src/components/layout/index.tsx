@@ -1,13 +1,11 @@
 import React, { ReactNode } from "react";
 import Header from "../header";
-import { ContentContainer, HeaderContainer } from "./styles";
+import { ContentContainer } from "./styles";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div>
-      <HeaderContainer>
-        <Header />
-      </HeaderContainer>
+      <Header />
 
       <ContentContainer>{children}</ContentContainer>
     </div>

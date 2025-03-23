@@ -11,6 +11,7 @@ export const styles: StylesProps = {
     fontWeight: 700,
     fontFamily: exo2.style.fontFamily,
     color: theme.white,
+    paddingBottom: 10,
   },
   h2: {
     fontSize: 55,
@@ -19,6 +20,7 @@ export const styles: StylesProps = {
     backgroundColor: theme.primary,
     fontFamily: exo2.style.fontFamily,
     display: "inline-block",
+    paddingBottom: 10,
   },
   title: {
     fontSize: 18,

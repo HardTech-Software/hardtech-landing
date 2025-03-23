@@ -1,10 +1,11 @@
 import { IconProps } from "@/utils/icon-props";
 import React from "react";
-import { LogoIcon, MenuIcon } from "../icons";
+import { InstragramIcon, LogoIcon, MenuIcon } from "../icons";
 
 const icons = (props?: IconProps) => ({
   menu: <MenuIcon {...props} />,
   logo: <LogoIcon {...props} />,
+  instagram: <InstragramIcon {...props} />,
 });
 
 export type IconName = keyof ReturnType<typeof icons>;

@@ -45,3 +45,19 @@ export const Item = styled.div`
     background-color: #1c32c5;
   }
 `;
+
+export const Overlay = styled.div`
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+`;
+
+export const SidebarContainer = styled.div<{ $isOpen: boolean }>`
+  position: fixed;
+  left: ${(props) => (props.$isOpen ? "0" : "-250px")};
+  transition: left 0.3s ease-in-out;
+`;
