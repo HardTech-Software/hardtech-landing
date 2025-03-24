@@ -8,3 +8,6 @@ export { default as ProjectsSection } from "./sections/projects-section";
 export { default as QuestionAnswerSection } from "./sections/question-answer-section";
 export { default as ContactSection } from "./sections/contact-section";
 export { default as Button } from "./button";
+export { default as QuestionAnswerCard } from "./question-answer-card";
+export { default as ProjectCard } from "./project-card";
+export { default as IconButton } from "./icon-button";

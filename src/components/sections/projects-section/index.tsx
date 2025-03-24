@@ -1,6 +1,7 @@
 import React from "react";
-import { Container } from "./styles";
-import Typography from "@/components/typography";
+import { Container, TypographyCustom } from "./styles";
+import ProjectCard from "@/components/project-card";
+import { projects } from "@/utils/constants";
 
 interface ProjectsSectionProps {
   id: string;
@@ -9,7 +10,14 @@ interface ProjectsSectionProps {
 const ProjectsSection = ({ id }: ProjectsSectionProps) => {
   return (
     <Container id={id}>
-      <Typography variant="h2">Nuestros Proyectos</Typography>
+      <TypographyCustom variant="h2">Nuestros Proyectos</TypographyCustom>
+      {projects.map((item, index) => (
+        <ProjectCard
+          key={index}
+          title={item.title}
+          description={item.description}
+        />
+      ))}
     </Container>
   );
 };

@@ -10,6 +10,10 @@ export const Container = styled.div`
   position: fixed;
   width: 100%;
   top: 0;
+
+  @media (max-width: 880px) {
+    padding: 0 30px;
+  }
 `;
 export const LogoIcon = styled.button`
   background-color: transparent;

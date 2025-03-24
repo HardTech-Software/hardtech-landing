@@ -4,7 +4,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 30px;
+  padding: 80px 30px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 3%,
+    rgba(0, 0, 0, 0) 30%
+  );
 
   @media (max-width: 880px) {
     flex-direction: column;
