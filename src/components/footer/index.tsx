@@ -1,20 +1,28 @@
 import React from "react";
-import { Container, ContainerCenter, ContainerRight } from "./styles";
+import {
+  Container,
+  ContainerCenter,
+  ContainerRight,
+  Email,
+  TypographyCustom,
+} from "./styles";
 import Icon from "@/components/icon";
 import Typography from "@/components/typography";
 import Image from "next/image";
 
-interface ContactSectionProps {
+interface FooterProps {
   id: string;
 }
 
-const ContactSection = ({ id }: ContactSectionProps) => {
+const Footer = ({ id }: FooterProps) => {
   return (
     <Container id={id}>
       <Icon name="logo" />
       <ContainerCenter>
         <Typography>CONTACTO</Typography>
-        <Typography>correobacan@gmail.com</Typography>
+        <Email href="mailto:correobacan@gmail.com">
+          <TypographyCustom>correobacan@gmail.com</TypographyCustom>
+        </Email>
       </ContainerCenter>
       <ContainerRight>
         {/* <Icon name="instagram" /> */}
@@ -28,4 +36,4 @@ const ContactSection = ({ id }: ContactSectionProps) => {
   );
 };
 
-export default ContactSection;
+export default Footer;

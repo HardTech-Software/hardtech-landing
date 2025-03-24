@@ -4,7 +4,7 @@ export const navItems = [
   { label: "HOME", sectionId: "home-section" },
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },
   { label: "Q&A", sectionId: "question-answer-section" },
-  { label: "CONTACTO", sectionId: "contact-section" },
+  { label: "CONTACTO", sectionId: "footer" },
 ];
 
 export const questionAnswer = [

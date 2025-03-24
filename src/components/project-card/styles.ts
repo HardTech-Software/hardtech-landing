@@ -19,7 +19,7 @@ export const ContainerBottom = styled.div`
   flex-direction: column;
   max-width: 590px;
   gap: 20px;
-  padding: 39px 0;
+  padding-top: 30px;
 `;
 
 export const ButtonContainer = styled.div`

@@ -1,6 +1,6 @@
 import React from "react";
 
-const LogoIcon = ({ color = "#2441FF", width = "88", height = "97" }) => {
+const LogoIcon = ({ color = "#2441FF", width = "68", height = "77" }) => {
   return (
     <svg
       width={width}
@@ -9,7 +9,7 @@ const LogoIcon = ({ color = "#2441FF", width = "88", height = "97" }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1193_4283)">
+      <g clipPath="url(#clip0_1193_4283)">
         <path
           d="M44.0024 0L0 24.23V72.77L44.0024 97L88 72.77V24.23L44.0024 0Z"
           fill={color}

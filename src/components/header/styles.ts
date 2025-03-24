@@ -2,14 +2,15 @@ import { theme } from "@/helpers/theme";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 110px;
+  height: 5rem;
   background-color: ${theme.secondary};
   display: flex;
   justify-content: space-between;
-  padding: 0 80px;
+  padding: 0 3rem;
   position: fixed;
   width: 100%;
   top: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
 
   @media (max-width: 880px) {
     padding: 0 30px;

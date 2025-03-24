@@ -7,30 +7,30 @@ const exo2 = Exo_2({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const styles: StylesProps = {
   h1: {
-    fontSize: 55,
+    fontSize: "3rem",
     fontWeight: 700,
     fontFamily: exo2.style.fontFamily,
     color: theme.white,
-    paddingBottom: 10,
+    paddingBottom: "0.6rem",
   },
   h2: {
-    fontSize: 55,
+    fontSize: "3rem",
     fontWeight: 700,
     color: "#262626",
     backgroundColor: theme.primary,
     fontFamily: exo2.style.fontFamily,
     display: "inline-block",
-    paddingBottom: 10,
+    paddingBottom: "0.6rem",
   },
   title: {
-    fontSize: 18,
+    fontSize: "1rem",
     fontWeight: 400,
     fontFamily: inter.style.fontFamily,
     color: theme.white,
   },
 
   description: {
-    fontSize: 21,
+    fontSize: "1rem",
     fontWeight: 400,
     fontFamily: inter.style.fontFamily,
     color: theme.white,

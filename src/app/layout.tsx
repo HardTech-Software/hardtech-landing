@@ -10,17 +10,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useEffect(() => {
-    const hideNextjsToast = () => {
-      const portal = document.querySelector("nextjs-portal");
-      if (portal && portal.shadowRoot) {
-        const toast = portal.shadowRoot.querySelector("[data-nextjs-toast]");
-        if (toast) toast.remove();
-      }
-    };
+  // useEffect(() => {
+  //   const hideNextjsToast = () => {
+  //     const portal = document.querySelector("nextjs-portal");
+  //     if (portal && portal.shadowRoot) {
+  //       const toast = portal.shadowRoot.querySelector("[data-nextjs-toast]");
+  //       if (toast) toast.remove();
+  //     }
+  //   };
 
-    setTimeout(hideNextjsToast, 500);
-  }, []);
+  //   setTimeout(hideNextjsToast, 500);
+  // }, []);
   return (
     <html lang="en">
       <head>
