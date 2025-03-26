@@ -7,7 +7,7 @@ import {
 } from "./styles";
 import Typography from "@/components/typography";
 import Button from "@/components/button";
-import Image from "next/image";
+import Icon from "@/components/icon";
 
 interface HomeSectionProps {
   id: string;
@@ -26,7 +26,7 @@ const HomeSection = ({ id }: HomeSectionProps) => {
         <Button title="NUESTROS PROYECTOS" />
       </ContainerLeft>
       <ContainerRight>
-        <Image src="/monito.png" width={300} height={400} alt="" />
+        <Icon name="logo-home" />
       </ContainerRight>
     </Container>
   );

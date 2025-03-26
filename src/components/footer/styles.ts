@@ -20,7 +20,7 @@ export const ContainerCenter = styled.div`
 export const ContainerRight = styled.div`
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 `;
 
 export const TypographyCustom = styled(Typography)`

@@ -24,6 +24,7 @@ export const ContainerLeft = styled.div`
 export const ContainerRight = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 export const TypographyCustom = styled(Typography)`

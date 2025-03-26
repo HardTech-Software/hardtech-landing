@@ -25,8 +25,7 @@ const Footer = ({ id }: FooterProps) => {
         </Email>
       </ContainerCenter>
       <ContainerRight>
-        {/* <Icon name="instagram" /> */}
-        <Image src="/instagram.svg" width={62} height={62} alt="" />
+        <Icon name="instagram" />
         <div>
           <Typography>SIGUENOS</Typography>
           <Typography>@hardtech</Typography>
