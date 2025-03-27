@@ -11,3 +11,4 @@ export { default as Button } from "./button";
 export { default as QuestionAnswerCard } from "./question-answer-card";
 export { default as ProjectCard } from "./project-card";
 export { default as IconButton } from "./icon-button";
+export { default as SwiperComponent } from "./swiper";

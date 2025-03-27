@@ -11,9 +11,10 @@ import {
 } from "./styles";
 import Typography from "../typography";
 import Icon from "../icon";
-import { headerHeight, navItems } from "@/utils/constants";
+
 import useToggle from "@/hooks/use-toggle";
 import Sidebar from "../sidebar";
+import { headerHeight, navItems } from "@/utils/constants/nav-items";
 
 const Header = () => {
   const { OpenSidebar, isSidebarOpen, CloseSidebar } = useToggle();

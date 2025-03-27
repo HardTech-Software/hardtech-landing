@@ -2,7 +2,7 @@ import React from "react";
 import { CardContainer, Container } from "./styles";
 import Typography from "@/components/typography";
 import QuestionAnswerCard from "@/components/question-answer-card";
-import { questionAnswer } from "@/utils/constants";
+import { questionAnswer } from "@/utils/constants/question-answer";
 
 interface QuestionAnswerSectionProps {
   id: string;

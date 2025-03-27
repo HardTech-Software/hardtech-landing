@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, TypographyCustom } from "./styles";
 import ProjectCard from "@/components/project-card";
-import { projects } from "@/utils/constants";
+import { projects } from "@/utils/constants/projects";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -19,6 +19,7 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       {projects.map((item, index) => (
         <ProjectCard
           key={index}
+          url={item.url}
           title={item.title}
           description={item.description}
         />

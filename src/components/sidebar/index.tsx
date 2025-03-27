@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "../typography";
 import { Container, Item, LogoIcon, Nav } from "./styles";
 import Icon from "../icon";
-import { navItems } from "@/utils/constants";
+import { navItems } from "@/utils/constants/nav-items";
 
 interface SidebarProps {
   onClick: () => void;

@@ -1,25 +1,11 @@
-import { theme } from "@/helpers/theme";
 import styled from "styled-components";
-import { SwiperSlide } from "swiper/react";
 
 export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-export const SwiperContainer = styled.div`
-  width: 60rem;
-  width: 100%;
-  height: 20rem;
-  // background-color: red;
-`;
-
-export const SwiperSlideCustom = styled(SwiperSlide)`
-  justify-content: center;
-  display: flex;
-  background-color: ${theme.background};
+  padding: 2.5rem 0 4rem 0;
 `;
 
 export const ContainerBottom = styled.div`
