@@ -8,6 +8,7 @@ export const Container = styled.div`
   justify-content: space-between;
   padding: 0 3rem;
   position: fixed;
+  z-index: 2;
   width: 100%;
   top: 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
@@ -63,6 +64,7 @@ export const Overlay = styled.div`
 
 export const SidebarContainer = styled.div<{ $isOpen: boolean }>`
   position: fixed;
+  z-index: 2;
   left: ${(props) => (props.$isOpen ? "0" : "-250px")};
   transition: left 0.3s ease-in-out;
 `;

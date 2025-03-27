@@ -1,4 +1,6 @@
+import { theme } from "@/helpers/theme";
 import styled from "styled-components";
+import { SwiperSlide } from "swiper/react";
 
 export const Container = styled.div`
   width: 100%;
@@ -7,17 +9,23 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const CarouselContainer = styled.div`
-  background-color: #d9d9d9;
+export const SwiperContainer = styled.div`
+  width: 60rem;
   width: 100%;
-  max-width: 590px;
-  height: 325px;
+  height: 20rem;
+  // background-color: red;
+`;
+
+export const SwiperSlideCustom = styled(SwiperSlide)`
+  justify-content: center;
+  display: flex;
+  background-color: ${theme.background};
 `;
 
 export const ContainerBottom = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 590px;
+  max-width: 37rem;
   gap: 20px;
   padding-top: 30px;
 `;
