@@ -8,6 +8,7 @@ import {
 import Typography from "@/components/typography";
 import Button from "@/components/button";
 import Icon from "@/components/icon";
+import Background from "@/components/background";
 
 interface HomeSectionProps {
   id: string;
