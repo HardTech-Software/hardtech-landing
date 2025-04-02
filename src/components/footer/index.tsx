@@ -8,7 +8,6 @@ import {
 } from "./styles";
 import Icon from "@/components/icon";
 import Typography from "@/components/typography";
-import Image from "next/image";
 
 interface FooterProps {
   id: string;

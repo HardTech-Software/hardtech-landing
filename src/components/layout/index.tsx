@@ -7,9 +7,10 @@ import Background from "../background";
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <Background />
       <Header />
+      <Background />
       <ContentContainer>{children}</ContentContainer>
+
       <Footer id="footer" />
     </>
   );

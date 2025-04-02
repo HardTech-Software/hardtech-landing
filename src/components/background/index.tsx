@@ -1,8 +1,13 @@
 import React from "react";
-import { Container, Container1, ContainerBottom, ContainerTop } from "./styles";
+import {
+  Container,
+  ContainerHex,
+  ContainerBottom,
+  ContainerTop,
+} from "./styles";
 
 const REPEAT_COUNT = 30;
-const SECTIONS_COUNT = 30;
+const SECTIONS_COUNT = 15;
 
 const Background = () => {
   return (
@@ -11,13 +16,13 @@ const Background = () => {
         index % 2 === 0 ? (
           <ContainerTop key={index}>
             {[...Array(REPEAT_COUNT)].map((_, i) => (
-              <Container1 key={i} />
+              <ContainerHex key={i} />
             ))}
           </ContainerTop>
         ) : (
           <ContainerBottom key={index}>
             {[...Array(REPEAT_COUNT)].map((_, i) => (
-              <Container1 key={i} />
+              <ContainerHex key={i} />
             ))}
           </ContainerBottom>
         )

@@ -18,7 +18,7 @@ export const ContainerBottom = styled.div`
   margin-top: -13px;
 `;
 
-export const Container1 = styled.div`
+export const ContainerHex = styled.div`
   width: 50px;
   height: 56px;
   background-color: ${theme.background};
