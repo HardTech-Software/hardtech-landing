@@ -3,6 +3,7 @@ import Typography from "../typography";
 import { theme } from "@/helpers/theme";
 
 export const Container = styled.div`
+  // background-color: #2441ff;
   display: flex;
   justify-content: space-around;
   align-items: center;

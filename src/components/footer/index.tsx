@@ -16,7 +16,7 @@ interface FooterProps {
 const Footer = ({ id }: FooterProps) => {
   return (
     <Container id={id}>
-      <Icon name="logo" />
+      <Icon name="logo" width="154" height="170" />
       <ContainerCenter>
         <Typography>CONTACTO</Typography>
         <Email href="mailto:correobacan@gmail.com">

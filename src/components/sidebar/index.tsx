@@ -1,8 +1,7 @@
 import React from "react";
 import Typography from "../typography";
 import { Container, Item, LogoIcon, Nav } from "./styles";
-import Icon from "../icon";
-import { navItems } from "@/utils/constants/nav-items";
+import { navItemsSidebar } from "@/utils/constants/nav-items";
 
 interface SidebarProps {
   onClick: () => void;
@@ -12,12 +11,8 @@ interface SidebarProps {
 const Sidebar = ({ onClick, scrollToSection }: SidebarProps) => {
   return (
     <Container>
-      <LogoIcon>
-        <Icon name="logo" />
-      </LogoIcon>
-
       <Nav>
-        {navItems.map((item, index) => (
+        {navItemsSidebar.map((item, index) => (
           <Item
             key={index}
             onClick={() => {

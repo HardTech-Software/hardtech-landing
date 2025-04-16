@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import {
-  Container,
+  ContainerButton,
+  ContainerLeft,
+  HeaderContainer,
   Item,
   LogoIcon,
   MenuIcon,
@@ -14,7 +16,8 @@ import Icon from "../icon";
 
 import useToggle from "@/hooks/use-toggle";
 import Sidebar from "../sidebar";
-import { headerHeight, navItems } from "@/utils/constants/nav-items";
+import { headerHeight, navItemsHeader } from "@/utils/constants/nav-items";
+import Button from "../button";
 
 const Header = () => {
   const { OpenSidebar, isSidebarOpen, CloseSidebar } = useToggle();
@@ -32,8 +35,8 @@ const Header = () => {
 
   return (
     <>
-      {!isSidebarOpen && (
-        <Container>
+      <HeaderContainer $isOpen={isSidebarOpen}>
+        <ContainerLeft>
           <LogoIcon>
             <Icon name="logo" />
           </LogoIcon>
@@ -41,14 +44,21 @@ const Header = () => {
             <Icon name="menu" />
           </MenuIcon>
           <Nav>
-            {navItems.map((item, index) => (
+            {navItemsHeader.map((item, index) => (
               <Item key={index} onClick={() => scrollToSection(item.sectionId)}>
                 <Typography variant="title">{item.label}</Typography>
               </Item>
             ))}
           </Nav>
-        </Container>
-      )}
+        </ContainerLeft>
+        <ContainerButton>
+          <Button
+            title="CONTACTO"
+            variant="secondary"
+            onClick={() => scrollToSection("footer")}
+          />
+        </ContainerButton>
+      </HeaderContainer>
 
       <SidebarContainer $isOpen={isSidebarOpen}>
         {isSidebarOpen && (

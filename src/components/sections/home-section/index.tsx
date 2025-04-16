@@ -6,9 +6,7 @@ import {
   TypographyCustom,
 } from "./styles";
 import Typography from "@/components/typography";
-import Button from "@/components/button";
 import Icon from "@/components/icon";
-import Background from "@/components/background";
 
 interface HomeSectionProps {
   id: string;
@@ -24,7 +22,6 @@ const HomeSection = ({ id }: HomeSectionProps) => {
           En HardTech, creamos aplicaciones que transforman la sociedad con
           tecnología y diseño inteligente.
         </TypographyCustom>
-        <Button title="NUESTROS PROYECTOS" />
       </ContainerLeft>
       <ContainerRight>
         <Icon name="logo-home" />

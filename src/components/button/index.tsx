@@ -4,11 +4,13 @@ import Typography from "../typography";
 
 interface ButtonProps {
   title: string;
+  variant?: "primary" | "secondary";
+  onClick?: () => void;
 }
 
-const Button = ({ title }: ButtonProps) => {
+const Button = ({ title, variant = "primary", onClick }: ButtonProps) => {
   return (
-    <ButtonContainer>
+    <ButtonContainer $variant={variant} onClick={onClick}>
       <Typography variant="title">{title}</Typography>
     </ButtonContainer>
   );

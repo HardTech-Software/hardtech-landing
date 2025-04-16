@@ -2,13 +2,11 @@ import { theme } from "@/helpers/theme";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 250px;
+  width: 233px;
   background-color: ${theme.secondary};
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  bottom: 0;
-  padding: 30px 0;
+  position: absolute;
+  padding: 0 27px;
+  border-bottom-left-radius: 30px;
 `;
 
 export const LogoIcon = styled.div`
@@ -16,16 +14,25 @@ export const LogoIcon = styled.div`
   justify-content: center;
 `;
 
-export const Nav = styled.nav``;
+export const Nav = styled.nav`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const Item = styled.div`
-  margin-top: 30px;
-  padding: 15px;
+  padding: 30px;
   cursor: pointer;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid ${theme.white};
 
   transition: background-color 0.3s ease;
 
   &:hover {
     background-color: #1c32c5;
+  }
+
+  &:last-child {
+    border-bottom: none;
   }
 `;

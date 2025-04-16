@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header />
-      <Background />
+      {/* <Background /> */}
       <ContentContainer>{children}</ContentContainer>
 
       <Footer id="footer" />

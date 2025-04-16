@@ -1,6 +1,5 @@
 "use client";
 import {
-  Background,
   HomeSection,
   ProjectsSection,
   QuestionAnswerSection,

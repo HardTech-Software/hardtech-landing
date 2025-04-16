@@ -22,13 +22,12 @@ export const ButtonContainer = styled.div`
   gap: 30px;
   margin-top: 10px;
 
-  @media (max-width: 550px) {
+  @media (max-width: 760px) {
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
   }
 `;
 export const DownloadButtonContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 9px;
+  gap: 30px;
 `;
