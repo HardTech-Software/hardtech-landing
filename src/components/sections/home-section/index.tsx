@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Container,
+  ContainerInner,
   ContainerLeft,
   ContainerRight,
   TypographyCustom,
@@ -14,18 +15,20 @@ interface HomeSectionProps {
 const HomeSection = ({ id }: HomeSectionProps) => {
   return (
     <Container id={id}>
-      <ContainerLeft>
-        <Typography variant="h1">Creando un</Typography>
-        <Typography variant="h2">impacto positivo</Typography>
-        <Typography variant="h1">una app a la vez</Typography>
-        <TypographyCustom>
-          En HardTech, creamos aplicaciones que transforman la sociedad con
-          tecnología y diseño inteligente.
-        </TypographyCustom>
-      </ContainerLeft>
-      <ContainerRight>
-        <Icon name="logo-home" />
-      </ContainerRight>
+      <ContainerInner>
+        <ContainerLeft>
+          <Typography variant="h1">Creando un</Typography>
+          <Typography variant="h2">impacto positivo</Typography>
+          <Typography variant="h1">una app a la vez.</Typography>
+          <TypographyCustom>
+            En HardTech, creamos aplicaciones que transforman la sociedad con
+            tecnología y diseño inteligente.
+          </TypographyCustom>
+        </ContainerLeft>
+        <ContainerRight>
+          <Icon name="logo-home" />
+        </ContainerRight>
+      </ContainerInner>
     </Container>
   );
 };

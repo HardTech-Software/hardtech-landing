@@ -3,11 +3,12 @@ import Typography from "../typography";
 import { theme } from "@/helpers/theme";
 
 export const Container = styled.div`
-  // background-color: #2441ff;
+  background: linear-gradient(rgba(36, 65, 255, 0.3) 0%, transparent 100%);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 8rem 2rem;
+
+  padding: 5rem clamp(1rem, 5vw, 10rem);
   position: absolute;
   width: 100%;
   z-index: -1;
@@ -17,6 +18,9 @@ export const Container = styled.div`
 `;
 export const ContainerCenter = styled.div`
   margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 export const ContainerRight = styled.div`
   display: flex;

@@ -12,4 +12,5 @@ export { default as QuestionAnswerCard } from "./question-answer-card";
 export { default as ProjectCard } from "./project-card";
 export { default as IconButton } from "./icon-button";
 export { default as SwiperComponent } from "./swiper";
-export { default as Background } from "./background";
+// export { default as Background } from "./background-d";
+export { default as BackgroundSVG } from "./background-svg";

@@ -1,11 +1,11 @@
 import React from "react";
 
-const MenuIcon = ({ color = "#fff", width = "30", height = "24" }) => {
+const MenuIcon = ({ color = "#fff", width = "35", height = "24" }) => {
   return (
     <svg
       width={width}
       height={height}
-      viewBox="0 0 30 24"
+      viewBox="0 0 35 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
