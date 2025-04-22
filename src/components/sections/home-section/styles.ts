@@ -21,7 +21,7 @@ export const ContainerInner = styled.div`
 `;
 
 export const ContainerLeft = styled.div`
-  max-width: 380px;
+  max-width: 330px;
   display: flex;
   flex-direction: column;
   justify-content: center;

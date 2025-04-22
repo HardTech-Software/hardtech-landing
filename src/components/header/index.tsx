@@ -8,36 +8,23 @@ import {
   LogoIcon,
   MenuIcon,
   Nav,
-  Overlay,
   SidebarContainer,
 } from "./styles";
 import Typography from "../typography";
 import Icon from "../icon";
-
 import useToggle from "@/hooks/use-toggle";
 import Sidebar from "../sidebar";
-import { headerHeight, navItemsHeader } from "@/utils/constants/nav-items";
+import { navItemsHeader, scrollToSection } from "@/utils/constants/nav-items";
 import Button from "../button";
 
 const Header = () => {
   const { OpenSidebar, isSidebarOpen, CloseSidebar } = useToggle();
 
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const offsetTop = section.offsetTop - headerHeight;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <>
       <HeaderContainer $isOpen={isSidebarOpen}>
         <ContainerLeft>
-          <LogoIcon>
+          <LogoIcon onClick={() => scrollToSection("home-section")}>
             <Icon name="logo" />
           </LogoIcon>
           <MenuIcon onClick={OpenSidebar}>
@@ -62,10 +49,7 @@ const Header = () => {
 
       <SidebarContainer $isOpen={isSidebarOpen}>
         {isSidebarOpen && (
-          <>
-            {/* <Overlay onClick={CloseSidebar} /> */}
-            <Sidebar onClick={CloseSidebar} scrollToSection={scrollToSection} />
-          </>
+          <Sidebar onClick={CloseSidebar} scrollToSection={scrollToSection} />
         )}
       </SidebarContainer>
     </>

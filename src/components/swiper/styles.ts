@@ -5,7 +5,6 @@ import { SwiperSlide } from "swiper/react";
 export const SwiperContainer = styled.div`
   width: 100%;
   max-width: 60rem;
-  max-height: 20rem;
   overflow: hidden;
 `;
 

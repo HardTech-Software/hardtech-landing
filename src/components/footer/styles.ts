@@ -16,16 +16,25 @@ export const Container = styled.div`
     flex-direction: column;
   }
 `;
+
+export const LogoContainer = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+`;
 export const ContainerCenter = styled.div`
   margin: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
-export const ContainerRight = styled.div`
+export const ContainerRight = styled.button`
   display: flex;
   align-items: center;
   gap: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 `;
 
 export const TypographyCustom = styled(Typography)`

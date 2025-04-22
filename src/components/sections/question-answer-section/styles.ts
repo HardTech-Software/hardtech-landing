@@ -12,7 +12,7 @@ export const ContainerInner = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 70px;
   padding: 0 clamp(1rem, 5vw, 10rem);
 `;
 export const CardContainer = styled.div`

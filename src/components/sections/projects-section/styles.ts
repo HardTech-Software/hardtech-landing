@@ -2,7 +2,7 @@ import Typography from "@/components/typography";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 7rem 0 37.5rem 0;
+  padding: 7rem 0 40rem 0;
   position: relative;
   display: flex;
   flex-direction: column;

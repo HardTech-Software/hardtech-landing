@@ -1,5 +1,16 @@
 export const headerHeight = 110;
 
+export const scrollToSection = (sectionId: string) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const offsetTop = section.offsetTop - headerHeight;
+    window.scrollTo({
+      top: offsetTop,
+      behavior: "smooth",
+    });
+  }
+};
+
 export const navItemsSidebar = [
   { label: "HOME", sectionId: "home-section" },
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },

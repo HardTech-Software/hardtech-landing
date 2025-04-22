@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "../typography";
-import { Container, Item, LogoIcon, Nav } from "./styles";
+import { Container, Item, Nav } from "./styles";
 import { navItemsSidebar } from "@/utils/constants/nav-items";
 
 interface SidebarProps {

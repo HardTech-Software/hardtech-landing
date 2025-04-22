@@ -1,3 +1,4 @@
+import { theme } from "@/helpers/theme";
 import React from "react";
 
 const BackgroundSVG = () => {
@@ -13,7 +14,7 @@ const BackgroundSVG = () => {
       <defs>
         <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
           <stop offset="10%" stopColor="#253392" />
-          <stop offset="100%" stopColor="transparent" />
+          <stop offset="100%" stopColor={theme.background} />
         </linearGradient>
       </defs>
       <path d="M0 450 L720 0 L1440 450 Z" fill="url(#gradient)" />

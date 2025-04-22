@@ -4,10 +4,13 @@ import {
   ContainerCenter,
   ContainerRight,
   Email,
+  LogoContainer,
   TypographyCustom,
 } from "./styles";
 import Icon from "@/components/icon";
 import Typography from "@/components/typography";
+import { Constants } from "@/utils/constants/constants";
+import { scrollToSection } from "@/utils/constants/nav-items";
 
 interface FooterProps {
   id: string;
@@ -16,18 +19,21 @@ interface FooterProps {
 const Footer = ({ id }: FooterProps) => {
   return (
     <Container id={id}>
-      <Icon name="logo" width="154" height="170" />
+      <LogoContainer onClick={() => scrollToSection("home-section")}>
+        <Icon name="logo" width="154" height="170" />
+      </LogoContainer>
+
       <ContainerCenter>
         <Typography>CONTACTO</Typography>
-        <Email href="mailto:correobacan@gmail.com">
-          <TypographyCustom>correobacan@gmail.com</TypographyCustom>
+        <Email href={`mailto:${Constants.email}`}>
+          <TypographyCustom>{Constants.email}</TypographyCustom>
         </Email>
       </ContainerCenter>
       <ContainerRight>
         <Icon name="instagram" />
         <div>
           <Typography>SIGUENOS</Typography>
-          <Typography>@hardtech</Typography>
+          <Typography>{Constants.instagram}</Typography>
         </div>
       </ContainerRight>
     </Container>

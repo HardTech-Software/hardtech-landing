@@ -1,5 +1,4 @@
 import { styles, Variant } from "./styles";
-
 import { theme } from "@/helpers/theme";
 
 interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {

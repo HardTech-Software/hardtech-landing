@@ -1,7 +1,5 @@
 "use client";
-
 import "./globals.css";
-import { useEffect } from "react";
 import { metadata } from "./metadata";
 import { Layout } from "@/components";
 
@@ -10,17 +8,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // useEffect(() => {
-  //   const hideNextjsToast = () => {
-  //     const portal = document.querySelector("nextjs-portal");
-  //     if (portal && portal.shadowRoot) {
-  //       const toast = portal.shadowRoot.querySelector("[data-nextjs-toast]");
-  //       if (toast) toast.remove();
-  //     }
-  //   };
-
-  //   setTimeout(hideNextjsToast, 500);
-  // }, []);
   return (
     <html lang="en">
       <head>
