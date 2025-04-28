@@ -8,6 +8,7 @@ import {
   LogoIcon,
   MenuIcon,
   Nav,
+  Overlay,
   SidebarContainer,
 } from "./styles";
 import Typography from "../typography";
@@ -49,7 +50,10 @@ const Header = () => {
 
       <SidebarContainer $isOpen={isSidebarOpen}>
         {isSidebarOpen && (
-          <Sidebar onClick={CloseSidebar} scrollToSection={scrollToSection} />
+          <>
+            <Sidebar onClick={CloseSidebar} scrollToSection={scrollToSection} />
+            <Overlay onClick={CloseSidebar} />
+          </>
         )}
       </SidebarContainer>
     </>

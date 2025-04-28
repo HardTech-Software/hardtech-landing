@@ -67,13 +67,13 @@ export const ContainerButton = styled.div`
   }
 `;
 export const Overlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
 `;
 
 export const SidebarContainer = styled.div<{ $isOpen: boolean }>`
