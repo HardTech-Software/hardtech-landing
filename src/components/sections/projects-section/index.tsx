@@ -1,5 +1,12 @@
 import React from "react";
-import { Container, ContainerInner, TypographyCustom } from "./styles";
+import {
+  Container,
+  ContainerInner,
+  TypographyContainer,
+  TypographyCustomWrapper,
+  TypographyPrimary,
+  TypographySecondary,
+} from "./styles";
 import ProjectCard from "@/components/project-card";
 import { projects } from "@/utils/constants/projects";
 import BackgroundSVG from "@/components/background-svg";
@@ -13,7 +20,14 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
     <Container id={id}>
       <BackgroundSVG />
       <ContainerInner>
-        <TypographyCustom variant="h2">Nuestros Proyectos</TypographyCustom>
+        <TypographyContainer>
+          <TypographyPrimary variant="h2">Nuestros Proyectos</TypographyPrimary>
+        </TypographyContainer>
+
+        <TypographyCustomWrapper>
+          <TypographySecondary variant="h2">Nuestros</TypographySecondary>
+          <TypographySecondary variant="h2">Proyectos</TypographySecondary>
+        </TypographyCustomWrapper>
 
         {projects.map((item, index) => (
           <ProjectCard

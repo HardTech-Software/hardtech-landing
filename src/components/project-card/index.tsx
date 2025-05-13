@@ -21,8 +21,8 @@ const ProjectCard = ({ title, description, url }: ProjectCardProps) => {
     <Container>
       <SwiperComponent url={url} />
       <ContainerBottom>
-        <Typography variant="h1">{title}</Typography>
-        <Typography variant="description">{description}</Typography>
+        <Typography variant="h3">{title}</Typography>
+        <Typography variant="description1">{description}</Typography>
         <ButtonContainer>
           <Button title="IR A LA PÁGINA WEB" />
           <DownloadButtonContainer>
