@@ -3,13 +3,13 @@ import { Container } from "./styles";
 import Icon, { IconName } from "../icon";
 
 interface IconButtonProps {
-  src: string;
+  url: string;
 }
 
-const IconButton = ({ src }: IconButtonProps) => {
+const IconButton = ({ url }: IconButtonProps) => {
   return (
     <Container>
-      <Icon name={src as IconName} />
+      <Icon name={url as IconName} />
     </Container>
   );
 };

@@ -1,4 +1,4 @@
-export const headerHeight = 110;
+export const headerHeight = 80;
 
 export const scrollToSection = (sectionId: string) => {
   const section = document.getElementById(sectionId);
@@ -15,7 +15,7 @@ export const navItemsSidebar = [
   { label: "HOME", sectionId: "home-section" },
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },
   { label: "Q&A", sectionId: "question-answer-section" },
-  { label: "CONTACTO", sectionId: "footer" },
+  { label: "CONTACTO", sectionId: "footer-section" },
 ];
 export const navItemsHeader = [
   { label: "HOME", sectionId: "home-section" },

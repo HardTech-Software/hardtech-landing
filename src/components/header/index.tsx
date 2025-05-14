@@ -43,7 +43,7 @@ const Header = () => {
           <Button
             title="CONTACTO"
             variant="secondary"
-            onClick={() => scrollToSection("footer")}
+            onClick={() => scrollToSection("footer-section")}
           />
         </ContainerButton>
       </HeaderContainer>

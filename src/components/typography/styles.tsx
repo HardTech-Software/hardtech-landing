@@ -7,7 +7,7 @@ interface Props {
 const variantStyles = {
   h1: css`
     font-size: 40px;
-    line-height: 2rem;
+    line-height: 2.5rem;
     font-weight: 700;
     padding-bottom: 0.6rem;
     color: ${({ theme }) => theme.white};

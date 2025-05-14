@@ -39,6 +39,7 @@ export const ContainerLeft = styled.div`
     max-width: 320px;
   }
 `;
+
 export const ContainerRight = styled.div`
   display: flex;
   justify-content: center;

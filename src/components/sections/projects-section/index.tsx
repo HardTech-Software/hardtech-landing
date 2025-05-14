@@ -32,7 +32,8 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
         {projects.map((item, index) => (
           <ProjectCard
             key={index}
-            url={item.url}
+            urlDesktop={item.urlDesktop}
+            urlmobile={item.urlMobile}
             title={item.title}
             description={item.description}
           />

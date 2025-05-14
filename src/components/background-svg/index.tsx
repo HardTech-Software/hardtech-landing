@@ -1,5 +1,5 @@
-import { theme } from "@/helpers/theme";
 import React from "react";
+import { theme } from "@/helpers/theme";
 
 const BackgroundSVG = () => {
   return (

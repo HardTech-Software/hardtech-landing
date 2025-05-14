@@ -13,9 +13,14 @@ export const ContainerInner = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 80px;
   padding: 0 clamp(1rem, 5vw, 10rem);
+
+  @media (max-width: 760px) {
+    gap: 30px;
+  }
 `;
+
 export const CardContainer = styled.div`
   max-width: 838px;
   width: 100%;
