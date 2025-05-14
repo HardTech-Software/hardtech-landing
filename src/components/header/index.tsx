@@ -8,6 +8,7 @@ import {
   LogoIcon,
   MenuIcon,
   Nav,
+  Overlay,
   SidebarContainer,
 } from "./styles";
 import Typography from "../typography";
@@ -42,14 +43,17 @@ const Header = () => {
           <Button
             title="CONTACTO"
             variant="secondary"
-            onClick={() => scrollToSection("footer")}
+            onClick={() => scrollToSection("footer-section")}
           />
         </ContainerButton>
       </HeaderContainer>
 
       <SidebarContainer $isOpen={isSidebarOpen}>
         {isSidebarOpen && (
-          <Sidebar onClick={CloseSidebar} scrollToSection={scrollToSection} />
+          <>
+            <Sidebar onClick={CloseSidebar} scrollToSection={scrollToSection} />
+            <Overlay onClick={CloseSidebar} />
+          </>
         )}
       </SidebarContainer>
     </>

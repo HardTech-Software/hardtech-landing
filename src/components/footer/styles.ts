@@ -12,7 +12,7 @@ export const Container = styled.div`
   position: absolute;
   width: 100%;
   z-index: -1;
-  @media (max-width: 580px) {
+  @media (max-width: 760px) {
     flex-direction: column;
   }
 `;
@@ -22,12 +22,14 @@ export const LogoContainer = styled.button`
   border: none;
   cursor: pointer;
 `;
+
 export const ContainerCenter = styled.div`
   margin: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
+
 export const ContainerRight = styled.button`
   display: flex;
   align-items: center;

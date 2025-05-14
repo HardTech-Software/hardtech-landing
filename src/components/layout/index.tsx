@@ -25,7 +25,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <>
           <Header />
           <ContentContainer>{children}</ContentContainer>
-          <Footer id="footer" />
+          <Footer id="footer-section" />
         </>
       )}
     </>

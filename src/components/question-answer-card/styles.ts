@@ -16,6 +16,5 @@ export const TypographyCustom = styled(Typography)`
   background-color: ${theme.secondary};
   padding: 9px 14px;
   margin-bottom: 46px;
-
   display: inline-block;
 `;

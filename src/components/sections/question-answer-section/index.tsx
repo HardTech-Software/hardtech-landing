@@ -1,6 +1,10 @@
 import React from "react";
-import { CardContainer, Container, ContainerInner } from "./styles";
-import Typography from "@/components/typography";
+import {
+  CardContainer,
+  Container,
+  ContainerInner,
+  TypographyCustom,
+} from "./styles";
 import QuestionAnswerCard from "@/components/question-answer-card";
 import { questionAnswer } from "@/utils/constants/question-answer";
 import BackgroundSVG from "@/components/background-svg";
@@ -14,7 +18,7 @@ const QuestionAnswerSection = ({ id }: QuestionAnswerSectionProps) => {
     <Container id={id}>
       <BackgroundSVG />
       <ContainerInner>
-        <Typography variant="h2">Q & A</Typography>
+        <TypographyCustom variant="h2">Q & A</TypographyCustom>
         <CardContainer>
           {questionAnswer.map((item, index) => (
             <QuestionAnswerCard

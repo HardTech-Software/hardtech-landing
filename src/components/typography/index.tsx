@@ -1,24 +1,14 @@
-import { styles, Variant } from "./styles";
-import { theme } from "@/helpers/theme";
+import { TypographyStyled } from "./styles";
 
 interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
-  variant?: Variant;
-  color?: keyof typeof theme;
+  variant?: "h1" | "h2" | "h3" | "title" | "description1" | "description2";
 }
 
 const Typography = ({
-  variant = "description",
-  style,
-  color,
+  variant = "description1",
   ...props
 }: TypographyProps) => {
-  const rootStyles = {
-    ...styles[variant],
-    color: color ? theme[color] : styles[variant].color,
-    ...style,
-  };
-
-  return <p style={rootStyles} {...props} />;
+  return <TypographyStyled $variant={variant} {...props} />;
 };
 
 export default Typography;
