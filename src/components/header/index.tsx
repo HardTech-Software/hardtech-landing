@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <>
-      <HeaderContainer $isOpen={isSidebarOpen}>
+      <HeaderContainer>
         <ContainerLeft>
           <LogoIcon onClick={() => scrollToSection("home-section")}>
             <Icon name="logo" />

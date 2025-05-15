@@ -7,7 +7,7 @@ export const Container = styled.div`
   position: absolute;
   padding: 0 27px;
   border-bottom-left-radius: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.3);
 `;
 
 export const LogoIcon = styled.div`

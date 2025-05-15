@@ -15,7 +15,7 @@ const SwiperComponent = ({ urlDesktop, urlMobile }: SwiperComponentProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
-  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 760);
@@ -53,7 +53,6 @@ const SwiperComponent = ({ urlDesktop, urlMobile }: SwiperComponentProps) => {
           swiper.params.navigation.prevEl = prevRef.current;
           // @ts-ignore
           swiper.params.navigation.nextEl = nextRef.current;
-          setSwiperInstance(swiper);
         }}
         onSlideChange={(swiper) => {
           setActiveIndex(swiper.realIndex);

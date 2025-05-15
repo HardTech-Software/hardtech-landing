@@ -1,7 +1,7 @@
 import { theme } from "@/helpers/theme";
 import styled from "styled-components";
 
-export const HeaderContainer = styled.div<{ $isOpen: boolean }>`
+export const HeaderContainer = styled.div`
   height: 5rem;
   background-color: ${theme.secondary};
   display: flex;
@@ -12,9 +12,7 @@ export const HeaderContainer = styled.div<{ $isOpen: boolean }>`
   z-index: 4;
   width: 100%;
   top: 0;
-
-  box-shadow: ${(props) =>
-    props.$isOpen ? "none" : "0 10px 30px rgba(0, 0, 0, 1)"};
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
 
   @media (max-width: 1280px) {
     padding: 0 30px;
@@ -78,7 +76,7 @@ export const Overlay = styled.div`
 
 export const SidebarContainer = styled.div<{ $isOpen: boolean }>`
   position: fixed;
-  z-index: 3;
+  z-index: 5;
   right: ${(props) => (props.$isOpen ? "233px" : "0px")};
   transition: right 0.3s ease-in-out;
 `;

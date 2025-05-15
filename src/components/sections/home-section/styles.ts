@@ -8,6 +8,7 @@ export const Container = styled.div`
   min-height: 75vh;
   padding: 6rem clamp(1rem, 5vw, 10rem);
 
+
   @media (max-width: 1024px) {
     padding: 4rem clamp(4rem, 5vw, 10rem);
   }
