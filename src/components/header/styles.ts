@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div<{ $isOpen: boolean }>`
   align-items: center;
   padding: 0 4rem;
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   width: 100%;
   top: 0;
 
@@ -78,7 +78,7 @@ export const Overlay = styled.div`
 
 export const SidebarContainer = styled.div<{ $isOpen: boolean }>`
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   right: ${(props) => (props.$isOpen ? "233px" : "0px")};
   transition: right 0.3s ease-in-out;
 `;

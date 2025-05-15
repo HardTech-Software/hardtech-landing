@@ -5,14 +5,16 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 6rem clamp(4rem, 5vw, 10rem);
+  min-height: 75vh;
+  padding: 6rem clamp(1rem, 5vw, 10rem);
 
   @media (max-width: 1024px) {
     padding: 4rem clamp(4rem, 5vw, 10rem);
   }
+
   @media (max-width: 760px) {
-    padding: 4rem 0;
-  }
+    padding: 4rem clamp(1rem, 5vw, 10rem);
+  
 `;
 
 export const ContainerInner = styled.div`
