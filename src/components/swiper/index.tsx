@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useEffect, useRef, useState } from "react";
 import { NavButton, SwiperContainer, SwiperSlideCustom } from "./styles";
 import { Swiper } from "swiper/react";
@@ -49,9 +50,9 @@ const SwiperComponent = ({ urlDesktop, urlMobile }: SwiperComponentProps) => {
         slidesPerView={1.5}
         spaceBetween={0}
         onBeforeInit={(swiper) => {
-          // @ts-ignore
+          // @ts-expect-error
           swiper.params.navigation.prevEl = prevRef.current;
-          // @ts-ignore
+          // @ts-expect-error
           swiper.params.navigation.nextEl = nextRef.current;
         }}
         onSlideChange={(swiper) => {
