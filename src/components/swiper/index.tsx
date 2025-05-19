@@ -48,6 +48,12 @@ const SwiperComponent = ({ urlDesktop, urlMobile }: SwiperComponentProps) => {
         centeredSlides
         slidesPerView={1.5}
         spaceBetween={0}
+        onBeforeInit={(swiper) => {
+          // @ts-ignore
+          swiper.params.navigation.prevEl = prevRef.current;
+          // @ts-ignore
+          swiper.params.navigation.nextEl = nextRef.current;
+        }}
         onSlideChange={(swiper) => {
           setActiveIndex(swiper.realIndex);
         }}

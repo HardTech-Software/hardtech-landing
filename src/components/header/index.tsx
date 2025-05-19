@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <>
-      <HeaderContainer $isOpen={isSidebarOpen}>
+      <HeaderContainer>
         <ContainerLeft>
           <LogoIcon onClick={() => scrollToSection("home-section")}>
             <Icon name="logo" />
@@ -49,12 +49,8 @@ const Header = () => {
       </HeaderContainer>
 
       <SidebarContainer $isOpen={isSidebarOpen}>
-        {isSidebarOpen && (
-          <>
-            <Sidebar onClick={CloseSidebar} scrollToSection={scrollToSection} />
-            <Overlay onClick={CloseSidebar} />
-          </>
-        )}
+        <Sidebar onClick={CloseSidebar} scrollToSection={scrollToSection} />
+        {isSidebarOpen && <Overlay onClick={CloseSidebar} />}
       </SidebarContainer>
     </>
   );

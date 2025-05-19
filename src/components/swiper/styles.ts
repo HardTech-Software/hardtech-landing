@@ -41,7 +41,7 @@ export const NavButton = styled.button<{
   height: 38px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 4;
+  z-index: 2;
   transition: background-color 0.3s ease;
 
   &:hover {
