@@ -13,12 +13,17 @@ export const scrollToSection = (sectionId: string) => {
 
 export const navItemsSidebar = [
   { label: "HOME", sectionId: "home-section" },
+  { label: "QUÉ OFRECEMOS", sectionId: "" },
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },
-  { label: "Q&A", sectionId: "question-answer-section" },
-  { label: "CONTACTO", sectionId: "footer-section" },
+  { label: "NUESTRO EQUIPO", sectionId: "" },
+  { label: "NUESTRA VISIÓN & MISIÓN", sectionId: "" },
+  { label: "CONTÁCTATE CON NOSOTROS", sectionId: "" },
 ];
+
 export const navItemsHeader = [
   { label: "HOME", sectionId: "home-section" },
+  { label: "QUÉ OFRECEMOS", sectionId: "" },
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },
-  { label: "Q&A", sectionId: "question-answer-section" },
+  { label: "NUESTRO EQUIPO", sectionId: "" },
+  { label: "VISIÓN & MISIÓN", sectionId: "" },
 ];

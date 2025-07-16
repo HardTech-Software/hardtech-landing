@@ -6,15 +6,15 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   min-height: 75vh;
-  padding: 6rem clamp(1rem, 5vw, 10rem);
+  padding: clamp(1rem, 5vw, 10rem);
 
 
   @media (max-width: 1024px) {
-    padding: 4rem clamp(4rem, 5vw, 10rem);
+    padding: 10rem clamp(4rem, 5vw, 10rem);
   }
 
   @media (max-width: 760px) {
-    padding: 4rem clamp(1rem, 5vw, 10rem);
+    padding: 10rem clamp(1rem, 5vw, 10rem);
   
 `;
 

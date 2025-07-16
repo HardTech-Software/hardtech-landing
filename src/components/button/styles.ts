@@ -7,8 +7,8 @@ interface ButtonContainerProps {
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
   border: none;
-  height: 44px;
-  padding: 9px 14px;
+  height: 100%;
+  width: 100%;
   cursor: pointer;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;

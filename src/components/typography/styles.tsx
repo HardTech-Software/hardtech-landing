@@ -10,7 +10,6 @@ const variantStyles = {
     line-height: 2.5rem;
     font-weight: 700;
     padding-bottom: 0.6rem;
-    color: ${({ theme }) => theme.white};
 
     @media (min-width: 1024px) {
       font-size: 55px;
@@ -22,7 +21,6 @@ const variantStyles = {
     line-height: 1.6rem;
     font-weight: 700;
     background-color: ${({ theme }) => theme.primary};
-    color: #262626;
     padding: 5px 0 0.6rem 0;
 
     @media (min-width: 1024px) {
@@ -35,22 +33,19 @@ const variantStyles = {
     line-height: 2rem;
     font-weight: 700;
     padding-bottom: 0.6rem;
-    color: ${({ theme }) => theme.white};
   `,
   title: css`
     font-size: 14px;
     font-weight: 400;
-    color: ${({ theme }) => theme.white};
   `,
+
   description1: css`
     font-size: 16px;
     font-weight: 400;
-    color: ${({ theme }) => theme.white};
   `,
   description2: css`
     font-size: 16px;
     font-weight: 400;
-    color: ${({ theme }) => theme.white};
 
     @media (min-width: 1024px) {
       font-size: 21px;
@@ -58,7 +53,7 @@ const variantStyles = {
   `,
 };
 
-export const TypographyStyled = styled.p<Props>`
+export const TypographyStyled = styled.p<Props & { color?: string }>`
   ${({ $variant }) => variantStyles[$variant]}
   font-family: ${({ $variant }) =>
     $variant === "title" ||
@@ -66,4 +61,5 @@ export const TypographyStyled = styled.p<Props>`
     $variant === "description2"
       ? "Inter, sans-serif"
       : "Exo 2, sans-serif"};
+  color: ${({ color }) => color};
 `;

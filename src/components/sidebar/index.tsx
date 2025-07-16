@@ -1,7 +1,8 @@
 import React from "react";
 import Typography from "../typography";
-import { Container, Item, Nav } from "./styles";
+import { Container, ContainerButton, Item, Nav } from "./styles";
 import { navItemsSidebar } from "@/utils/constants/nav-items";
+import Button from "../button";
 
 interface SidebarProps {
   onClick: () => void;
@@ -23,6 +24,14 @@ const Sidebar = ({ onClick, scrollToSection }: SidebarProps) => {
             <Typography variant="title">{item.label}</Typography>
           </Item>
         ))}
+
+        <ContainerButton>
+          <Button
+            title="CONTÁCTANOS"
+            variant="secondary"
+            onClick={() => scrollToSection("footer-section")}
+          />
+        </ContainerButton>
       </Nav>
     </Container>
   );

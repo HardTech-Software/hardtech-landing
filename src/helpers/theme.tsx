@@ -8,6 +8,6 @@ export interface ThemeProps {
 export const theme: ThemeProps = {
   primary: "#FE71F4",
   secondary: "#2441FF",
-  background: "#202020",
+  background: "#1D1D1D",
   white: "#ffffff",
 };

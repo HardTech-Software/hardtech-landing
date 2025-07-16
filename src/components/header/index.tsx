@@ -1,8 +1,8 @@
-"use client";
 import React from "react";
 import {
   ContainerButton,
   ContainerLeft,
+  ContainerRight,
   HeaderContainer,
   Item,
   LogoIcon,
@@ -31,6 +31,8 @@ const Header = () => {
           <MenuIcon onClick={OpenSidebar}>
             <Icon name="menu" />
           </MenuIcon>
+        </ContainerLeft>
+        <ContainerRight>
           <Nav>
             {navItemsHeader.map((item, index) => (
               <Item key={index} onClick={() => scrollToSection(item.sectionId)}>
@@ -38,14 +40,14 @@ const Header = () => {
               </Item>
             ))}
           </Nav>
-        </ContainerLeft>
-        <ContainerButton>
-          <Button
-            title="CONTACTO"
-            variant="secondary"
-            onClick={() => scrollToSection("footer-section")}
-          />
-        </ContainerButton>
+          <ContainerButton>
+            <Button
+              title="CONTÁCTANOS"
+              variant="secondary"
+              onClick={() => scrollToSection("footer-section")}
+            />
+          </ContainerButton>
+        </ContainerRight>
       </HeaderContainer>
 
       <SidebarContainer $isOpen={isSidebarOpen}>

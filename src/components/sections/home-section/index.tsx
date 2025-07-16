@@ -9,6 +9,7 @@ import {
 } from "./styles";
 import Typography from "@/components/typography";
 import { LogoHomeIcon } from "@/components/icons";
+import { theme } from "@/helpers/theme";
 
 interface HomeSectionProps {
   id: string;
@@ -18,12 +19,12 @@ const HomeSection = ({ id }: HomeSectionProps) => {
     <Container id={id}>
       <ContainerInner>
         <ContainerLeft>
-          <Typography variant="h1">Creando un</Typography>
-          <Typography variant="h2">impacto positivo</Typography>
-          <Typography variant="h1">una app a la vez.</Typography>
+          <Typography variant="h2" color={theme.background}>
+            Apps y sitios web con impacto real.
+          </Typography>
+
           <TypographyCustom variant="description2">
-            En HardTech, creamos aplicaciones que transforman la sociedad con
-            tecnología y diseño inteligente.
+            En Hardtech trabajamos con diseño atractivo y desarrollo sólido.
           </TypographyCustom>
         </ContainerLeft>
         <ContainerRight>

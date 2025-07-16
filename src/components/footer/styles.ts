@@ -27,7 +27,9 @@ export const ContainerCenter = styled.div`
   margin: 40px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  @media (max-width: 760px) {
+    align-items: center;
+  }
 `;
 
 export const ContainerRight = styled.button`
@@ -41,6 +43,7 @@ export const ContainerRight = styled.button`
 
 export const TypographyCustom = styled(Typography)`
   padding: 4px;
+  margin-left: -4px;
   transition: background-color 0.3s ease;
   &:hover {
     background-color: ${theme.secondary};
