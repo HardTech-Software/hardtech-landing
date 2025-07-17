@@ -10,7 +10,7 @@ interface QuestionAnswerCardProps {
 const QuestionAnswerCard = ({ question, answer }: QuestionAnswerCardProps) => {
   return (
     <Container>
-      <TypographyCustom variant="title">{question}</TypographyCustom>
+      <TypographyCustom variant="title1">{question}</TypographyCustom>
       <Typography>{answer}</Typography>
     </Container>
   );

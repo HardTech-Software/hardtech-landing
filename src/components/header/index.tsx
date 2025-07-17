@@ -17,6 +17,7 @@ import useToggle from "@/hooks/use-toggle";
 import Sidebar from "../sidebar";
 import { navItemsHeader, scrollToSection } from "@/utils/constants/nav-items";
 import Button from "../button";
+import { theme } from "@/helpers/theme";
 
 const Header = () => {
   const { OpenSidebar, isSidebarOpen, CloseSidebar } = useToggle();
@@ -36,7 +37,9 @@ const Header = () => {
           <Nav>
             {navItemsHeader.map((item, index) => (
               <Item key={index} onClick={() => scrollToSection(item.sectionId)}>
-                <Typography variant="title">{item.label}</Typography>
+                <Typography variant="title1" color={theme.white}>
+                  {item.label}
+                </Typography>
               </Item>
             ))}
           </Nav>

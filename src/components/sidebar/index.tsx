@@ -3,6 +3,7 @@ import Typography from "../typography";
 import { Container, ContainerButton, Item, Nav } from "./styles";
 import { navItemsSidebar } from "@/utils/constants/nav-items";
 import Button from "../button";
+import { theme } from "@/helpers/theme";
 
 interface SidebarProps {
   onClick: () => void;
@@ -21,7 +22,9 @@ const Sidebar = ({ onClick, scrollToSection }: SidebarProps) => {
               scrollToSection(item.sectionId);
             }}
           >
-            <Typography variant="title">{item.label}</Typography>
+            <Typography variant="title1" color={theme.white}>
+              {item.label}
+            </Typography>
           </Item>
         ))}
 

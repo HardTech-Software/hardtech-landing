@@ -11,6 +11,7 @@ import Icon from "@/components/icon";
 import Typography from "@/components/typography";
 import { Constants } from "@/utils/constants/constants";
 import { scrollToSection } from "@/utils/constants/nav-items";
+import { theme } from "@/helpers/theme";
 
 interface FooterProps {
   id: string;
@@ -24,16 +25,24 @@ const Footer = ({ id }: FooterProps) => {
       </LogoContainer>
 
       <ContainerCenter>
-        <Typography>CONTACTO</Typography>
+        <Typography variant="description2" color={theme.white}>
+          CONTACTO
+        </Typography>
         <Email href={`mailto:${Constants.email}`}>
-          <TypographyCustom>{Constants.email}</TypographyCustom>
+          <TypographyCustom variant="description2" color={theme.white}>
+            {Constants.email}
+          </TypographyCustom>
         </Email>
       </ContainerCenter>
       <ContainerRight>
         <Icon name="instagram" />
         <div>
-          <Typography>SIGUENOS</Typography>
-          <Typography>{Constants.instagram}</Typography>
+          <Typography variant="description2" color={theme.white}>
+            SIGUENOS
+          </Typography>
+          <Typography variant="description2" color={theme.white}>
+            {Constants.instagram}
+          </Typography>
         </div>
       </ContainerRight>
     </Container>
