@@ -10,6 +10,7 @@ import {
   LogoIcon,
   MenuIcon,
 } from "../icons";
+import AppIcon from "../icons/app-icon";
 
 const icons = (props?: IconProps) => ({
   menu: <MenuIcon {...props} />,
@@ -20,6 +21,7 @@ const icons = (props?: IconProps) => ({
   "logo-home": <LogoHomeIcon {...props} />,
   "chevron-left": <ChevronLeftIcon {...props} />,
   "chevron-right": <ChevronRightIcon {...props} />,
+  "app-icon": <AppIcon {...props} />,
 });
 
 export type IconName = keyof ReturnType<typeof icons>;

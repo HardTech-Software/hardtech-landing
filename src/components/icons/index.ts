@@ -6,3 +6,4 @@ export { default as GooglePlayIcon } from "./google-play";
 export { default as LogoHomeIcon } from "./logo-home";
 export { default as ChevronLeftIcon } from "./chevron-left";
 export { default as ChevronRightIcon } from "./chevron-right";
+export { default as AppIcon } from "./app-icon";

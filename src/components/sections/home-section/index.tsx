@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Background,
   Container,
   ContainerInner,
   ContainerLeft,
@@ -9,9 +10,9 @@ import {
   TypographyCustom,
   TypographyTitleCustom,
 } from "./styles";
-import Typography from "@/components/typography";
-import { LogoHomeIcon } from "@/components/icons";
 import { theme } from "@/helpers/theme";
+import HomeBackground from "@/components/home-background";
+import Icon from "@/components/icon";
 
 interface HomeSectionProps {
   id: string;
@@ -19,6 +20,9 @@ interface HomeSectionProps {
 const HomeSection = ({ id }: HomeSectionProps) => {
   return (
     <Container id={id}>
+      <Background>
+        <HomeBackground />
+      </Background>
       <ContainerInner>
         <ContainerLeft>
           <TitleContainer>
@@ -33,7 +37,7 @@ const HomeSection = ({ id }: HomeSectionProps) => {
         </ContainerLeft>
         <ContainerRight>
           <LogoHomeWrapper>
-            <LogoHomeIcon />
+            <Icon name="logo-home" />
           </LogoHomeWrapper>
         </ContainerRight>
       </ContainerInner>

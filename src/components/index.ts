@@ -13,3 +13,6 @@ export { default as ProjectCard } from "./project-card";
 export { default as IconButton } from "./icon-button";
 export { default as SwiperComponent } from "./swiper";
 export { default as BackgroundSVG } from "./background-svg";
+export { default as HomeBackground } from "./home-background";
+export { default as Title } from "./title";
+export { default as InformationCard } from "./information-card";

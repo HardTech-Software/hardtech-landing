@@ -7,14 +7,21 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   min-height: 75vh;
-  padding: 9rem clamp(1rem, 5vw, 14rem);
-
+  position: relative;
+  z-index: -1;
+  padding: 9rem 0 50rem 0;
   @media (max-width: 1250px) {
     padding-top: 7rem;
   }
-  @media (max-width: 1024px) {
-    padding: 7rem 0;
-  }
+`;
+
+export const Background = styled.div`
+  height: 1200px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
 `;
 
 export const ContainerInner = styled.div`
@@ -23,6 +30,7 @@ export const ContainerInner = styled.div`
   justify-content: center;
   gap: 80px;
   align-items: center;
+  z-index: 2;
   @media (max-width: 1024px) {
     justify-content: start;
   }
@@ -54,7 +62,8 @@ export const TitleContainer = styled.div`
     ${theme.primary} 80%,
     transparent 100%
   );
-  padding: 0 100px;
+
+  padding: 0 0 0 70px;
   max-width: 650px;
 
   @media (max-width: 1250px) {
@@ -84,7 +93,7 @@ export const ContainerRight = styled.div`
 
 export const TypographyCustom = styled(Typography)`
   max-width: 383px;
-  margin-left: -70px;
+  margin-left: -130px;
 
   @media (max-width: 1250px) {
     margin-left: 40px;

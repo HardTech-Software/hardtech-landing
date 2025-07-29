@@ -13,17 +13,17 @@ export const scrollToSection = (sectionId: string) => {
 
 export const navItemsSidebar = [
   { label: "HOME", sectionId: "home-section" },
-  { label: "QUÉ OFRECEMOS", sectionId: "" },
+  { label: "QUE OFRECEMOS", sectionId: "services-section" },
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },
-  { label: "NUESTRO EQUIPO", sectionId: "" },
-  { label: "NUESTRA VISIÓN & MISIÓN", sectionId: "" },
-  { label: "CONTÁCTATE CON NOSOTROS", sectionId: "" },
+  { label: "NUESTRO EQUIPO", sectionId: "team-section" },
+  { label: "NUESTRA VISIÓN & MISIÓN", sectionId: "mission-section" },
+  { label: "CONTÁCTATE CON NOSOTROS", sectionId: "contact-section" },
 ];
 
 export const navItemsHeader = [
   { label: "HOME", sectionId: "home-section" },
-  { label: "QUÉ OFRECEMOS", sectionId: "" },
+  { label: "QUE OFRECEMOS", sectionId: "services-section" },
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },
-  { label: "NUESTRO EQUIPO", sectionId: "" },
-  { label: "VISIÓN & MISIÓN", sectionId: "" },
+  { label: "NUESTRO EQUIPO", sectionId: "team-section" },
+  { label: "VISIÓN & MISIÓN", sectionId: "mission-section" },
 ];

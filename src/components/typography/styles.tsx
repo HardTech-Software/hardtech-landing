@@ -17,7 +17,8 @@ const variantStyles = {
   h1: css`
     font-size: 50px;
     font-weight: 800;
-    // background-color: red;
+    line-height: 1;
+    padding-bottom: 9px;
 
     @media (max-width: 1250px) {
       font-size: 40px;
@@ -26,6 +27,8 @@ const variantStyles = {
   h2: css`
     font-size: 45px;
     font-weight: 800;
+    line-height: 1;
+    padding-bottom: 5px;
 
     @media (max-width: 1024px) {
       font-size: 35px;
