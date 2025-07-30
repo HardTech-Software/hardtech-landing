@@ -40,7 +40,7 @@ const variantStyles = {
   h3: css`
     font-size: 25px;
     font-weight: 900;
-    @media (max-width: 1024px) {
+    @media (max-width: 1350px) {
       font-size: 16px;
     }
   `, //titulos div difuminados
@@ -71,7 +71,7 @@ const variantStyles = {
   description1: css`
     font-size: 20px;
     font-weight: 400;
-    @media (max-width: 1024px) {
+    @media (max-width: 1350px) {
       font-size: 14px;
     }
   `, // descripciones dentro de los div difuminados

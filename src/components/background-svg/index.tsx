@@ -17,7 +17,7 @@ const BackgroundSVG = () => {
           <stop offset="100%" stopColor={theme.background} />
         </linearGradient>
       </defs>
-      <path d="M0 300 L720 0 L1440 300 Z" fill="url(#gradient)" />
+      <path d="M0 320 L720 0 L1440 320 Z" fill="url(#gradient)" />
     </svg>
   );
 };

@@ -10,29 +10,35 @@ import {
 } from "./styles";
 import Typography from "../typography";
 import { theme } from "@/helpers/theme";
-import Icon from "../icon";
+import Icon, { IconName } from "../icon";
 
-interface InformationCardProps {
+export interface InformationCardProps {
   variant?: "right" | "left";
+  icon: string;
+  title: string;
+  description: string;
 }
 
-const InformationCard = ({ variant = "right" }: InformationCardProps) => {
+const InformationCard = ({
+  variant = "right",
+  icon,
+  title,
+  description,
+}: InformationCardProps) => {
   return (
     <Container>
       <InnerContainer>
         <TitleContainer $variant={variant}>
           <Typography variant="h3" color={theme.primary}>
-            APP
+            {title}
           </Typography>
         </TitleContainer>
 
         <DescriptionContainer $variant={variant}>
-          <Typography>
-            Diseño y desarrollo de aplicaciones mobile android e ios.
-          </Typography>
+          <Typography>{description}</Typography>
 
           <ImageContainer $variant={variant}>
-            <Icon name="app-icon" />
+            <Icon name={icon as IconName} />
           </ImageContainer>
         </DescriptionContainer>
         <TopContainer $variant={variant} />
