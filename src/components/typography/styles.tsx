@@ -30,7 +30,7 @@ const variantStyles = {
     line-height: 1;
     padding-bottom: 5px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1350px) {
       font-size: 35px;
     }
     @media (max-width: 760px) {

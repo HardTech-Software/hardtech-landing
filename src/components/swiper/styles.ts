@@ -2,13 +2,10 @@ import styled from "styled-components";
 import { SwiperSlide } from "swiper/react";
 
 export const SwiperContainer = styled.div`
-  width: 880px;
+  width: 680px;
   height: 325px;
   position: relative;
 
-  @media (max-width: 1024px) {
-    width: 680px;
-  }
   @media (max-width: 760px) {
     width: 350px;
   }
@@ -33,7 +30,7 @@ export const NavButton = styled.button<{
   align-items: center;
   position: absolute;
   top: 50%;
-  ${({ position }) => (position === "left" ? "left: 90px;" : "right:90px;")}
+  ${({ position }) => (position === "left" ? "left: -5px;" : "right:-5px;")}
   transform: translateY(-50%);
   background-color: transparent;
   border: none;

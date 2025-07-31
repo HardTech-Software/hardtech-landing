@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, ContainerInner } from "./styles";
+import { Container, ContainerInner, IconProject } from "./styles";
 import ProjectCard from "@/components/project-card";
 import { projects } from "@/utils/constants/projects";
 import BackgroundSVG from "@/components/background-svg";
@@ -16,6 +16,11 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       <BackgroundSVG />
       <ContainerInner>
         <Title title="Nuestros proyectos" />
+
+        <IconProject>
+          <div style={{ width: 102, backgroundColor: "purple" }} />
+          <div style={{ width: 202, backgroundColor: "yellow" }} />
+        </IconProject>
 
         {projects.map((item, index) => (
           <ProjectCard

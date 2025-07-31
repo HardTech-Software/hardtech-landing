@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: transparent;
-  padding: 10rem 0 45rem 0;
-  margin-top: -45rem;
+  padding: 10rem 0 55rem 0;
+  margin-top: -50rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,5 @@ export const Container = styled.div`
 
   @media (max-width: 1350px) {
     gap: 150px;
-    padding-top: 6rem;
   }
 `;

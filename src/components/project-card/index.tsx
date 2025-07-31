@@ -9,6 +9,7 @@ import Typography from "../typography";
 import Button from "../button";
 import IconButton from "../icon-button";
 import SwiperComponent from "../swiper";
+import { theme } from "@/helpers/theme";
 
 interface ProjectCardProps {
   title: string;
@@ -47,10 +48,16 @@ const ProjectCard = ({
     <Container>
       <SwiperComponent urlDesktop={urlDesktop} urlMobile={urlmobile} />
       <ContainerBottom>
-        <Typography variant="h3">{title}</Typography>
-        <Typography variant="description1">{description}</Typography>
+        <Typography variant="h2" color={theme.white}>
+          {title}
+        </Typography>
+        <Typography variant="description2" color={theme.white}>
+          {description}
+        </Typography>
         <ButtonContainer>
-          <Button title="IR A LA PÁGINA WEB" />
+          <div style={{ height: 40, width: 210 }}>
+            <Button variant="secondary" title="IR A LA PÁGINA WEB" />
+          </div>
           {store && (
             <DownloadButtonContainer>
               <IconButton url={store} />
