@@ -1,10 +1,11 @@
 import React from "react";
-import { Container, ContainerInner, IconProject } from "./styles";
+import { Container, ContainerInner } from "./styles";
 import ProjectCard from "@/components/project-card";
 import { projects } from "@/utils/constants/projects";
 import BackgroundSVG from "@/components/background-svg";
 
 import Title from "@/components/title";
+import Tab from "@/components/tab";
 
 interface ProjectsSectionProps {
   id: string;
@@ -17,10 +18,7 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
       <ContainerInner>
         <Title title="Nuestros proyectos" />
 
-        <IconProject>
-          <div style={{ width: 102, backgroundColor: "purple" }} />
-          <div style={{ width: 202, backgroundColor: "yellow" }} />
-        </IconProject>
+        <Tab />
 
         {projects.map((item, index) => (
           <ProjectCard

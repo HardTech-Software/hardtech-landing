@@ -17,3 +17,4 @@ export { default as HomeBackground } from "./home-background";
 export { default as Title } from "./title";
 export { default as InformationCard } from "./information-card";
 export { default as InformationCardSection } from "./information-card-section";
+export { default as Tab } from "./tab";
