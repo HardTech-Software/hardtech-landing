@@ -7,3 +7,8 @@ export { default as LogoHomeIcon } from "./logo-home";
 export { default as ChevronLeftIcon } from "./chevron-left";
 export { default as ChevronRightIcon } from "./chevron-right";
 export { default as AppIcon } from "./app-icon";
+export { default as WebIcon } from "./web-icon";
+export { default as VisionIcon } from "./vision-icon";
+export { default as MisionIcon } from "./mision-icon";
+export { default as PatitasLogo } from "./patitas-logo";
+export { default as ZeventLogo } from "./zevent-logo";

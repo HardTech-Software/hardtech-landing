@@ -9,8 +9,13 @@ import {
   LogoHomeIcon,
   LogoIcon,
   MenuIcon,
+  PatitasLogo,
+  ZeventLogo,
+  AppIcon,
+  WebIcon,
+  VisionIcon,
+  MisionIcon,
 } from "../icons";
-import AppIcon from "../icons/app-icon";
 
 const icons = (props?: IconProps) => ({
   menu: <MenuIcon {...props} />,
@@ -22,6 +27,11 @@ const icons = (props?: IconProps) => ({
   "chevron-left": <ChevronLeftIcon {...props} />,
   "chevron-right": <ChevronRightIcon {...props} />,
   "app-icon": <AppIcon {...props} />,
+  "web-icon": <WebIcon {...props} />,
+  "vision-icon": <VisionIcon {...props} />,
+  "mision-icon": <MisionIcon {...props} />,
+  "patitas-logo": <PatitasLogo {...props} />,
+  "zevent-logo": <ZeventLogo {...props} />,
 });
 
 export type IconName = keyof ReturnType<typeof icons>;

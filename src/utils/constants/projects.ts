@@ -17,5 +17,25 @@ export const projects = [
       "/prueba2.png",
       "/prueba2.png",
     ],
+    logo: "patitas-logo",
+  },
+  {
+    title: "Zevent",
+    description: "Administrador de entradas para joditas",
+    urlDesktop: [
+      "/prueba1.png",
+      "/prueba1.png",
+      "/prueba1.png",
+      "/prueba1.png",
+      "/prueba1.png",
+    ],
+    urlMobile: [
+      "/prueba2.png",
+      "/prueba2.png",
+      "/prueba2.png",
+      "/prueba2.png",
+      "/prueba2.png",
+    ],
+    logo: "zevent-logo",
   },
 ];

@@ -32,7 +32,7 @@ const Sidebar = ({ onClick, scrollToSection }: SidebarProps) => {
           <Button
             title="CONTÁCTANOS"
             variant="secondary"
-            onClick={() => scrollToSection("footer-section")}
+            onClick={() => scrollToSection("contact-section")}
           />
         </ContainerButton>
       </Nav>

@@ -18,3 +18,4 @@ export { default as Title } from "./title";
 export { default as InformationCard } from "./information-card";
 export { default as InformationCardSection } from "./information-card-section";
 export { default as Tab } from "./tab";
+export { default as ContactSection } from "./sections/contact-section";

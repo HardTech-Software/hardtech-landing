@@ -1,19 +1,29 @@
 import React from "react";
 
-const AppIcon = ({ width = "163", height = "255" }) => {
+const AppIcon = ({ width = "171", height = "281" }) => {
   return (
     <svg
       width={width}
       height={height}
-      viewBox="0 0 171 265"
+      viewBox="0 0 171 281"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <g filter="url(#filter0_f_2998_4842)">
+        <ellipse
+          cx="66.5"
+          cy="261.449"
+          rx="59.5"
+          ry="13.5"
+          fill="#1A1A1A"
+          fillOpacity="0.5"
+        />
+      </g>
       <path
         d="M158.778 23.7419L49.9684 6.3167C45.4276 5.58951 41.1562 8.68566 40.4281 13.2322L5.31821 232.472C4.59012 237.018 7.68098 241.294 12.2219 242.021L121.031 259.446C125.572 260.173 129.844 257.077 130.572 252.531L165.682 33.2907C166.41 28.7442 163.319 24.4691 158.778 23.7419Z"
         fill="black"
       />
-      <g filter="url(#filter0_dddddd_2791_6157)">
+      <g filter="url(#filter1_dddddd_2998_4842)">
         <path
           d="M157.811 28.3741L49.4413 11.0194C47.4379 10.6986 45.5533 12.0646 45.2321 14.0706L10.1436 233.176C9.82238 235.182 11.1861 237.068 13.1896 237.389L121.559 254.744C123.562 255.065 125.447 253.699 125.768 251.693L160.856 32.5871C161.178 30.5812 159.814 28.6949 157.811 28.3741Z"
           fill="white"
@@ -57,8 +67,29 @@ const AppIcon = ({ width = "163", height = "255" }) => {
       />
       <defs>
         <filter
-          id="filter0_dddddd_2791_6157"
-          x="0.077095"
+          id="filter0_f_2998_4842"
+          x="1"
+          y="241.949"
+          width="131"
+          height="39"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feGaussianBlur
+            stdDeviation="3"
+            result="effect1_foregroundBlur_2998_4842"
+          />
+        </filter>
+        <filter
+          id="filter1_dddddd_2998_4842"
+          x="0.0771561"
           y="0.953011"
           width="170.846"
           height="263.858"
@@ -81,7 +112,7 @@ const AppIcon = ({ width = "163", height = "255" }) => {
           <feBlend
             mode="normal"
             in2="BackgroundImageFix"
-            result="effect1_dropShadow_2791_6157"
+            result="effect1_dropShadow_2998_4842"
           />
           <feColorMatrix
             in="SourceAlpha"
@@ -97,8 +128,8 @@ const AppIcon = ({ width = "163", height = "255" }) => {
           />
           <feBlend
             mode="normal"
-            in2="effect1_dropShadow_2791_6157"
-            result="effect2_dropShadow_2791_6157"
+            in2="effect1_dropShadow_2998_4842"
+            result="effect2_dropShadow_2998_4842"
           />
           <feColorMatrix
             in="SourceAlpha"
@@ -114,8 +145,8 @@ const AppIcon = ({ width = "163", height = "255" }) => {
           />
           <feBlend
             mode="normal"
-            in2="effect2_dropShadow_2791_6157"
-            result="effect3_dropShadow_2791_6157"
+            in2="effect2_dropShadow_2998_4842"
+            result="effect3_dropShadow_2998_4842"
           />
           <feColorMatrix
             in="SourceAlpha"
@@ -131,8 +162,8 @@ const AppIcon = ({ width = "163", height = "255" }) => {
           />
           <feBlend
             mode="normal"
-            in2="effect3_dropShadow_2791_6157"
-            result="effect4_dropShadow_2791_6157"
+            in2="effect3_dropShadow_2998_4842"
+            result="effect4_dropShadow_2998_4842"
           />
           <feColorMatrix
             in="SourceAlpha"
@@ -148,8 +179,8 @@ const AppIcon = ({ width = "163", height = "255" }) => {
           />
           <feBlend
             mode="normal"
-            in2="effect4_dropShadow_2791_6157"
-            result="effect5_dropShadow_2791_6157"
+            in2="effect4_dropShadow_2998_4842"
+            result="effect5_dropShadow_2998_4842"
           />
           <feColorMatrix
             in="SourceAlpha"
@@ -165,13 +196,13 @@ const AppIcon = ({ width = "163", height = "255" }) => {
           />
           <feBlend
             mode="normal"
-            in2="effect5_dropShadow_2791_6157"
-            result="effect6_dropShadow_2791_6157"
+            in2="effect5_dropShadow_2998_4842"
+            result="effect6_dropShadow_2998_4842"
           />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect6_dropShadow_2791_6157"
+            in2="effect6_dropShadow_2998_4842"
             result="shape"
           />
         </filter>

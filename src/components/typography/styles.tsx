@@ -10,7 +10,8 @@ interface Props {
     | "title3"
     | "title4"
     | "description1"
-    | "description2";
+    | "description2"
+    | "description3";
 }
 
 const variantStyles = {
@@ -100,7 +101,8 @@ export const TypographyStyled = styled.p<Props & { color?: string }>`
     $variant === "title3" ||
     $variant === "title4" ||
     $variant === "description1" ||
-    $variant === "description2"
+    $variant === "description2" ||
+    $variant === "description3"
       ? "Inter, sans-serif"
       : "Exo 2, sans-serif"};
   color: ${({ color }) => color};

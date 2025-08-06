@@ -1,4 +1,4 @@
-export const headerHeight = 80;
+export const headerHeight = 0;
 
 export const scrollToSection = (sectionId: string) => {
   const section = document.getElementById(sectionId);

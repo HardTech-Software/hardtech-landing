@@ -13,13 +13,9 @@ import { Constants } from "@/utils/constants/constants";
 import { scrollToSection } from "@/utils/constants/nav-items";
 import { theme } from "@/helpers/theme";
 
-interface FooterProps {
-  id: string;
-}
-
-const Footer = ({ id }: FooterProps) => {
+const Footer = () => {
   return (
-    <Container id={id}>
+    <Container>
       <LogoContainer onClick={() => scrollToSection("home-section")}>
         <Icon name="logo" width="154" height="170" />
       </LogoContainer>

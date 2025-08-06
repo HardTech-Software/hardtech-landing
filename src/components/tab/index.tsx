@@ -1,16 +1,26 @@
 import React from "react";
 import { Container, LogoContainer } from "./styles";
-import Image from "next/image";
 
-const Tab = () => {
+import { projects } from "@/utils/constants/projects";
+import Icon, { IconName } from "../icon";
+
+interface TabProps {
+  activeTab: number;
+  onTabClick: (index: number) => void;
+}
+
+const Tab = ({ activeTab, onTabClick }: TabProps) => {
   return (
     <Container>
-      <LogoContainer>
-        <Image src="/patitas-logo.svg" width={54} height={50} alt="" />
-      </LogoContainer>
-      <LogoContainer>
-        <Image src="/patitas-logo.svg" width={149} height={50} alt="" />
-      </LogoContainer>
+      {projects.map((item, index) => (
+        <LogoContainer
+          key={index}
+          onClick={() => onTabClick(index)}
+          style={{ opacity: activeTab === index ? 1 : 0.4 }}
+        >
+          <Icon name={item.logo as IconName} />
+        </LogoContainer>
+      ))}
     </Container>
   );
 };

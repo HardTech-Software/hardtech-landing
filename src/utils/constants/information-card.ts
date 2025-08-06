@@ -1,6 +1,6 @@
 export const ServicesSectionData = [
   {
-    icon: "app-icon",
+    icon: "web-icon",
     title: "WEB",
     description: "Diseño y desarrollo de sitios web.",
   },
@@ -13,12 +13,12 @@ export const ServicesSectionData = [
 
 export const MissionSectionData = [
   {
-    icon: "app-icon",
+    icon: "vision-icon",
     title: "VISIÓN",
     description: "Diseño y desarrollo de aplicaciones mobile android e ios.",
   },
   {
-    icon: "app-icon",
+    icon: "mision-icon",
     title: "MISIÓN",
     description: "Diseño y desarrollo de aplicaciones mobile android e ios.",
   },

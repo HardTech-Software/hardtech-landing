@@ -10,7 +10,8 @@ interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
     | "title3"
     | "title4"
     | "description1"
-    | "description2";
+    | "description2"
+    | "description3";
   color?: string;
 }
 

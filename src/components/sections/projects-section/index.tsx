@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, ContainerInner } from "./styles";
 import ProjectCard from "@/components/project-card";
 import { projects } from "@/utils/constants/projects";
@@ -12,23 +12,22 @@ interface ProjectsSectionProps {
 }
 
 const ProjectsSection = ({ id }: ProjectsSectionProps) => {
+  const [activeTab, setActivTab] = useState(0);
+  const activeProject = projects[activeTab];
   return (
     <Container id={id}>
       <BackgroundSVG />
       <ContainerInner>
         <Title title="Nuestros proyectos" />
 
-        <Tab />
+        <Tab activeTab={activeTab} onTabClick={setActivTab} />
 
-        {projects.map((item, index) => (
-          <ProjectCard
-            key={index}
-            urlDesktop={item.urlDesktop}
-            urlmobile={item.urlMobile}
-            title={item.title}
-            description={item.description}
-          />
-        ))}
+        <ProjectCard
+          urlDesktop={activeProject.urlDesktop}
+          urlmobile={activeProject.urlMobile}
+          title={activeProject.title}
+          description={activeProject.description}
+        />
       </ContainerInner>
     </Container>
   );

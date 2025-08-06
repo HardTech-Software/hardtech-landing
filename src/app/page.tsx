@@ -1,9 +1,5 @@
 "use client";
-import {
-  HomeSection,
-  ProjectsSection,
-  QuestionAnswerSection,
-} from "@/components";
+import { ContactSection, HomeSection, ProjectsSection } from "@/components";
 import MissionSection from "@/components/sections/mission-section";
 import ServicesSection from "@/components/sections/services-section";
 import React from "react";
@@ -15,7 +11,7 @@ const Home = () => {
       <ServicesSection id="services-section" />
       <ProjectsSection id="projects-section" />
       <MissionSection id="mission-section" />
-      <QuestionAnswerSection id="question-answer-section" />
+      <ContactSection id="contact-section" />
     </>
   );
 };

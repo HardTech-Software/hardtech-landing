@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: transparent;
-  padding: 10rem 0 55rem 0;
+  padding: 12rem 0 55rem 0;
   margin-top: -50rem;
   position: relative;
   display: flex;

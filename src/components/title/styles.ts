@@ -10,6 +10,7 @@ export const Container = styled.div`
     transparent 100%
   );
   padding: 0 60px;
+  text-align: center;
 
   @media (max-width: 450px) {
     padding: 0 25px;
