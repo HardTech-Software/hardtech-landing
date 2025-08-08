@@ -7,12 +7,12 @@ import {
   LeftContainer,
   RightContainer,
   TextInput,
+  TitleContainer,
   TypographyCustom,
   TypographyCustomLeftContainer,
 } from "./styles";
 import BackgroundSVG from "@/components/background-svg";
 import Title from "@/components/title";
-import Typography from "@/components/typography";
 import Icon from "@/components/icon";
 import { theme } from "@/helpers/theme";
 import Button from "@/components/button";
@@ -25,7 +25,9 @@ const ContactSection = ({ id }: ContactSectionProps) => {
   return (
     <Container id={id}>
       <BackgroundSVG />
-      <Title title="Contáctate con nosotros" />
+      <TitleContainer>
+        <Title title="Contáctate con nosotros" />
+      </TitleContainer>
       <InnerContainer>
         <LeftContainer>
           <TypographyCustomLeftContainer

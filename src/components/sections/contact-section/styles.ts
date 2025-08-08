@@ -4,22 +4,29 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
   position: relative;
-  padding: 12rem clamp(1rem, 10rem, 1rem) 10rem;
+  padding: 12rem clamp(1rem, 4rem, 4rem) 10rem;
+  width: 100%;
   margin-top: -45rem;
   min-height: 75vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 140px;
 
   @media (max-width: 760px) {
     gap: 66px;
-    padding-top: 8rem;
+    padding: 8rem 1rem;
   }
+`;
+
+export const TitleContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 export const InnerContainer = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 80px;
 
   @media (max-width: 760px) {
