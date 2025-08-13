@@ -1,20 +1,14 @@
 import { theme } from "@/helpers/theme";
-import styled from "styled-components";
+import { styled } from "styled-components";
 import Typography from "../typography";
 
 export const Container = styled.div`
   width: 262px;
-  height: 466px;
+  height: 1700px;
   background: linear-gradient(to bottom, ${theme.background} 0%, #21319b 100%);
   position: relative;
   clip-path: polygon(50% 0%, 100% 17%, 100% 83%, 50% 100%, 0% 83%, 0% 17%);
-
-  @media (max-width: 1250px) {
-    width: 218px;
-    height: 388px;
-  }
 `;
-
 export const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;

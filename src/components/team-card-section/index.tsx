@@ -10,12 +10,29 @@ const TeamCardSection = () => {
         <TeamCard
           name="NICOLÁS CASTILLO"
           profession="Desarrollador Fullstack"
+          avatar="/nicolas.svg"
         />
-        <TeamCard name="ABRAHAM VIDAL" profession="Desarrollador Fullstack" />
-        <TeamCard name="BRYAN MONTÉS" profession="Desarrollador Fullstack" />
+        <TeamCard
+          name="ABRAHAM VIDAL"
+          profession="Desarrollador Fullstack"
+          avatar="/abraham.svg"
+        />
+        <TeamCard
+          name="BRYAN MONTÉS"
+          profession="Desarrollador Fullstack"
+          avatar="/bryan.svg"
+        />
         <BottomRow>
-          <TeamCard name="MATÍAS PADILLA" profession="Ingeniero Comercial" />
-          <TeamCard name="MACARENA TECAS" profession="Diseñadora Gráfica" />
+          <TeamCard
+            name="MATÍAS PADILLA"
+            profession="Ingeniero Comercial"
+            avatar="/matias.svg"
+          />
+          <TeamCard
+            name="MACARENA TECAS"
+            profession="Diseñadora Gráfica"
+            avatar="/maca.svg"
+          />
         </BottomRow>
       </GridContainer>
     </Container>

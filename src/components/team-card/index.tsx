@@ -9,13 +9,15 @@ import {
   TypographyCustom,
 } from "./styles";
 import Typography from "../typography";
+import Image from "next/image";
 
 interface TeamCardProps {
   name: string;
   profession: string;
+  avatar: string;
 }
 
-const TeamCard = ({ name, profession }: TeamCardProps) => {
+const TeamCard = ({ name, profession, avatar }: TeamCardProps) => {
   return (
     <Container>
       <InnerContainer>
@@ -26,7 +28,9 @@ const TeamCard = ({ name, profession }: TeamCardProps) => {
         <TopContainer />
         <BottomContainer />
       </InnerContainer>
-      <AvatarContainer></AvatarContainer>
+      <AvatarContainer>
+        <Image src={avatar} width={185} height={185} alt="" />
+      </AvatarContainer>
     </Container>
   );
 };
