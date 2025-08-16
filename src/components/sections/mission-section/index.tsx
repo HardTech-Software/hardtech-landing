@@ -12,7 +12,7 @@ const MissionSection = ({ id }: MissionSectionProps) => {
   return (
     <Container id={id}>
       <BackgroundSVG />
-      <Title title="Visión & Misión" />
+      <Title title="Visión & misión" />
 
       <InformationCardSection data={MissionSectionData} />
     </Container>

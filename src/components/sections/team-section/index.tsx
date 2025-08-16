@@ -15,7 +15,7 @@ const TeamSection = ({ id }: TeamSectionProps) => {
       <BackgroundSVG />
       <Title title="Nuestro equipo" />
       <TeamCardSection />
-      {/* <TeamCardSectionMobile /> */}
+      <TeamCardSectionMobile />
     </Container>
   );
 };

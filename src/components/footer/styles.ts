@@ -3,12 +3,16 @@ import Typography from "../typography";
 import { theme } from "@/helpers/theme";
 
 export const Container = styled.div`
-  background: linear-gradient(rgba(36, 65, 255, 0.3) 0%, transparent 100%);
+  background: linear-gradient(
+    rgba(18, 34, 133, 0.2) 0%,
+    transparent 70%,
+    transparent 100%
+  );
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  padding: 5rem clamp(1rem, 5vw, 10rem);
+  padding: 5rem clamp(1rem, 10vw, 10rem);
   position: absolute;
   width: 100%;
   z-index: -1;

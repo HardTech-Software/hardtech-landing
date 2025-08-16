@@ -5,15 +5,16 @@ export const Container = styled.div`
   background: linear-gradient(
     to bottom,
     ${theme.background} 0%,
-    ${theme.background} 80%,
-    transparent 100%
+    ${theme.background} 60%,
+    #1427a4 100%
   );
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 66px clamp(1rem, 5vw, 7rem) 10rem;
+  padding: 66px clamp(1rem, 5vw, 7rem) 55rem;
   gap: 100px;
+  z-index: -1;
 
   @media (max-width: 1350px) {
     flex-direction: column;
@@ -37,6 +38,17 @@ export const ButtonContainer = styled.div`
   flex-direction: column;
   align-items: start;
   gap: 20px;
+  padding-top: 30px;
+
+  @media (max-width: 1350px) {
+    flex-direction: row;
+    align-items: center;
+  }
+`;
+
+export const ButtonInnerContainer = styled.div`
+  width: 210px;
+  height: 40px;
 `;
 export const DownloadButtonContainer = styled.div`
   display: flex;

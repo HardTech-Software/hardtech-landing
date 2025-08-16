@@ -9,7 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   min-height: 75vh;
-  gap: 350px;
+  gap: 300px;
 
   @media (max-width: 1350px) {
     gap: 150px;

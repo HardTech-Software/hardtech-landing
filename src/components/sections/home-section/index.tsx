@@ -37,7 +37,7 @@ const HomeSection = ({ id }: HomeSectionProps) => {
         </ContainerLeft>
         <ContainerRight>
           <LogoHomeWrapper>
-            <Icon name="logo-home" />
+            <Icon name="home-logo" />
           </LogoHomeWrapper>
         </ContainerRight>
       </ContainerInner>

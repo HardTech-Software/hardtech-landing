@@ -1,6 +1,6 @@
 import React from "react";
 
-const LogoHomeIcon = ({ width = "226", height = "346" }) => {
+const HomeLogoIcon = ({ width = "226", height = "346" }) => {
   return (
     <svg
       width={width}
@@ -77,4 +77,4 @@ const LogoHomeIcon = ({ width = "226", height = "346" }) => {
   );
 };
 
-export default LogoHomeIcon;
+export default HomeLogoIcon;

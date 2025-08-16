@@ -15,6 +15,7 @@ import {
   WebIcon,
   VisionIcon,
   MisionIcon,
+  ContactLogo,
 } from "../icons";
 
 const icons = (props?: IconProps) => ({
@@ -23,7 +24,7 @@ const icons = (props?: IconProps) => ({
   instagram: <InstragramIcon {...props} />,
   "app-store": <AppStoreIcon {...props} />,
   "google-play": <GooglePlayIcon {...props} />,
-  "logo-home": <LogoHomeIcon {...props} />,
+  "home-logo": <LogoHomeIcon {...props} />,
   "chevron-left": <ChevronLeftIcon {...props} />,
   "chevron-right": <ChevronRightIcon {...props} />,
   "app-icon": <AppIcon {...props} />,
@@ -32,6 +33,7 @@ const icons = (props?: IconProps) => ({
   "mision-icon": <MisionIcon {...props} />,
   "patitas-logo": <PatitasLogo {...props} />,
   "zevent-logo": <ZeventLogo {...props} />,
+  "contact-logo": <ContactLogo {...props} />,
 });
 
 export type IconName = keyof ReturnType<typeof icons>;

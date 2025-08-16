@@ -6,7 +6,7 @@ interface InformationCardProps {
 }
 
 export const Container = styled.div`
-  margin-top: -110px;
+  margin-top: -180px;
 
   @media (max-width: 1350px) {
     margin-top: 0px;

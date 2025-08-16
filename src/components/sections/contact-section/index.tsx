@@ -36,7 +36,7 @@ const ContactSection = ({ id }: ContactSectionProps) => {
           >
             ¿Tienes un proyecto en mente? <b>¡Contáctanos!</b>
           </TypographyCustomLeftContainer>
-          <Icon name="logo-home" />
+          <Icon name="contact-logo" />
         </LeftContainer>
         <RightContainer>
           <TypographyCustom variant="title4" color={theme.primary}>

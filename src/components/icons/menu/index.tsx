@@ -1,6 +1,6 @@
 import React from "react";
 
-const MenuIcon = ({ color = "#fff", width = "35", height = "24" }) => {
+const MenuIcon = ({ color = "#D9D9D9", width = "35", height = "24" }) => {
   return (
     <svg
       width={width}

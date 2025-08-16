@@ -22,3 +22,4 @@ export { default as TeamSection } from "./sections/team-section";
 export { default as TeamCardSection } from "./team-card-section";
 export { default as TeamCardSectionMobile } from "./team-card-section-mobile";
 export { default as TeamCard } from "./team-card";
+export { default as TeamCarMobile } from "./team-card-mobile";

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
   ButtonContainer,
+  ButtonInnerContainer,
   Container,
   ContainerBottom,
   DownloadButtonContainer,
@@ -55,9 +56,9 @@ const ProjectCard = ({
           {description}
         </Typography>
         <ButtonContainer>
-          <div style={{ height: 40, width: 210 }}>
+          <ButtonInnerContainer>
             <Button variant="secondary" title="IR A LA PÁGINA WEB" />
-          </div>
+          </ButtonInnerContainer>
           {store && (
             <DownloadButtonContainer>
               <IconButton url={store} />

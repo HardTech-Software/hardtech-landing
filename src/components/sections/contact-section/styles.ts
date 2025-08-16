@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
   position: relative;
-  padding: 12rem clamp(1rem, 4rem, 4rem) 10rem;
+  padding: 12rem clamp(1rem, 4rem, 4rem) 16rem;
   width: 100%;
   margin-top: -45rem;
   min-height: 75vh;
@@ -56,7 +56,7 @@ export const RightContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  padding: 20px;
+  padding: 15px;
 `;
 
 export const TypographyCustom = styled(Typography)`

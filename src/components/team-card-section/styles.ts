@@ -14,6 +14,7 @@ export const BlurCircle = styled.div`
     transparent 100%
   );
   z-index: -1;
+  opacity: 0.6;
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.4s ease;
@@ -64,6 +65,7 @@ export const Container = styled.div`
     &:hover ${BlurCircle} {
       width: 1800px;
       height: 1200px;
+      opacity: 1;
     }
 
     &:hover ${GridContainer} {
@@ -75,5 +77,9 @@ export const Container = styled.div`
     &:hover ${BottomRow} > :nth-child(3) {
       transform: translateX(170px);
     }
+  }
+
+  @media (max-width: 760px) {
+    display: none;
   }
 `;

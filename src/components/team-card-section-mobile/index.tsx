@@ -1,30 +1,38 @@
 import React from "react";
-import {
-  AvatarContainer,
-  BottomContainer,
-  Container,
-  InfoContainer,
-  InnerContainer,
-  TopContainer,
-  TypographyCustom,
-} from "./styles";
-import Typography from "../typography";
-import Image from "next/image";
+import { Container, ContainerInner } from "./styles";
+
+import TeamCardMobile from "../team-card-mobile";
 
 const TeamCardSectionMobile = () => {
   return (
     <Container>
-      <InnerContainer>
-        <InfoContainer>
-          <TypographyCustom variant="title2">NICOLÁS CASTILLO</TypographyCustom>
-          <Typography variant="title3">Desarrollador Fullstack</Typography>
-        </InfoContainer>
-        <TopContainer />
-        <BottomContainer />
-      </InnerContainer>
-      <AvatarContainer>
-        <Image src="/nicolas.svg" width={185} height={185} alt="" />
-      </AvatarContainer>
+      <ContainerInner />
+      <TeamCardMobile
+        name="NICOLÁS CASTILLO"
+        profession="Desarrollador Fullstack"
+        avatar="/nicolas.svg"
+      />
+      <TeamCardMobile
+        name="ABRAHAM VIDAL"
+        profession="Desarrollador Fullstack"
+        avatar="/abraham.svg"
+      />
+      <TeamCardMobile
+        name="BRYAN MONTÉS"
+        profession="Desarrollador Fullstack"
+        avatar="/bryan.svg"
+      />
+
+      <TeamCardMobile
+        name="MATÍAS PADILLA"
+        profession="Ingeniero Comercial"
+        avatar="/matias.svg"
+      />
+      <TeamCardMobile
+        name="MACARENA TECAS"
+        profession="Diseñadora Gráfica"
+        avatar="/maca.svg"
+      />
     </Container>
   );
 };
