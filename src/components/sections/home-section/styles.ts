@@ -10,6 +10,7 @@ export const Container = styled.div`
   position: relative;
   z-index: -1;
   padding: 9rem 0 50rem 0;
+
   @media (max-width: 1250px) {
     padding-top: 7rem;
   }
@@ -24,19 +25,22 @@ export const Background = styled.div`
   left: 0;
 `;
 
-export const ContainerInner = styled.div`
+export const InnerContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
   gap: 80px;
   align-items: center;
   z-index: 2;
+
   @media (max-width: 1024px) {
     justify-content: start;
   }
+
   @media (max-width: 850px) {
     gap: 10px;
   }
+
   @media (max-width: 760px) {
     flex-direction: column;
     align-items: center;
@@ -44,11 +48,12 @@ export const ContainerInner = styled.div`
   }
 `;
 
-export const ContainerLeft = styled.div`
+export const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
+
   @media (max-width: 760px) {
     order: 2;
   }
@@ -70,18 +75,22 @@ export const TitleContainer = styled.div`
     width: 483px;
     padding: 0 70px;
   }
+
   @media (max-width: 490px) {
     width: 100%;
     padding: 0 20px;
   }
 `;
+
 export const TypographyTitleCustom = styled(Typography)`
+  padding-top: 5px;
+
   @media (max-width: 490px) {
     max-width: 375px;
   }
 `;
 
-export const ContainerRight = styled.div`
+export const RightContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,11 +105,13 @@ export const TypographyCustom = styled(Typography)`
   margin-left: -130px;
 
   @media (max-width: 1250px) {
-    margin-left: 40px;
+    margin-left: -40px;
+    max-width: 300px;
   }
 
   @media (max-width: 490px) {
-    margin: 0 16px;
+    margin-left: 20px;
+    align-self: start;
   }
 `;
 

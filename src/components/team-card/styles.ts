@@ -2,7 +2,13 @@ import { theme } from "@/helpers/theme";
 import styled from "styled-components";
 import Typography from "../typography";
 
-export const Container = styled.div`
+export const CardShadow = styled.div`
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.5));
+`;
+
+export const CardContainer = styled.div`
   width: 262px;
   height: 466px;
   background: linear-gradient(to bottom, ${theme.background} 0%, #21319b 100%);
@@ -48,6 +54,7 @@ export const TopContainer = styled.div`
   background-color: ${theme.tertiary};
   height: 22px;
   opacity: 0.6;
+
   @media (max-width: 1250px) {
     height: 19px;
   }
@@ -57,6 +64,7 @@ export const BottomContainer = styled.div`
   background-color: ${theme.tertiary};
   height: 10px;
   opacity: 0.3;
+
   @media (max-width: 1250px) {
     height: 8px;
   }
@@ -79,6 +87,7 @@ export const AvatarContainer = styled.div`
   overflow: hidden;
   transform: translateX(-50%);
   box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.5);
+
   img {
     width: 186px;
     height: 186px;

@@ -2,7 +2,8 @@ import React from "react";
 import {
   AvatarContainer,
   BottomContainer,
-  Container,
+  CardContainer,
+  CardShadow,
   InfoContainer,
   InnerContainer,
   TopContainer,
@@ -19,19 +20,21 @@ interface TeamCardProps {
 
 const TeamCard = ({ name, profession, avatar }: TeamCardProps) => {
   return (
-    <Container>
-      <InnerContainer>
-        <InfoContainer>
-          <TypographyCustom variant="title2">{name}</TypographyCustom>
-          <Typography variant="title3">{profession}</Typography>
-        </InfoContainer>
-        <TopContainer />
-        <BottomContainer />
-      </InnerContainer>
-      <AvatarContainer>
-        <Image src={avatar} width={185} height={185} alt="" />
-      </AvatarContainer>
-    </Container>
+    <CardShadow>
+      <CardContainer>
+        <InnerContainer>
+          <InfoContainer>
+            <TypographyCustom variant="title2">{name}</TypographyCustom>
+            <Typography variant="title3">{profession}</Typography>
+          </InfoContainer>
+          <TopContainer />
+          <BottomContainer />
+        </InnerContainer>
+        <AvatarContainer>
+          <Image src={avatar} width={185} height={185} alt="" />
+        </AvatarContainer>
+      </CardContainer>
+    </CardShadow>
   );
 };
 

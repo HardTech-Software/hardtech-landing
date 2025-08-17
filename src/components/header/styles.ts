@@ -19,8 +19,9 @@ export const HeaderContainer = styled.div`
   }
 `;
 
-export const ContainerLeft = styled.div`
+export const LeftContainer = styled.div`
   display: flex;
+
   @media (max-width: 1250px) {
     justify-content: space-between;
     width: 100%;
@@ -37,12 +38,13 @@ export const MenuIcon = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+
   @media (min-width: 1251px) {
     display: none;
   }
 `;
 
-export const ContainerRight = styled.div`
+export const RightContainer = styled.div`
   display: flex;
   align-items: center;
 `;
@@ -51,6 +53,7 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   margin-left: 1rem;
+
   @media (max-width: 1250px) {
     display: none;
   }
@@ -66,10 +69,11 @@ export const Item = styled.div`
   }
 `;
 
-export const ContainerButton = styled.div`
+export const ButtonContainer = styled.div`
   height: 34px;
   width: 160px;
   margin-left: 30px;
+
   @media (max-width: 1250px) {
     display: none;
   }

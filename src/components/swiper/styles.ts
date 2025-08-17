@@ -16,6 +16,7 @@ export const SwiperSlideCustom = styled(SwiperSlide)`
   display: flex;
   background-color: transparent;
   height: 325px;
+
   @media (max-width: 760px) {
     height: 300px;
   }

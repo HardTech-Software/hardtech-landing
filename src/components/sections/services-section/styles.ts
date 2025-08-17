@@ -10,8 +10,12 @@ export const Container = styled.div`
   align-items: center;
   min-height: 75vh;
   gap: 300px;
+
   @media (max-width: 1350px) {
+    padding-top: 7rem;
+  }
+
+  @media (max-width: 1024px) {
     gap: 150px;
-    padding-top: 6rem;
   }
 `;

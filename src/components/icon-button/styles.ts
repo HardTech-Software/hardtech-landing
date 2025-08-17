@@ -7,7 +7,6 @@ export const Container = styled.button`
   width: 152px;
   height: 44px;
   display: flex;
-
   padding: 0;
   margin: 0;
   border-radius: 3px;

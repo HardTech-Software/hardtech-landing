@@ -5,17 +5,15 @@ import {
   DescriptionTextInput,
   InnerContainer,
   LeftContainer,
+  LogoContainer,
   RightContainer,
   TextInput,
   TitleContainer,
   TypographyCustom,
   TypographyCustomLeftContainer,
 } from "./styles";
-import BackgroundSVG from "@/components/background-svg";
-import Title from "@/components/title";
-import Icon from "@/components/icon";
 import { theme } from "@/helpers/theme";
-import Button from "@/components/button";
+import { BackgroundSVG, Button, Icon, Title } from "@/components";
 
 interface ContactSectionProps {
   id: string;
@@ -36,7 +34,9 @@ const ContactSection = ({ id }: ContactSectionProps) => {
           >
             ¿Tienes un proyecto en mente? <b>¡Contáctanos!</b>
           </TypographyCustomLeftContainer>
-          <Icon name="contact-logo" />
+          <LogoContainer>
+            <Icon name="contact-logo" width="100%" height="100%" />
+          </LogoContainer>
         </LeftContainer>
         <RightContainer>
           <TypographyCustom variant="title4" color={theme.primary}>

@@ -11,4 +11,9 @@ export const Container = styled.div`
   min-height: 75vh;
   gap: 100px;
   overflow: hidden;
+  z-index: 2;
+
+  @media (max-width: 1350px) {
+    padding-top: 7rem;
+  }
 `;

@@ -1,23 +1,20 @@
 import React from "react";
 import {
-  ContainerButton,
-  ContainerLeft,
-  ContainerRight,
+  ButtonContainer,
   HeaderContainer,
   Item,
+  LeftContainer,
   LogoIcon,
   MenuIcon,
   Nav,
   Overlay,
+  RightContainer,
   SidebarContainer,
 } from "./styles";
-import Typography from "../typography";
-import Icon from "../icon";
 import useToggle from "@/hooks/use-toggle";
-import Sidebar from "../sidebar";
 import { navItemsHeader, scrollToSection } from "@/utils/constants/nav-items";
-import Button from "../button";
 import { theme } from "@/helpers/theme";
+import { Button, Icon, Sidebar, Typography } from "..";
 
 const Header = () => {
   const { OpenSidebar, isSidebarOpen, CloseSidebar } = useToggle();
@@ -25,15 +22,15 @@ const Header = () => {
   return (
     <>
       <HeaderContainer>
-        <ContainerLeft>
+        <LeftContainer>
           <LogoIcon onClick={() => scrollToSection("home-section")}>
             <Icon name="logo" />
           </LogoIcon>
           <MenuIcon onClick={OpenSidebar}>
             <Icon name="menu" />
           </MenuIcon>
-        </ContainerLeft>
-        <ContainerRight>
+        </LeftContainer>
+        <RightContainer>
           <Nav>
             {navItemsHeader.map((item, index) => (
               <Item key={index} onClick={() => scrollToSection(item.sectionId)}>
@@ -43,14 +40,14 @@ const Header = () => {
               </Item>
             ))}
           </Nav>
-          <ContainerButton>
+          <ButtonContainer>
             <Button
               title="CONTÁCTANOS"
               variant="secondary"
               onClick={() => scrollToSection("contact-section")}
             />
-          </ContainerButton>
-        </ContainerRight>
+          </ButtonContainer>
+        </RightContainer>
       </HeaderContainer>
 
       <SidebarContainer $isOpen={isSidebarOpen}>

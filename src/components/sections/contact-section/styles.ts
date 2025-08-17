@@ -11,6 +11,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 140px;
+  z-index: 2;
+
+  @media (max-width: 1350px) {
+    padding-top: 7rem;
+  }
 
   @media (max-width: 760px) {
     gap: 66px;
@@ -29,6 +34,10 @@ export const InnerContainer = styled.div`
   justify-content: center;
   gap: 80px;
 
+  @media (max-width: 1024px) {
+    gap: 68px;
+  }
+
   @media (max-width: 760px) {
     flex-direction: column;
     gap: 37px;
@@ -40,6 +49,7 @@ export const LeftContainer = styled.div`
   align-items: center;
   gap: 50px;
   text-align: center;
+  justify-content: center;
 `;
 
 export const TypographyCustomLeftContainer = styled(Typography)`
@@ -48,6 +58,15 @@ export const TypographyCustomLeftContainer = styled(Typography)`
     order: 2;
   }
 `;
+
+export const LogoContainer = styled.div`
+  width: 321px;
+
+  @media (max-width: 1024px) {
+    width: 219px;
+  }
+`;
+
 export const RightContainer = styled.div`
   background-color: ${theme.background};
   max-width: 562px;
@@ -60,7 +79,7 @@ export const RightContainer = styled.div`
 `;
 
 export const TypographyCustom = styled(Typography)`
-  padding: 10px 30px;
+  padding: 5px 30px;
   border-bottom: 2px solid ${theme.primary};
 `;
 

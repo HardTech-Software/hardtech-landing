@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import {
+  BottomContainer,
   ButtonContainer,
   ButtonInnerContainer,
   Container,
-  ContainerBottom,
   DownloadButtonContainer,
 } from "./styles";
-import Typography from "../typography";
-import Button from "../button";
-import IconButton from "../icon-button";
-import SwiperComponent from "../swiper";
 import { theme } from "@/helpers/theme";
+import { Button, IconButton, SwiperComponent, Typography } from "..";
 
 interface ProjectCardProps {
   title: string;
@@ -48,7 +45,7 @@ const ProjectCard = ({
   return (
     <Container>
       <SwiperComponent urlDesktop={urlDesktop} urlMobile={urlmobile} />
-      <ContainerBottom>
+      <BottomContainer>
         <Typography variant="h2" color={theme.white}>
           {title}
         </Typography>
@@ -65,7 +62,7 @@ const ProjectCard = ({
             </DownloadButtonContainer>
           )}
         </ButtonContainer>
-      </ContainerBottom>
+      </BottomContainer>
     </Container>
   );
 };

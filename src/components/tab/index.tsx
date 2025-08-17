@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, LogoContainer } from "./styles";
-
 import { projects } from "@/utils/constants/projects";
 import Icon, { IconName } from "../icon";
 
@@ -18,7 +17,7 @@ const Tab = ({ activeTab, onTabClick }: TabProps) => {
           onClick={() => onTabClick(index)}
           style={{ opacity: activeTab === index ? 1 : 0.4 }}
         >
-          <Icon name={item.logo as IconName} />
+          <Icon name={item.logo as IconName} width="100%" height="100%" />
         </LogoContainer>
       ))}
     </Container>

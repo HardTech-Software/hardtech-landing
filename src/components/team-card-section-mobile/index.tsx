@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, ContainerInner } from "./styles";
-
 import TeamCardMobile from "../team-card-mobile";
 
 const TeamCardSectionMobile = () => {

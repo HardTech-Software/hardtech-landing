@@ -9,6 +9,14 @@ export const Container = styled.div`
   gap: 60px;
   height: 75px;
   padding: 0 clamp(1rem, 10vw, 11rem);
+
+  @media (max-width: 1350px) {
+    height: 90px;
+  }
+
+  @media (max-width: 760px) {
+    height: 70px;
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -18,7 +26,7 @@ export const LogoContainer = styled.div`
     ${theme.background} 70%,
     transparent 100%
   );
-  padding: 0 35px 0 10px;
+  padding: 20px 35px 10px 10px;
   display: flex;
   align-items: center;
   cursor: pointer;

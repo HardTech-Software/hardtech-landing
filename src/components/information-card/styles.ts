@@ -8,7 +8,7 @@ interface InformationCardProps {
 export const Container = styled.div`
   margin-top: -180px;
 
-  @media (max-width: 1350px) {
+  @media (max-width: 1024px) {
     margin-top: 0px;
   }
 `;
@@ -22,18 +22,13 @@ export const InnerContainer = styled.div`
 
 export const TitleContainer = styled.div<InformationCardProps>`
   border-bottom: 4px solid ${theme.primary};
-  margin-left: ${({ $variant }) => ($variant === "right" ? "20%" : "0%")};
-  margin-right: ${({ $variant }) => ($variant === "right" ? "0%" : "20%")};
+  margin-left: ${({ $variant }) => ($variant === "right" ? "25%" : "0%")};
+  margin-right: ${({ $variant }) => ($variant === "right" ? "0%" : "25%")};
   text-align: ${({ $variant }) => ($variant === "right" ? "start" : "end")};
 
-  @media (max-width: 1350px) {
-    margin-left: ${({ $variant }) => ($variant === "right" ? "40%" : "0%")};
-    margin-right: ${({ $variant }) => ($variant === "right" ? "0%" : "40%")};
-  }
-
-  @media (max-width: 800px) {
-    margin-left: ${({ $variant }) => ($variant === "right" ? "50%" : "0")};
-    margin-right: ${({ $variant }) => ($variant === "right" ? "0" : "50%")};
+  @media (max-width: 1024px) {
+    margin-left: ${({ $variant }) => ($variant === "right" ? "50%" : "0%")};
+    margin-right: ${({ $variant }) => ($variant === "right" ? "0%" : "50%")};
   }
 `;
 
@@ -48,18 +43,11 @@ export const DescriptionContainer = styled.div<InformationCardProps>`
     $variant === "right"
       ? `linear-gradient(to left, ${theme.primary} 0%, ${theme.primary} 80%, transparent 100%)`
       : `linear-gradient(to right, ${theme.primary} 0%, ${theme.primary} 80%, transparent 100%)`};
-
   justify-content: ${({ $variant }) =>
     $variant === "right" ? "flex-start" : "flex-end"};
   text-align: ${({ $variant }) => ($variant === "right" ? "start" : "end")};
 
-  @media (max-width: 1350px) {
-    height: 103px;
-    padding-left: ${({ $variant }) => ($variant === "right" ? "40%" : "0")};
-    padding-right: ${({ $variant }) => ($variant === "right" ? "0" : "40%")};
-  }
-
-  @media (max-width: 800px) {
+  @media (max-width: 1024px) {
     height: 103px;
     padding-left: ${({ $variant }) => ($variant === "right" ? "50%" : "5%")};
     padding-right: ${({ $variant }) => ($variant === "right" ? "5%" : "50%")};
@@ -69,7 +57,7 @@ export const DescriptionContainer = styled.div<InformationCardProps>`
 export const ImageContainer = styled.div<InformationCardProps>`
   width: 163px;
   position: absolute;
-  bottom: 20px;
+  bottom: 16px;
   right: ${({ $variant }) => ($variant === "right" ? "" : "-40px")};
   left: ${({ $variant }) => ($variant === "right" ? "-40px" : "")};
 
@@ -78,17 +66,18 @@ export const ImageContainer = styled.div<InformationCardProps>`
     height: auto;
   }
 
-  @media (max-width: 1350px) {
+  @media (max-width: 1024px) {
     width: 140px;
     right: ${({ $variant }) => ($variant === "right" ? "" : "80px")};
     left: ${({ $variant }) => ($variant === "right" ? "80px" : "")};
+    bottom: 5px;
 
     svg {
       width: 140px;
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 760px) {
     right: ${({ $variant }) => ($variant === "right" ? "" : "20px")};
     left: ${({ $variant }) => ($variant === "right" ? "20px" : "")};
   }

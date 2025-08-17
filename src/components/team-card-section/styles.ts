@@ -18,6 +18,7 @@ export const BlurCircle = styled.div`
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.4s ease;
+
   @media (max-width: 1250px) {
     width: 973px;
     height: 723px;
@@ -61,6 +62,7 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+
   @media (min-width: 1250px) {
     &:hover ${BlurCircle} {
       width: 1800px;

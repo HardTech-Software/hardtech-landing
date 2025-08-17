@@ -1,12 +1,11 @@
 import React, { ReactNode, useEffect, useState } from "react";
 import Header from "../header";
 import { ContentContainer } from "./styles";
-import Footer from "../footer";
-import Typography from "../typography";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Footer, Typography } from "..";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);

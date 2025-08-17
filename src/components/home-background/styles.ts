@@ -19,7 +19,6 @@ export const BlurCircle1 = styled.div`
     transparent 60%,
     transparent 100%
   );
-
   z-index: 1;
   left: -600px;
   bottom: -500px;
@@ -36,7 +35,6 @@ export const BlurCircle2 = styled.div`
     transparent 60%,
     transparent 100%
   );
-
   z-index: 1;
   right: -500px;
   top: -600px;
@@ -56,13 +54,14 @@ export const BlurCircle3 = styled.div`
     transparent 60%,
     transparent 100%
   );
-
   z-index: 1;
   left: -900px;
   top: -300px;
+
   @media (max-width: 1024px) {
     left: -1000px;
   }
+
   @media (max-width: 760px) {
     display: none;
   }

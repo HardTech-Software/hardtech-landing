@@ -1,9 +1,7 @@
 import React from "react";
 import { Container } from "./styles";
-import BackgroundSVG from "@/components/background-svg";
-import Title from "@/components/title";
 import { ServicesSectionData } from "@/utils/constants/information-card";
-import InformationCardSection from "@/components/information-card-section";
+import { BackgroundSVG, InformationCardSection, Title } from "@/components";
 
 interface ServicesSectionProps {
   id: string;

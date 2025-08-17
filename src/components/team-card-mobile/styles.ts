@@ -56,6 +56,7 @@ export const AvatarContainer = styled.div`
   transform: translateX(-50%);
   overflow: hidden;
   box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.5);
+
   img {
     width: 206px;
     height: 206px;

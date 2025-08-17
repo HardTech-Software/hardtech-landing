@@ -41,7 +41,7 @@ const variantStyles = {
   h3: css`
     font-size: 25px;
     font-weight: 900;
-    @media (max-width: 1350px) {
+    @media (max-width: 1024px) {
       font-size: 16px;
     }
   `, //titulos div difuminados
@@ -56,7 +56,6 @@ const variantStyles = {
       font-size: 16px;
     }
   `, // titulos nombres
-
   title3: css`
     font-size: 14px;
     font-weight: 400;
@@ -68,11 +67,10 @@ const variantStyles = {
     font-size: 16px;
     font-weight: 900;
   `, // titulo correo
-
   description1: css`
     font-size: 20px;
     font-weight: 400;
-    @media (max-width: 1350px) {
+    @media (max-width: 1024px) {
       font-size: 14px;
     }
   `, // descripciones dentro de los div difuminados

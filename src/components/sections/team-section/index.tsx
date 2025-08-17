@@ -1,9 +1,11 @@
 import React from "react";
 import { Container } from "./styles";
-import BackgroundSVG from "@/components/background-svg";
-import Title from "@/components/title";
-import TeamCardSection from "@/components/team-card-section";
-import TeamCardSectionMobile from "@/components/team-card-section-mobile";
+import {
+  BackgroundSVG,
+  TeamCardSection,
+  TeamCardSectionMobile,
+  Title,
+} from "@/components";
 
 interface TeamSectionProps {
   id: string;

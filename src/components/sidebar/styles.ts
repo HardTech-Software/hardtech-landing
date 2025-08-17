@@ -27,6 +27,6 @@ export const Item = styled.div`
   transition: background-color 0.3s ease;
 `;
 
-export const ContainerButton = styled.div`
+export const ButtonContainer = styled.div`
   height: 34px;
 `;

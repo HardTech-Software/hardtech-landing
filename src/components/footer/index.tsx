@@ -1,17 +1,17 @@
 import React from "react";
 import {
+  CenterContainer,
   Container,
-  ContainerCenter,
-  ContainerRight,
   Email,
+  InnerContainer,
   LogoContainer,
+  RightContainer,
   TypographyCustom,
 } from "./styles";
-import Icon from "@/components/icon";
-import Typography from "@/components/typography";
 import { Constants } from "@/utils/constants/constants";
 import { scrollToSection } from "@/utils/constants/nav-items";
 import { theme } from "@/helpers/theme";
+import { Icon, Typography } from "..";
 
 const Footer = () => {
   return (
@@ -19,8 +19,7 @@ const Footer = () => {
       <LogoContainer onClick={() => scrollToSection("home-section")}>
         <Icon name="logo" width="154" height="170" />
       </LogoContainer>
-
-      <ContainerCenter>
+      <CenterContainer>
         <Typography variant="description2" color={theme.white}>
           CONTACTO
         </Typography>
@@ -29,18 +28,18 @@ const Footer = () => {
             {Constants.email}
           </TypographyCustom>
         </Email>
-      </ContainerCenter>
-      <ContainerRight>
+      </CenterContainer>
+      <RightContainer>
         <Icon name="instagram" />
-        <div>
+        <InnerContainer>
           <Typography variant="description2" color={theme.white}>
             SIGUENOS
           </Typography>
           <Typography variant="description2" color={theme.white}>
             {Constants.instagram}
           </Typography>
-        </div>
-      </ContainerRight>
+        </InnerContainer>
+      </RightContainer>
     </Container>
   );
 };
