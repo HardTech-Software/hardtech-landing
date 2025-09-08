@@ -11,7 +11,12 @@ interface ButtonProps {
 const Button = ({ title, variant = "primary", onClick }: ButtonProps) => {
   return (
     <ButtonContainer $variant={variant} onClick={onClick}>
-      <Typography variant="title">{title}</Typography>
+      <Typography
+        variant="title1"
+        color={variant === "secondary" ? "#1d1d1d" : "white"}
+      >
+        {title}
+      </Typography>
     </ButtonContainer>
   );
 };

@@ -1,4 +1,4 @@
-export const headerHeight = 80;
+export const headerHeight = 0;
 
 export const scrollToSection = (sectionId: string) => {
   const section = document.getElementById(sectionId);
@@ -13,12 +13,17 @@ export const scrollToSection = (sectionId: string) => {
 
 export const navItemsSidebar = [
   { label: "HOME", sectionId: "home-section" },
+  { label: "QUE OFRECEMOS", sectionId: "services-section" },
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },
-  { label: "Q&A", sectionId: "question-answer-section" },
-  { label: "CONTACTO", sectionId: "footer-section" },
+  { label: "NUESTRO EQUIPO", sectionId: "team-section" },
+  { label: "NUESTRA VISIÓN & MISIÓN", sectionId: "mission-section" },
+  { label: "CONTÁCTATE CON NOSOTROS", sectionId: "contact-section" },
 ];
+
 export const navItemsHeader = [
   { label: "HOME", sectionId: "home-section" },
+  { label: "QUE OFRECEMOS", sectionId: "services-section" },
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },
-  { label: "Q&A", sectionId: "question-answer-section" },
+  { label: "NUESTRO EQUIPO", sectionId: "team-section" },
+  { label: "VISIÓN & MISIÓN", sectionId: "mission-section" },
 ];

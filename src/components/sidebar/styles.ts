@@ -2,10 +2,10 @@ import { theme } from "@/helpers/theme";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 233px;
+  width: 188px;
   background-color: ${theme.secondary};
   position: absolute;
-  padding: 0 27px;
+  padding: 17px;
   border-bottom-left-radius: 30px;
   box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.3);
 `;
@@ -21,15 +21,12 @@ export const Nav = styled.nav`
 `;
 
 export const Item = styled.div`
-  padding: 40px;
+  padding-bottom: 36px;
   cursor: pointer;
   width: 100%;
-  text-align: center;
-  border-bottom: 1px solid ${theme.white};
-
   transition: background-color 0.3s ease;
+`;
 
-  &:last-child {
-    border-bottom: none;
-  }
+export const ButtonContainer = styled.div`
+  height: 34px;
 `;

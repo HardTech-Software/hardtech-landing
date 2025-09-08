@@ -1,14 +1,17 @@
 import React from "react";
 import {
+  Background,
   Container,
-  ContainerInner,
-  ContainerLeft,
-  ContainerRight,
+  InnerContainer,
+  LeftContainer,
   LogoHomeWrapper,
+  RightContainer,
+  TitleContainer,
   TypographyCustom,
+  TypographyTitleCustom,
 } from "./styles";
-import Typography from "@/components/typography";
-import { LogoHomeIcon } from "@/components/icons";
+import { theme } from "@/helpers/theme";
+import { HomeBackground, Icon } from "@/components";
 
 interface HomeSectionProps {
   id: string;
@@ -16,22 +19,27 @@ interface HomeSectionProps {
 const HomeSection = ({ id }: HomeSectionProps) => {
   return (
     <Container id={id}>
-      <ContainerInner>
-        <ContainerLeft>
-          <Typography variant="h1">Creando un</Typography>
-          <Typography variant="h2">impacto positivo</Typography>
-          <Typography variant="h1">una app a la vez.</Typography>
-          <TypographyCustom variant="description2">
-            En HardTech, creamos aplicaciones que transforman la sociedad con
-            tecnología y diseño inteligente.
+      <Background>
+        <HomeBackground />
+      </Background>
+      <InnerContainer>
+        <LeftContainer>
+          <TitleContainer>
+            <TypographyTitleCustom variant="h1" color={theme.background}>
+              Apps y sitios web con impacto real.
+            </TypographyTitleCustom>
+          </TitleContainer>
+
+          <TypographyCustom variant="description2" color={theme.white}>
+            En Hardtech trabajamos con diseño atractivo y desarrollo sólido.
           </TypographyCustom>
-        </ContainerLeft>
-        <ContainerRight>
+        </LeftContainer>
+        <RightContainer>
           <LogoHomeWrapper>
-            <LogoHomeIcon />
+            <Icon name="home-logo" />
           </LogoHomeWrapper>
-        </ContainerRight>
-      </ContainerInner>
+        </RightContainer>
+      </InnerContainer>
     </Container>
   );
 };

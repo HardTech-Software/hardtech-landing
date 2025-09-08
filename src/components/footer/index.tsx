@@ -1,41 +1,45 @@
 import React from "react";
 import {
+  CenterContainer,
   Container,
-  ContainerCenter,
-  ContainerRight,
   Email,
+  InnerContainer,
   LogoContainer,
+  RightContainer,
   TypographyCustom,
 } from "./styles";
-import Icon from "@/components/icon";
-import Typography from "@/components/typography";
 import { Constants } from "@/utils/constants/constants";
 import { scrollToSection } from "@/utils/constants/nav-items";
+import { theme } from "@/helpers/theme";
+import { Icon, Typography } from "..";
 
-interface FooterProps {
-  id: string;
-}
-
-const Footer = ({ id }: FooterProps) => {
+const Footer = () => {
   return (
-    <Container id={id}>
+    <Container>
       <LogoContainer onClick={() => scrollToSection("home-section")}>
         <Icon name="logo" width="154" height="170" />
       </LogoContainer>
-
-      <ContainerCenter>
-        <Typography>CONTACTO</Typography>
+      <CenterContainer>
+        <Typography variant="description2" color={theme.white}>
+          CONTACTO
+        </Typography>
         <Email href={`mailto:${Constants.email}`}>
-          <TypographyCustom>{Constants.email}</TypographyCustom>
+          <TypographyCustom variant="description2" color={theme.white}>
+            {Constants.email}
+          </TypographyCustom>
         </Email>
-      </ContainerCenter>
-      <ContainerRight>
+      </CenterContainer>
+      <RightContainer>
         <Icon name="instagram" />
-        <div>
-          <Typography>SIGUENOS</Typography>
-          <Typography>{Constants.instagram}</Typography>
-        </div>
-      </ContainerRight>
+        <InnerContainer>
+          <Typography variant="description2" color={theme.white}>
+            SIGUENOS
+          </Typography>
+          <Typography variant="description2" color={theme.white}>
+            {Constants.instagram}
+          </Typography>
+        </InnerContainer>
+      </RightContainer>
     </Container>
   );
 };

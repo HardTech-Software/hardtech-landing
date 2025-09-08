@@ -1,44 +1,29 @@
-import React from "react";
-import {
-  Container,
-  ContainerInner,
-  TypographyContainer,
-  TypographyCustomWrapper,
-  TypographyPrimary,
-  TypographySecondary,
-} from "./styles";
-import ProjectCard from "@/components/project-card";
+import React, { useState } from "react";
+import { Container, InnerContainer } from "./styles";
 import { projects } from "@/utils/constants/projects";
-import BackgroundSVG from "@/components/background-svg";
+import { BackgroundSVG, ProjectCard, Tab, Title } from "@/components";
 
 interface ProjectsSectionProps {
   id: string;
 }
 
 const ProjectsSection = ({ id }: ProjectsSectionProps) => {
+  const [activeTab, setActivTab] = useState(0);
+  const activeProject = projects[activeTab];
   return (
     <Container id={id}>
       <BackgroundSVG />
-      <ContainerInner>
-        <TypographyContainer>
-          <TypographyPrimary variant="h2">Nuestros Proyectos</TypographyPrimary>
-        </TypographyContainer>
-
-        <TypographyCustomWrapper>
-          <TypographySecondary variant="h2">Nuestros</TypographySecondary>
-          <TypographySecondary variant="h2">Proyectos</TypographySecondary>
-        </TypographyCustomWrapper>
-
-        {projects.map((item, index) => (
-          <ProjectCard
-            key={index}
-            urlDesktop={item.urlDesktop}
-            urlmobile={item.urlMobile}
-            title={item.title}
-            description={item.description}
-          />
-        ))}
-      </ContainerInner>
+      <InnerContainer>
+        <Title title="Nuestros proyectos" />
+        <Tab activeTab={activeTab} onTabClick={setActivTab} />
+        <ProjectCard
+          key={activeTab}
+          urlDesktop={activeProject.urlDesktop}
+          urlmobile={activeProject.urlMobile}
+          title={activeProject.title}
+          description={activeProject.description}
+        />
+      </InnerContainer>
     </Container>
   );
 };

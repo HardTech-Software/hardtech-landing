@@ -14,18 +14,20 @@ export const HeaderContainer = styled.div`
   top: 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1250px) {
     padding: 0 30px;
   }
 `;
 
-export const ContainerLeft = styled.div`
+export const LeftContainer = styled.div`
   display: flex;
-  width: 100%;
-  @media (max-width: 760px) {
+
+  @media (max-width: 1250px) {
     justify-content: space-between;
+    width: 100%;
   }
 `;
+
 export const LogoIcon = styled.button`
   background-color: transparent;
   border: none;
@@ -36,15 +38,23 @@ export const MenuIcon = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  @media (min-width: 760px) {
+
+  @media (min-width: 1251px) {
     display: none;
   }
 `;
+
+export const RightContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
   margin-left: 1rem;
-  @media (max-width: 760px) {
+
+  @media (max-width: 1250px) {
     display: none;
   }
 `;
@@ -59,11 +69,16 @@ export const Item = styled.div`
   }
 `;
 
-export const ContainerButton = styled.div`
-  @media (max-width: 760px) {
+export const ButtonContainer = styled.div`
+  height: 34px;
+  width: 160px;
+  margin-left: 30px;
+
+  @media (max-width: 1250px) {
     display: none;
   }
 `;
+
 export const Overlay = styled.div`
   background-color: transparent;
   position: fixed;
@@ -77,6 +92,7 @@ export const Overlay = styled.div`
 export const SidebarContainer = styled.div<{ $isOpen: boolean }>`
   position: fixed;
   z-index: 5;
-  right: ${(props) => (props.$isOpen ? "233px" : "0px")};
+  right: ${(props) => (props.$isOpen ? "188px" : "0px")};
   transition: right 0.3s ease-in-out;
+  top: 5rem;
 `;

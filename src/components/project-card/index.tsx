@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import {
+  BottomContainer,
   ButtonContainer,
+  ButtonInnerContainer,
   Container,
-  ContainerBottom,
   DownloadButtonContainer,
 } from "./styles";
-import Typography from "../typography";
-import Button from "../button";
-import IconButton from "../icon-button";
-import SwiperComponent from "../swiper";
+import { theme } from "@/helpers/theme";
+import { Button, IconButton, SwiperComponent, Typography } from "..";
 
 interface ProjectCardProps {
   title: string;
@@ -46,18 +45,24 @@ const ProjectCard = ({
   return (
     <Container>
       <SwiperComponent urlDesktop={urlDesktop} urlMobile={urlmobile} />
-      <ContainerBottom>
-        <Typography variant="h3">{title}</Typography>
-        <Typography variant="description1">{description}</Typography>
+      <BottomContainer>
+        <Typography variant="h2" color={theme.white}>
+          {title}
+        </Typography>
+        <Typography variant="description2" color={theme.white}>
+          {description}
+        </Typography>
         <ButtonContainer>
-          <Button title="IR A LA PÁGINA WEB" />
+          <ButtonInnerContainer>
+            <Button variant="secondary" title="IR A LA PÁGINA WEB" />
+          </ButtonInnerContainer>
           {store && (
             <DownloadButtonContainer>
               <IconButton url={store} />
             </DownloadButtonContainer>
           )}
         </ButtonContainer>
-      </ContainerBottom>
+      </BottomContainer>
     </Container>
   );
 };

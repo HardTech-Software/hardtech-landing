@@ -1,4 +1,5 @@
 import Typography from "@/components/typography";
+import { theme } from "@/helpers/theme";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -6,65 +7,122 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   min-height: 75vh;
-  padding: 6rem clamp(1rem, 5vw, 10rem);
+  position: relative;
+  z-index: -1;
+  padding: 9rem 0 50rem 0;
 
-
-  @media (max-width: 1024px) {
-    padding: 4rem clamp(4rem, 5vw, 10rem);
+  @media (max-width: 1250px) {
+    padding-top: 7rem;
   }
-
-  @media (max-width: 760px) {
-    padding: 4rem clamp(1rem, 5vw, 10rem);
-  
 `;
 
-export const ContainerInner = styled.div`
+export const Background = styled.div`
+  height: 1200px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+`;
+
+export const InnerContainer = styled.div`
   display: flex;
-  max-width: 840px;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 80px;
   align-items: center;
+  z-index: 2;
+
+  @media (max-width: 1024px) {
+    justify-content: start;
+  }
+
+  @media (max-width: 850px) {
+    gap: 10px;
+  }
+
   @media (max-width: 760px) {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
   }
 `;
 
-export const ContainerLeft = styled.div`
-  max-width: 445px;
+export const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 15px;
 
   @media (max-width: 760px) {
     order: 2;
   }
-  @media (max-width: 1023px) {
-    max-width: 320px;
+`;
+
+export const TitleContainer = styled.div`
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    ${theme.primary} 20%,
+    ${theme.primary} 80%,
+    transparent 100%
+  );
+
+  padding: 0 0 0 70px;
+  max-width: 650px;
+
+  @media (max-width: 1250px) {
+    width: 483px;
+    padding: 0 70px;
+  }
+
+  @media (max-width: 490px) {
+    width: 100%;
+    padding: 0 20px;
   }
 `;
 
-export const ContainerRight = styled.div`
+export const TypographyTitleCustom = styled(Typography)`
+  padding-top: 5px;
+
+  @media (max-width: 490px) {
+    max-width: 375px;
+  }
+`;
+
+export const RightContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   @media (max-width: 760px) {
-    margin-bottom: 32px;
     order: 1;
   }
 `;
 
 export const TypographyCustom = styled(Typography)`
-  margin-top: 30px;
+  max-width: 383px;
+  margin-left: -130px;
 
-  @media (max-width: 1024px) {
-    margin-top: 22px;
+  @media (max-width: 1250px) {
+    margin-left: -40px;
+    max-width: 300px;
+  }
+
+  @media (max-width: 490px) {
+    margin-left: 20px;
+    align-self: start;
   }
 `;
 
 export const LogoHomeWrapper = styled.div`
-  width: 226px;
-  height: 346px;
+  width: 275px;
+  height: 437px;
 
+  @media (max-width: 1250px) {
+    width: 215px;
+    height: 342px;
+  }
   @media (max-width: 760px) {
     width: 198px;
     height: 303px;

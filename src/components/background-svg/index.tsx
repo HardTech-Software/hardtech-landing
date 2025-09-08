@@ -13,11 +13,12 @@ const BackgroundSVG = () => {
     >
       <defs>
         <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="10%" stopColor="#253392" />
+          <stop offset="10%" stopColor="#1427A4" />
+          <stop offset="70%" stopColor={theme.background} />
           <stop offset="100%" stopColor={theme.background} />
         </linearGradient>
       </defs>
-      <path d="M0 450 L720 0 L1440 450 Z" fill="url(#gradient)" />
+      <path d="M0 320 L720 0 L1440 320 Z" fill="url(#gradient)" />
     </svg>
   );
 };

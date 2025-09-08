@@ -3,15 +3,19 @@ import Typography from "../typography";
 import { theme } from "@/helpers/theme";
 
 export const Container = styled.div`
-  background: linear-gradient(rgba(36, 65, 255, 0.3) 0%, transparent 100%);
+  background: linear-gradient(
+    rgba(18, 34, 133, 0.2) 0%,
+    transparent 70%,
+    transparent 100%
+  );
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-  padding: 5rem clamp(1rem, 5vw, 10rem);
+  padding: 5rem clamp(1rem, 10vw, 10rem);
   position: absolute;
   width: 100%;
   z-index: -1;
+
   @media (max-width: 760px) {
     flex-direction: column;
   }
@@ -23,14 +27,17 @@ export const LogoContainer = styled.button`
   cursor: pointer;
 `;
 
-export const ContainerCenter = styled.div`
+export const CenterContainer = styled.div`
   margin: 40px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  @media (max-width: 760px) {
+    align-items: center;
+  }
 `;
 
-export const ContainerRight = styled.button`
+export const RightContainer = styled.button`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -39,9 +46,13 @@ export const ContainerRight = styled.button`
   cursor: pointer;
 `;
 
+export const InnerContainer = styled.div``;
+
 export const TypographyCustom = styled(Typography)`
   padding: 4px;
+  margin-left: -4px;
   transition: background-color 0.3s ease;
+
   &:hover {
     background-color: ${theme.secondary};
   }
