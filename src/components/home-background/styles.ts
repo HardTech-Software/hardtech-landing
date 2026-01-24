@@ -10,29 +10,30 @@ export const Container = styled.div`
 
 export const BlurCircle1 = styled.div`
   position: absolute;
-  width: 1400px;
-  height: 1400px;
+  width: 1600px;
+  height: 1600px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    ${theme.primary} 0%,
-    transparent 60%,
+    ${theme.secondary} 0%,
+    transparent 70%,
     transparent 100%
   );
   z-index: 1;
   left: -600px;
   bottom: -500px;
+
 `;
 
 export const BlurCircle2 = styled.div`
   position: absolute;
-  width: 1400px;
-  height: 1400px;
+  width: 1380px;
+  height: 1480px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    ${theme.secondary} 0%,
-    transparent 60%,
+    ${theme.secondary} -25%,
+    transparent 70%,
     transparent 100%
   );
   z-index: 1;
@@ -40,29 +41,6 @@ export const BlurCircle2 = styled.div`
   top: -600px;
 
   @media (max-width: 1024px) {
-    right: -800px;
-  }
-`;
-export const BlurCircle3 = styled.div`
-  position: absolute;
-  width: 1400px;
-  height: 1400px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    ${theme.primary} 0%,
-    transparent 60%,
-    transparent 100%
-  );
-  z-index: 1;
-  left: -900px;
-  top: -300px;
-
-  @media (max-width: 1024px) {
-    left: -1000px;
-  }
-
-  @media (max-width: 760px) {
-    display: none;
+    right: -900px;
   }
 `;

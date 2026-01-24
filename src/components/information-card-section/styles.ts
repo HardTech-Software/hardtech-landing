@@ -16,26 +16,15 @@ export const GridContainer = styled.div`
 `;
 
 export const Row = styled.div<RowProps>`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
 
-  @media (max-width: 1024px) {
-    grid-template-columns: ${({ $index }) =>
-      $index % 2 === 0 ? "1fr 11fr" : "11fr 1fr"};
-  }
-
-  @media (max-width: 760px) {
-    grid-template-columns: 1fr;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 60px;
   }
 `;
 
-export const EmptySpace = styled.div`
-  width: 100%;
-  height: 100%;
-
-  @media (max-width: 760px) {
-    display: none;
-  }
-`;

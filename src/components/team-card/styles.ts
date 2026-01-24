@@ -1,105 +1,77 @@
 import { theme } from "@/helpers/theme";
 import styled from "styled-components";
-import Typography from "../typography";
 
 export const CardShadow = styled.div`
   position: relative;
-  z-index: 1;
-  filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.5));
+  display: inline-block;
+
+  filter: drop-shadow(0 0px 15px rgba(254, 113, 244, 0));
+  transition: all 0.4s ease-in-out;
+
+  &.active,
+  &:hover {
+    filter: drop-shadow(0 0px 35px rgba(254, 113, 244, 0.35));
+  }
+
+  /*@media (hover: hover) and (pointer: fine) {
+    &.active {
+      filter: drop-shadow(0 0px 15px rgba(254, 113, 244, 0));
+      transform: none;
+    }
+  }*/
+
 `;
 
 export const CardContainer = styled.div`
-  width: 262px;
-  height: 466px;
+  width: 190px;
+  height: 338px;
   background: linear-gradient(to bottom, ${theme.background} 0%, #21319b 100%);
-  position: relative;
   clip-path: polygon(50% 0%, 100% 17%, 100% 83%, 50% 100%, 0% 83%, 0% 17%);
-
-  @media (max-width: 1250px) {
-    width: 218px;
-    height: 388px;
-  }
+  position: relative;
+  z-index: 2;
 `;
 
 export const InnerContainer = styled.div`
-  display: flex;
+  z-index: 3;
   flex-direction: column;
   gap: 10px;
   width: 100%;
   position: absolute;
   bottom: 80px;
-
-  @media (max-width: 1250px) {
-    bottom: 67px;
-    gap: 8px;
-  }
+  gap: 10px;
 `;
 
 export const InfoContainer = styled.div`
-  background-color: ${theme.tertiary};
-  height: 114px;
+  height: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 7px;
   text-align: center;
-
-  @media (max-width: 1250px) {
-    height: 95px;
-  }
-`;
-
-export const TopContainer = styled.div`
-  background-color: ${theme.tertiary};
-  height: 22px;
-  opacity: 0.6;
-
-  @media (max-width: 1250px) {
-    height: 19px;
-  }
-`;
-
-export const BottomContainer = styled.div`
-  background-color: ${theme.tertiary};
-  height: 10px;
-  opacity: 0.3;
-
-  @media (max-width: 1250px) {
-    height: 8px;
-  }
-`;
-
-export const TypographyCustom = styled(Typography)`
-  border-bottom: 2px solid ${theme.background};
-  padding: 7px;
-  width: 162px;
-  margin-top: 25px;
 `;
 
 export const AvatarContainer = styled.div`
-  width: 186px;
   height: 186px;
-  border-radius: 50%;
-  position: absolute;
-  top: 70px;
-  left: 50%;
-  overflow: hidden;
-  transform: translateX(-50%);
-  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center; 
+  
+`;
 
-  img {
-    width: 186px;
-    height: 186px;
-  }
-
-  @media (max-width: 1250px) {
-    width: 155px;
-    height: 155px;
-    top: 60px;
-    img {
-      width: 155px;
-      height: 155px;
-    }
+  export const TextTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  
+  margin-top: -30px;
+  &::after {
+    content: "";
+    width: 104px;
+    height: 2px;
+    background: #fE71F4;
+    margin: 4px auto 0;
   }
 `;

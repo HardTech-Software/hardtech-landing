@@ -1,5 +1,5 @@
-import { theme } from "@/helpers/theme";
 import styled from "styled-components";
+import { theme } from "@/helpers/theme";
 
 export const Container = styled.div`
   background: linear-gradient(
@@ -14,8 +14,6 @@ export const Container = styled.div`
   justify-content: center;
   padding: 66px clamp(1rem, 5vw, 7rem) 55rem;
   gap: 100px;
-  z-index: 1;
-
   @media (max-width: 1350px) {
     flex-direction: column;
     gap: 30px;
@@ -27,28 +25,39 @@ export const BottomContainer = styled.div`
   flex-direction: column;
   max-width: 326px;
   gap: 20px;
-  padding-top: 30px;
-
   @media (max-width: 1350px) {
     max-width: 680px;
+    width: 100%;
   }
+`;
+
+export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media (max-width: 1350px) and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+  }
+`;
+
+export const TextContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: start;
-  gap: 20px;
-  padding-top: 30px;
+  align-items: flex-start;
+  gap: 30px;
 
-  @media (max-width: 1350px) {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  @media (max-width: 430px) {
-    flex-direction: column;
-    align-items: start;
+  @media (max-width: 767px) {
+    margin-top: 30px;
+    width: 100%;
   }
 `;
 
@@ -60,4 +69,23 @@ export const ButtonInnerContainer = styled.div`
 export const DownloadButtonContainer = styled.div`
   display: flex;
   gap: 30px;
+
+  &.tablet-icons {
+    display: none;
+    @media (max-width: 1350px) and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &.default-icons {
+    display: flex;
+    @media (max-width: 1350px) and (min-width: 768px) {
+      display: none;
+    }
+    @media (max-width: 767px) {
+      gap: 16px;
+      justify-content: center;
+    }
+  }
 `;

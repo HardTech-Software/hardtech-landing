@@ -12,7 +12,7 @@ const Button = ({ title, variant = "primary", onClick }: ButtonProps) => {
   return (
     <ButtonContainer $variant={variant} onClick={onClick}>
       <Typography
-        variant="title1"
+        variant="button"
         color={variant === "secondary" ? "#1d1d1d" : "white"}
       >
         {title}

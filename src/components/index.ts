@@ -15,6 +15,8 @@ export { default as HomeBackground } from "./home-background";
 export { default as Title } from "./title";
 export { default as InformationCard } from "./information-card";
 export { default as InformationCardSection } from "./information-card-section";
+export { default as InformationCardMission } from "./information-card-mission";
+export { default as InformationCardMission2 } from "./information-card-mission2";
 export { default as Tab } from "./tab";
 export { default as ContactSection } from "./sections/contact-section";
 export { default as TeamSection } from "./sections/team-section";
@@ -24,3 +26,7 @@ export { default as TeamCard } from "./team-card";
 export { default as TeamCarMobile } from "./team-card-mobile";
 export { default as MissionSection } from "./sections/mission-section";
 export { default as ServicesSection } from "./sections/services-section";
+export { default as QuoteSection } from "./sections/quote-section";
+
+export { default as InfoCard } from "./quote-components/info-card";
+export { default as InfoCardSection } from "./quote-components/info-card-section";

@@ -4,9 +4,10 @@ import {
   HomeSection,
   ProjectsSection,
   TeamSection,
+  QuoteSection,
+  MissionSection,
+  ServicesSection,
 } from "@/components";
-import MissionSection from "@/components/sections/mission-section";
-import ServicesSection from "@/components/sections/services-section";
 import React from "react";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
       <ProjectsSection id="projects-section" />
       <TeamSection id="team-section" />
       <MissionSection id="mission-section" />
+      <QuoteSection  id="quote-section" />
       <ContactSection id="contact-section" />
     </>
   );

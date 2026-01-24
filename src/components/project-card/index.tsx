@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   BottomContainer,
   ButtonContainer,
   ButtonInnerContainer,
   Container,
+  ContentWrapper,
   DownloadButtonContainer,
+  TextContent,
 } from "./styles";
 import { theme } from "@/helpers/theme";
 import { Button, IconButton, SwiperComponent, Typography } from "..";
@@ -22,45 +24,32 @@ const ProjectCard = ({
   urlDesktop,
   urlmobile,
 }: ProjectCardProps) => {
-  const [store, setStore] = useState<string | null>(null);
-
-  useEffect(() => {
-    const getMobileStore = () => {
-      const userAgent = navigator.userAgent || navigator.vendor;
-
-      if (/android/i.test(userAgent)) {
-        return "google-play";
-      }
-
-      if (/iPad|iPhone|iPod/.test(userAgent)) {
-        return "app-store";
-      }
-
-      return null;
-    };
-
-    setStore(getMobileStore());
-  }, []);
-
   return (
     <Container>
       <SwiperComponent urlDesktop={urlDesktop} urlMobile={urlmobile} />
       <BottomContainer>
-        <Typography variant="h2" color={theme.white}>
+        <Typography variant="title2" color={theme.white}>
           {title}
         </Typography>
-        <Typography variant="description2" color={theme.white}>
-          {description}
-        </Typography>
+        <ContentWrapper>
+          <TextContent>
+            <Typography variant="description1" color={theme.white}>
+              {description}
+            </Typography>
+          </TextContent>
+          <DownloadButtonContainer className="tablet-icons">
+            <IconButton url="app-store" />
+            <IconButton url="google-play" />
+          </DownloadButtonContainer>
+        </ContentWrapper>
         <ButtonContainer>
           <ButtonInnerContainer>
             <Button variant="secondary" title="IR A LA PÁGINA WEB" />
           </ButtonInnerContainer>
-          {store && (
-            <DownloadButtonContainer>
-              <IconButton url={store} />
-            </DownloadButtonContainer>
-          )}
+          <DownloadButtonContainer className="default-icons">
+            <IconButton url="app-store" />
+            <IconButton url="google-play" />
+          </DownloadButtonContainer>
         </ButtonContainer>
       </BottomContainer>
     </Container>

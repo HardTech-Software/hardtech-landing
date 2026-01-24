@@ -1,11 +1,18 @@
 import React from "react";
-import { BottomRow, BlurCircle, Container, GridContainer } from "./styles";
+import { Container, GridContainer } from "./styles";
 import TeamCard from "../team-card";
+import { useHighlightCenteredCard } from "@/hooks/useHighlightCenteredCard";
 
 const TeamCardSection = () => {
+
+    useHighlightCenteredCard({
+      cardSelector: ".info-card",
+      threshold: 0.40,
+      mobileBreakpoint: 728
+    });
+
   return (
     <Container>
-      <BlurCircle />
       <GridContainer>
         <TeamCard
           name="NICOLÁS CASTILLO"
@@ -22,18 +29,16 @@ const TeamCardSection = () => {
           profession="Desarrollador Fullstack"
           avatar="/bryan.svg"
         />
-        <BottomRow>
-          <TeamCard
-            name="MATÍAS PADILLA"
-            profession="Ingeniero Comercial"
-            avatar="/matias.svg"
-          />
-          <TeamCard
-            name="MACARENA TECAS"
-            profession="Diseñadora Gráfica"
-            avatar="/maca.svg"
-          />
-        </BottomRow>
+        <TeamCard
+          name="MATÍAS PADILLA"
+          profession="Ingeniero Comercial"
+          avatar="/matias.svg"
+        />
+        <TeamCard
+          name="MACARENA TECAS"
+          profession="Diseñadora Gráfica"
+          avatar="/maca.svg"
+        />
       </GridContainer>
     </Container>
   );

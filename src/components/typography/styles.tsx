@@ -5,102 +5,134 @@ interface Props {
     | "h1"
     | "h2"
     | "h3"
+    | "h4"
     | "title1"
     | "title2"
     | "title3"
     | "title4"
+    | "title5"
     | "description1"
     | "description2"
-    | "description3";
+    | "description3"
+    | "price"
+    | "button",
 }
 
 const variantStyles = {
   h1: css`
+    font-family: "Orbitron", sans-serif;
     font-size: 50px;
     font-weight: 800;
-    line-height: 1;
-    padding-bottom: 9px;
-
+    
     @media (max-width: 1250px) {
       font-size: 40px;
     }
-  `, // titulo home
-  h2: css`
-    font-size: 45px;
-    font-weight: 800;
-    line-height: 1;
-    padding-bottom: 5px;
-
-    @media (max-width: 1350px) {
-      font-size: 35px;
-    }
     @media (max-width: 760px) {
+      font-size: 32px;
+    }
+  `,
+  h2: css`
+    font-family: "Orbitron", sans-serif;
+    font-size: 35px;
+    font-weight: 900;
+
+    @media (max-width: 1250px) {
       font-size: 30px;
     }
-  `, // titulos secciones
+    @media (max-width: 760px) {
+      font-size: 24px;
+    }
+  `,
   h3: css`
-    font-size: 25px;
-    font-weight: 900;
-    @media (max-width: 1024px) {
-      font-size: 16px;
-    }
-  `, //titulos div difuminados
-  title1: css`
+    font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 400;
-  `, // header sidebar
-  title2: css`
-    font-size: 14px;
-    font-weight: 900;
-    @media (max-width: 760px) {
-      font-size: 16px;
-    }
-  `, // titulos nombres
-  title3: css`
-    font-size: 14px;
-    font-weight: 400;
-    @media (max-width: 760px) {
-      font-size: 16px;
-    }
-  `, // subtitulos nombres
-  title4: css`
-    font-size: 16px;
-    font-weight: 900;
-  `, // titulo correo
-  description1: css`
+  `,
+  h4: css`
+    font-family: "Inter", sans-serif;
     font-size: 20px;
-    font-weight: 400;
-    @media (max-width: 1024px) {
+    font-weight: 500;
+    @media (max-width: 760px) {
       font-size: 14px;
     }
-  `, // descripciones dentro de los div difuminados
-  description2: css`
-    font-size: 16px;
-    font-weight: 400;
-  `, // description del home y seccion proyectos y texto footer
-  description3: css`
-    font-size: 30px;
-    font-weight: 400;
-    @media (max-width: 1024px) {
-      font-size: 18px;
+  `,
+  title1: css`
+    font-family: "Inter", sans-serif;
+    font-size: 20px; 
+    font-weight: 900;
+  `,
+  title2: css`
+    font-family: "Inter", sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+   @media (max-width: 1250px) {
+      font-size: 36px;
+    font-weight: 700;
     }
+    @media (max-width: 760px) {
+      font-size: 32px;
+    font-weight: 700;
+    }
+  `,
+  title3: css`
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+  `,
+  title4: css`
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+  `,
+  title5: css`
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
     @media (max-width: 760px) {
       font-size: 20px;
     }
-  `, // texto monito correo
+  `,
+  description1: css`
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  `,
+  description2: css`
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+  `,
+  description3: css`
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+  `,
+  price: css`
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+  `,
+  button: css`
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  `
 };
 
 export const TypographyStyled = styled.p<Props & { color?: string }>`
   ${({ $variant }) => variantStyles[$variant]}
   font-family: ${({ $variant }) =>
     $variant === "h3" ||
+    $variant === "h4" ||
     $variant === "title1" ||
     $variant === "title2" ||
     $variant === "title3" ||
     $variant === "title4" ||
+    $variant === "title5" ||
     $variant === "description1" ||
-    $variant === "description2" ||
-    $variant === "description3"
+    $variant === "description3"||
+    $variant === "price"||
+    $variant === "button"
       ? "Inter, sans-serif"
       : "Exo 2, sans-serif"};
   color: ${({ color }) => color};

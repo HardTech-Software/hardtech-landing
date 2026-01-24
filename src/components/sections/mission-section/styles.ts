@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: transparent;
-  padding: 12rem 0 55rem 0;
-  margin-top: -35rem;
-  position: relative;
-  display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  padding: 11rem 0 48rem 0;
+  margin-top: -35rem;
+  display: flex;
   min-height: 75vh;
-  gap: 300px;
+  gap: 220px;
   z-index: 2;
 
   @media (max-width: 1350px) {

@@ -1,8 +1,7 @@
 import React from "react";
 import { Container } from "./styles";
-
 import { MissionSectionData } from "@/utils/constants/information-card";
-import { BackgroundSVG, InformationCardSection, Title } from "@/components";
+import { BackgroundSVG, InformationCardMission2, Title } from "@/components";
 
 interface MissionSectionProps {
   id: string;
@@ -12,7 +11,7 @@ const MissionSection = ({ id }: MissionSectionProps) => {
     <Container id={id}>
       <BackgroundSVG />
       <Title title="Visión & misión" />
-      <InformationCardSection data={MissionSectionData} />
+      <InformationCardMission2 data={MissionSectionData} />
     </Container>
   );
 };
