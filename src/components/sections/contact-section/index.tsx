@@ -23,7 +23,7 @@ interface ContactSectionProps {
 
 const ContactSection = ({ id }: ContactSectionProps) => {
   const [selectedSubject, setSelectedSubject] = useState("");
-  
+
   useEffect(() => {
     const handleSetSubject = (event: any) => {
       const subjectValue = event.detail;
@@ -66,11 +66,13 @@ const ContactSection = ({ id }: ContactSectionProps) => {
           <TypographyCustom variant="title3" color={theme.primary}>
             ASUNTO
           </TypographyCustom>
-          <SelectInput 
-            value={selectedSubject} 
-            onChange={(e) => setSelectedSubject(e.target.value)}
+          <SelectInput
+            value={selectedSubject}
+            onChange={(e: any) => setSelectedSubject(e.target.value)}
           >
-            <option value="" disabled>Selecciona una opción...</option>
+            <option value="" disabled>
+              Selecciona una opción...
+            </option>
             {SUBJECT_OPTIONS.map((option) => (
               <option key={option.value} value={option.value}>
                 {option.label}

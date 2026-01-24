@@ -6,7 +6,7 @@ import {
   InnerContainer,
   TextTitle,
   TextContent,
-  ImageContainer2
+  ImageContainer2,
 } from "./styles";
 import Typography from "../typography";
 import { theme } from "@/helpers/theme";
@@ -23,22 +23,22 @@ export interface InformationCardProps {
 }
 
 const InformationCard = ({
-  variant = "right",
   icon,
   icon2,
   title,
   description,
-  subjectValue
+  subjectValue,
 }: InformationCardProps) => {
-  
   const handleClick = () => {
-    const event = new CustomEvent("setContactSubject", { detail: subjectValue });
+    const event = new CustomEvent("setContactSubject", {
+      detail: subjectValue,
+    });
     window.dispatchEvent(event);
     setTimeout(() => {
       scrollToSection("contact-section");
     }, 80);
   };
-  
+
   return (
     <Container>
       <InnerContainer>
@@ -46,7 +46,7 @@ const InformationCard = ({
           <ImageContainer>
             <Icon name={icon as IconName} />
           </ImageContainer>
-          
+
           <ImageContainer2>
             <Icon name={icon2 as IconName} />
           </ImageContainer2>
