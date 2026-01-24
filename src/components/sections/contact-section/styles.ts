@@ -4,21 +4,25 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
   position: relative;
-  padding: 12rem clamp(1rem, 4rem, 4rem) 16rem;
+  padding: 14rem clamp(1rem, 5%, 4rem) 16rem;
   width: 100%;
-  margin-top: -45rem;
+  margin-top: -50rem; 
   min-height: 75vh;
   display: flex;
   flex-direction: column;
-  gap: 140px;
+  gap: 80px;
   z-index: 2;
 
   @media (max-width: 1350px) {
-    padding-top: 7rem;
+    padding-top: 12rem;
+  }
+  
+  @media (max-width: 1100px) {
+    gap: 50px;
+    padding: 9rem 1rem;
   }
 
-  @media (max-width: 760px) {
-    gap: 66px;
+  @media (max-width: 768px) {
     padding: 8rem 1rem;
   }
 `;
@@ -26,83 +30,167 @@ export const Container = styled.div`
 export const TitleContainer = styled.div`
   display: flex;
   justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+
+  h2, h1, span {
+    display: inline-block;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem; 
+  }
 `;
 
 export const InnerContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 80px;
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 
-  @media (max-width: 1024px) {
-    gap: 68px;
-  }
-
-  @media (max-width: 760px) {
+  @media (max-width: 1100px) {
     flex-direction: column;
-    gap: 37px;
+    gap: 40px;
   }
 `;
+
 export const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
-  text-align: center;
-  justify-content: center;
-`;
-
-export const TypographyCustomLeftContainer = styled(Typography)`
-  max-width: 327px;
-  @media (max-width: 760px) {
-    order: 2;
-  }
+  flex: 1;
 `;
 
 export const LogoContainer = styled.div`
-  width: 321px;
+  width: 100%;
+  max-width: 296px;
 
-  @media (max-width: 1024px) {
-    width: 219px;
+  svg, img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1100px) {
+    max-width: 220px;
   }
 `;
 
 export const RightContainer = styled.div`
-  background-color: ${theme.background};
-  max-width: 562px;
+  background-color: #161616;
   width: 100%;
+  max-width: 621px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  padding: 15px;
+  padding: 31px 23px;
+  border-radius: 5px;
+  
+  box-shadow: 0px 0px 25px 0px #2441FF;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 25px 15px;
+  }
+`;
+
+export const MainTitle = styled(Typography)`
+  margin-bottom: 25px;
+  color: ${theme.white};
+
+  strong {
+    font-weight: 700;
+    color: ${theme.white};
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const TypographyCustom = styled(Typography)`
-  padding: 5px 30px;
-  border-bottom: 2px solid ${theme.primary};
+  display: inline-block;
+  position: relative;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+  align-self: flex-start;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 116px;
+    height: 1.64px;
+    background-color: ${theme.primary};
+  }
 `;
 
 export const TextInput = styled.input`
-  background-color: #13238d;
+  background-color: #2f2f2f;
   border: none;
   width: 100%;
-  min-height: 43px;
+  height: 35.18px;
   color: #fff;
-  padding: 10px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: #888;
+    opacity: 0.7;
+  }
 `;
 
 export const DescriptionTextInput = styled.textarea`
-  background-color: #13238d;
+  background-color: #2f2f2f;
   border: none;
   width: 100%;
-  min-height: 190px;
+  min-height: 157.09px;
   color: #fff;
-  padding: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  resize: vertical;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: #888;
+    opacity: 0.7;
+  }
 `;
 
 export const ButtonContainer = styled.div`
-  height: 43px;
-  width: 223px;
-  margin-top: 10px;
+  height: 35px;
+  width: 246px;
+  margin-top: 25px;
+  align-self: center;
+`;
+
+export const SelectInput = styled.select`
+  background-color: #2f2f2f;
+  border: none;
+  width: 100%;
+  height: 35.18px;
+  color: #fff;
+  padding: 0 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+
+  option {
+    background-color: #2f2f2f;
+    color: #fff;
+  }
 `;

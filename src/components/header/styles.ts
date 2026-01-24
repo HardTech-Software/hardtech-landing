@@ -1,18 +1,30 @@
-import { theme } from "@/helpers/theme";
 import styled from "styled-components";
 
-export const HeaderContainer = styled.div`
-  height: 5rem;
-  background-color: ${theme.secondary};
+interface HeaderProps {
+  $isScrolled: boolean;
+}
+
+export const HeaderContainer = styled.div<HeaderProps>`
+  height: 5.3rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 4rem;
   position: fixed;
   z-index: 4;
   width: 100%;
   top: 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+  
+  transition: all 0.6s ease-in-out;
+
+  background: ${(props) => 
+    props.$isScrolled 
+      ? "linear-gradient(to left, rgb(36,65,255) 0%, #161616 55%)" 
+      : "transparent"};
+      
+  box-shadow: ${(props) => 
+    props.$isScrolled 
+      ? "0 10px 30px rgba(0, 0, 0, 0.7)" 
+      : "none"};
 
   @media (max-width: 1250px) {
     padding: 0 30px;
@@ -21,10 +33,11 @@ export const HeaderContainer = styled.div`
 
 export const LeftContainer = styled.div`
   display: flex;
-
+  align-items: center; 
+  gap: 1.5rem;
   @media (max-width: 1250px) {
-    justify-content: space-between;
-    width: 100%;
+    gap: 0; 
+    flex: 1; 
   }
 `;
 
@@ -32,27 +45,41 @@ export const LogoIcon = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin-left: 60px;
+  
+  svg, img {
+    width: 62px;
+    height: 69px;
+  }
+
+  @media (max-width: 1250px) {
+    margin-left: 40px;
+  }
 `;
 
 export const MenuIcon = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-
   @media (min-width: 1251px) {
     display: none;
+  }
+  @media (max-width: 1250px) {
+    margin-left: auto;
+    margin-right: -6rem;
   }
 `;
 
 export const RightContainer = styled.div`
   display: flex;
   align-items: center;
+  margin-right: 5rem;
 `;
 
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
-  margin-left: 1rem;
+  margin-right: 1rem; 
 
   @media (max-width: 1250px) {
     display: none;
@@ -61,7 +88,7 @@ export const Nav = styled.nav`
 
 export const Item = styled.div`
   cursor: pointer;
-  padding: 25px;
+  padding: 20px;
   transition: background-color 0.3s ease;
 
   &:hover {
@@ -70,10 +97,9 @@ export const Item = styled.div`
 `;
 
 export const ButtonContainer = styled.div`
-  height: 34px;
+  height: 38px;
   width: 160px;
-  margin-left: 30px;
-
+  margin-left: 40px;
   @media (max-width: 1250px) {
     display: none;
   }
@@ -92,7 +118,16 @@ export const Overlay = styled.div`
 export const SidebarContainer = styled.div<{ $isOpen: boolean }>`
   position: fixed;
   z-index: 5;
-  right: ${(props) => (props.$isOpen ? "188px" : "0px")};
-  transition: right 0.3s ease-in-out;
-  top: 5rem;
+  top: 5.4rem;
+  right: 0;
+  width: 235px;
+  transition: transform 0.3s ease-in-out;
+  transform: ${(props) => (props.$isOpen ? "translateX(0)" : "translateX(100%)")};
+  
+  @media (min-width: 1251px) {
+    display: none;
+  }
+  @media (max-width: 750px) {
+    width: 188px;
+  }
 `;

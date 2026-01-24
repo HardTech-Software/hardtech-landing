@@ -16,8 +16,8 @@ export const navItemsSidebar = [
   { label: "QUE OFRECEMOS", sectionId: "services-section" },
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },
   { label: "NUESTRO EQUIPO", sectionId: "team-section" },
-  { label: "NUESTRA VISIÓN & MISIÓN", sectionId: "mission-section" },
-  { label: "CONTÁCTATE CON NOSOTROS", sectionId: "contact-section" },
+  { label: "VISIÓN & MISIÓN", sectionId: "mission-section" },
+  { label: "COTIZA CON NOSOTROS", sectionId: "quote-section" },
 ];
 
 export const navItemsHeader = [
@@ -26,4 +26,5 @@ export const navItemsHeader = [
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },
   { label: "NUESTRO EQUIPO", sectionId: "team-section" },
   { label: "VISIÓN & MISIÓN", sectionId: "mission-section" },
+  { label: "COTIZA CON NOSOTROS", sectionId: "quote-section" },
 ];

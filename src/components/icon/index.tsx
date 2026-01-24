@@ -16,6 +16,10 @@ import {
   VisionIcon,
   MisionIcon,
   ContactLogo,
+  BrandingIcon,
+  CommerceIcon,
+  BrandingIcon2,
+  HexaIcon
 } from "../icons";
 
 const icons = (props?: IconProps) => ({
@@ -34,6 +38,10 @@ const icons = (props?: IconProps) => ({
   "patitas-logo": <PatitasLogo {...props} />,
   "zevent-logo": <ZeventLogo {...props} />,
   "contact-logo": <ContactLogo {...props} />,
+  "commerce-icon": <CommerceIcon {...props} />,
+  "branding-icon": <BrandingIcon {...props} />,
+  "branding-icon2": <BrandingIcon2 {...props} />,
+  "hexa-icon": <HexaIcon {...props} />,
 });
 
 export type IconName = keyof ReturnType<typeof icons>;

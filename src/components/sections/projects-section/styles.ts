@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: transparent;
-  padding-top: 10rem;
-  margin-top: -35rem;
-  position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 75vh;
-
+  position: relative;
+  padding: 10rem 0 0rem 0;
+  margin-top: -38rem;
+  gap: 150px;
   @media (max-width: 1350px) {
     padding-top: 6rem;
   }
@@ -18,5 +17,5 @@ export const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 50px;
 `;

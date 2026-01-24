@@ -13,3 +13,7 @@ export { default as MisionIcon } from "./mision-icon";
 export { default as PatitasLogo } from "./patitas-logo";
 export { default as ZeventLogo } from "./zevent-logo";
 export { default as ContactLogo } from "./contact-logo";
+export { default as CommerceIcon } from "./commerce-icon";
+export { default as BrandingIcon } from "./branding-icon";
+export { default as BrandingIcon2 } from "./branding-icon2";
+export { default as HexaIcon } from "./hexa-icon";

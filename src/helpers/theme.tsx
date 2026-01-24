@@ -4,6 +4,8 @@ export interface ThemeProps {
   tertiary: string;
   background: string;
   white: string;
+  white2: string;
+  black: string;
 }
 
 export const theme: ThemeProps = {
@@ -12,4 +14,6 @@ export const theme: ThemeProps = {
   tertiary: "#D464D2",
   background: "#1D1D1D",
   white: "#ffffff",
+  white2: "#E9E9E9",
+  black: "#161616"
 };

@@ -1,11 +1,6 @@
 import React from "react";
 import { Container } from "./styles";
-import {
-  BackgroundSVG,
-  TeamCardSection,
-  TeamCardSectionMobile,
-  Title,
-} from "@/components";
+import { BackgroundSVG, TeamCardSection, Title } from "@/components";
 
 interface TeamSectionProps {
   id: string;
@@ -17,7 +12,6 @@ const TeamSection = ({ id }: TeamSectionProps) => {
       <BackgroundSVG />
       <Title title="Nuestro equipo" />
       <TeamCardSection />
-      <TeamCardSectionMobile />
     </Container>
   );
 };

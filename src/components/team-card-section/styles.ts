@@ -1,60 +1,27 @@
-import { theme } from "@/helpers/theme";
 import styled from "styled-components";
-
-export const BlurCircle = styled.div`
-  position: absolute;
-  width: 1400px;
-  height: 935px;
-  border-radius: 50%;
-  background: radial-gradient(
-    ellipse,
-    ${theme.primary} 0%,
-
-    transparent 50%,
-    transparent 100%
-  );
-  z-index: -1;
-  opacity: 0.6;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.4s ease;
-
-  @media (max-width: 1250px) {
-    width: 973px;
-    height: 723px;
-  }
-`;
 
 export const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  gap: 1px;
   transition: gap 0.4s ease;
-`;
-
-export const BottomRow = styled.div`
-  display: contents;
-
-  & > * {
-    margin-top: -80px;
-  }
-  & > :nth-child(1),
-  & > :nth-child(2),
-  & > :nth-child(3) {
-    transform: translateX(139px);
-    transition: transform 0.4s ease;
+  justify-content: center;
+  
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(5, 220px);
   }
 
-  @media (max-width: 1250px) {
-    & > * {
-      margin-top: -70px;
-    }
+  @media (min-width: 768px) and (max-width: 1399px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
 
-    & > :nth-child(1),
-    & > :nth-child(2),
-    & > :nth-child(3) {
-      transform: translateX(116px);
-    }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
   }
 `;
 
@@ -62,26 +29,36 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow: visible;
+  padding: 0px 20px;
+  min-height: 600px;
 
-  @media (min-width: 1250px) {
-    &:hover ${BlurCircle} {
-      width: 1800px;
-      height: 1200px;
-      opacity: 1;
+  @media (min-width: 1080px) {
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      pointer-events: none;
+
+      width: min(1301px, 90vw);
+      height: min(340px, 50vh);
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #FE71F4 0%,
+        rgba(254, 113, 244, 0.0414663) 95.67%,
+        rgba(254, 113, 244, 0) 100%
+      );
+
+      filter: blur(40px);
+      opacity: 0.85;
+
+      transition: opacity 0.6s ease;
     }
-
-    &:hover ${GridContainer} {
-      gap: 80px;
-    }
-
-    &:hover ${BottomRow} > :nth-child(1),
-    &:hover ${BottomRow} > :nth-child(2),
-    &:hover ${BottomRow} > :nth-child(3) {
-      transform: translateX(170px);
-    }
-  }
-
-  @media (max-width: 760px) {
-    display: none;
   }
 `;

@@ -5,10 +5,9 @@ export const Container = styled.div`
   margin-top: 100px;
   display: flex;
   align-self: start;
-  width: 100%;
-  gap: 60px;
+  gap: 20px;
   height: 75px;
-  padding: 0 clamp(1rem, 10vw, 11rem);
+  padding: 0 clamp(1rem, 10vw, 18rem);
 
   @media (max-width: 1350px) {
     height: 90px;

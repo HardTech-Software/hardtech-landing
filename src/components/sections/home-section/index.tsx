@@ -4,14 +4,14 @@ import {
   Container,
   InnerContainer,
   LeftContainer,
-  LogoHomeWrapper,
-  RightContainer,
   TitleContainer,
   TypographyCustom,
   TypographyTitleCustom,
+  HighlightedText,
+  SecondLine,
 } from "./styles";
 import { theme } from "@/helpers/theme";
-import { HomeBackground, Icon } from "@/components";
+import { HomeBackground } from "@/components";
 
 interface HomeSectionProps {
   id: string;
@@ -22,23 +22,25 @@ const HomeSection = ({ id }: HomeSectionProps) => {
       <Background>
         <HomeBackground />
       </Background>
+
       <InnerContainer>
+
         <LeftContainer>
+          
           <TitleContainer>
-            <TypographyTitleCustom variant="h1" color={theme.background}>
-              Apps y sitios web con impacto real.
+            <TypographyTitleCustom variant="h1" color={theme.white}>
+              Apps y sitios web{" "}
+              <SecondLine>
+                con <HighlightedText>impacto real.</HighlightedText>
+              </SecondLine>
             </TypographyTitleCustom>
           </TitleContainer>
 
-          <TypographyCustom variant="description2" color={theme.white}>
+          <TypographyCustom variant="h4" color={theme.white}>
             En Hardtech trabajamos con diseño atractivo y desarrollo sólido.
           </TypographyCustom>
+
         </LeftContainer>
-        <RightContainer>
-          <LogoHomeWrapper>
-            <Icon name="home-logo" />
-          </LogoHomeWrapper>
-        </RightContainer>
       </InnerContainer>
     </Container>
   );
