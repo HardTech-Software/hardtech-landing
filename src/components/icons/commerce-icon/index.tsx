@@ -1,10 +1,10 @@
 import React from "react";
 
-const CommerceIcon = ({}) => {
+const CommerceIcon = ({ width = "66", height = "82" }) => {
   return (
     <svg
-      width="66"
-      height="82"
+      width={width || "66"}
+      height={height || "82"}
       viewBox="0 0 66 82"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
