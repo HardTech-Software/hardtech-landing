@@ -27,7 +27,7 @@ const TeamCardMobile = ({ name, profession, avatar }: TeamCardMobileProps) => {
       <BottomContainer />
 
       <AvatarContainer>
-        <Image src={avatar} width={206} height={206} alt="" />
+        <Image src={avatar} width={206} height={206} alt={`Foto de ${name}`} />
       </AvatarContainer>
     </Container>
   );

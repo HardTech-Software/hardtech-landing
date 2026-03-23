@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  z-index: 2;
   padding: 12rem 0 46rem 0;
   margin-top: -48rem;
   align-items: center;
@@ -28,12 +29,18 @@ export const CTAContainer = styled.div`
   margin-top: -5rem;
 
   @media (max-width: 1024px) {
-   margin-top: -2.5rem;
+    margin-top: -2.5rem;
   }
 
   @media (max-width: 768px) {
-    margin-top: -rem;
+    margin-top: -2rem;
     width: 240px;
     height: 40px;
   }
+`;
+
+export const TitleSlot = styled.div<{ $hidden: boolean }>`
+  opacity: ${({ $hidden }) => ($hidden ? 0 : 1)};
+  pointer-events: ${({ $hidden }) => ($hidden ? "none" : "auto")};
+  transition: opacity 0.25s ease;
 `;

@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 HardTech - Landing Page
 
-## Getting Started
+Landing page oficial de HardTech, una agencia de desarrollo de aplicaciones móviles y sitios web.
 
-First, run the development server:
+## 📋 Descripción
+
+Sitio web corporativo desarrollado con Next.js 15, presentando nuestros servicios, proyectos y equipo. Incluye formulario de contacto funcional y diseño completamente responsive.
+
+## 🛠️ Tecnologías
+
+- **Framework**: Next.js 15.2.8
+- **UI**: React 19
+- **Estilos**: Styled Components 6.1.16 + Tailwind CSS 4
+- **Carrusel**: Swiper 11.2.6
+- **TypeScript**: 5
+- **Fuentes**: Orbitron, Exo 2, Inter
+
+## 🚀 Inicio Rápido
+
+### Instalación
+
+```bash
+npm install
+```
+
+### Desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+### Linter
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Estructura del Proyecto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/                    # App Router de Next.js
+│   ├── layout.tsx         # Layout principal con metadata
+│   ├── page.tsx           # Página principal
+│   └── globals.css        # Estilos globales
+├── components/            # Componentes React
+│   ├── sections/         # Secciones de la página
+│   ├── icons/            # Iconos SVG
+│   └── ...               # Otros componentes
+├── helpers/              # Funciones auxiliares
+├── hooks/                # Custom React hooks
+├── lib/                  # Configuraciones (Styled Components Registry)
+└── utils/                # Utilidades y constantes
+```
 
-## Deploy on Vercel
+## 🎨 Características
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ✅ Diseño responsive (móvil, tablet, desktop)
+- ✅ Formulario de contacto funcional con validación
+- ✅ Carrusel de proyectos interactivo
+- ✅ Optimización SEO (metadata, sitemap, robots.txt)
+- ✅ Accesibilidad mejorada (alt text, aria-labels)
+- ✅ Styled Components con SSR configurado
+- ✅ Tipado completo con TypeScript
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Configuración
+
+### Email de Contacto
+
+Actualiza el email en `src/utils/constants/constants.ts`:
+
+```typescript
+export class Constants {
+  static email = "tu-email@hardtech.cl";
+  static instagram = "@hardtech";
+  static instagramUrl = "https://www.instagram.com/hardtech";
+}
+```
+
+### Proyectos
+
+Actualiza los proyectos en `src/utils/constants/projects.ts` con las imágenes y URLs reales.
+
+## 🌐 Deploy en Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tu-usuario/hardtech-landing)
+
+1. Conecta tu repositorio de GitHub
+2. Vercel detectará automáticamente Next.js
+3. Presiona "Deploy"
+
+## 📄 Licencia
+
+© 2026 HardTech. Todos los derechos reservados.
+
+## 👥 Contacto
+
+- **Email**: contacto@hardtech.cl
+- **Instagram**: [@hardtech](https://www.instagram.com/hardtech)
+
+---
+
+Desarrollado con ❤️ por el equipo de HardTech

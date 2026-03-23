@@ -10,7 +10,7 @@ import {
 } from "@/components";
 import React from "react";
 
-const Home = () => {
+const Root = () => {
   return (
     <>
       <HomeSection id="home-section" />
@@ -18,10 +18,10 @@ const Home = () => {
       <ProjectsSection id="projects-section" />
       <TeamSection id="team-section" />
       <MissionSection id="mission-section" />
-      <QuoteSection  id="quote-section" />
+      <QuoteSection id="quote-section" />
       <ContactSection id="contact-section" />
     </>
   );
 };
 
-export default Home;
+export default Root;

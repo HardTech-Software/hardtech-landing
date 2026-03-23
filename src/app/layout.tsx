@@ -1,10 +1,39 @@
-"use client";
-import { ThemeProvider } from "styled-components";
 import "./globals.css";
-import { metadata } from "./metadata";
-import { Layout } from "@/components";
-import { theme } from "@/helpers/theme";
-import { orbitron ,exo2, inter } from "@/utils/fonts";
+import { orbitron, exo2, inter } from "@/utils/fonts";
+import ClientLayout from "@/components/client-layout";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "HardTech - Desarrollo de Apps y Sitios Web con Impacto Real",
+  description:
+    "En HardTech creamos aplicaciones móviles y sitios web con diseño atractivo y desarrollo sólido. Transformamos tus ideas en soluciones digitales que generan resultados.",
+  keywords: [
+    "desarrollo web",
+    "desarrollo de apps",
+    "diseño web",
+    "desarrollo móvil",
+    "hardtech",
+    "chile",
+  ],
+  authors: [{ name: "HardTech" }],
+  creator: "HardTech",
+  publisher: "HardTech",
+  openGraph: {
+    type: "website",
+    locale: "es_CL",
+    url: "https://hardtech.cl",
+    title: "HardTech - Desarrollo de Apps y Sitios Web",
+    description:
+      "Creamos aplicaciones móviles y sitios web con diseño atractivo y desarrollo sólido.",
+    siteName: "HardTech",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HardTech - Desarrollo de Apps y Sitios Web",
+    description:
+      "Creamos aplicaciones móviles y sitios web con diseño atractivo y desarrollo sólido.",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -12,15 +41,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.className} ${exo2.className} ${orbitron.className}`}>
-      <head>
-        <title>{metadata.title as string}</title>
-        <meta name="description" content={metadata.description as string} />
-      </head>
-      <body suppressHydrationWarning>
-        <ThemeProvider theme={theme}>
-          <Layout>{children}</Layout>
-        </ThemeProvider>
+    <html
+      lang="es"
+      className={`${inter.className} ${exo2.className} ${orbitron.className}`}
+    >
+      <body>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

@@ -30,7 +30,14 @@ const Footer = () => {
         </Email>
       </CenterContainer>
       <RightContainer>
-        <Icon name="instagram" />
+        <a
+          href={Constants.instagramUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visitar Instagram de HardTech"
+        >
+          <Icon name="instagram" />
+        </a>
         <InnerContainer>
           <Typography variant="description2" color={theme.white}>
             SIGUENOS

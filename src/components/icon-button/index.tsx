@@ -3,13 +3,22 @@ import { Container } from "./styles";
 import Icon, { IconName } from "../icon";
 
 interface IconButtonProps {
-  url: string;
+  iconName: IconName;
+  href?: string;
 }
 
-const IconButton = ({ url }: IconButtonProps) => {
+const IconButton = ({ iconName, href }: IconButtonProps) => {
+  if (href && href !== "#") {
+    return (
+      <Container as="a" href={href} target="_blank" rel="noopener noreferrer">
+        <Icon name={iconName} />
+      </Container>
+    );
+  }
+
   return (
     <Container>
-      <Icon name={url as IconName} />
+      <Icon name={iconName} />
     </Container>
   );
 };

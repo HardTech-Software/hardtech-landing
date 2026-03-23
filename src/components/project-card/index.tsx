@@ -16,6 +16,9 @@ interface ProjectCardProps {
   description: string;
   urlDesktop: string[];
   urlmobile: string[];
+  websiteUrl?: string;
+  appStoreUrl?: string;
+  googlePlayUrl?: string;
 }
 
 const ProjectCard = ({
@@ -23,7 +26,16 @@ const ProjectCard = ({
   description,
   urlDesktop,
   urlmobile,
+  websiteUrl,
+  appStoreUrl,
+  googlePlayUrl,
 }: ProjectCardProps) => {
+  const handleWebsiteClick = () => {
+    if (websiteUrl && websiteUrl !== "#") {
+      window.open(websiteUrl, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <Container>
       <SwiperComponent urlDesktop={urlDesktop} urlMobile={urlmobile} />
@@ -38,17 +50,21 @@ const ProjectCard = ({
             </Typography>
           </TextContent>
           <DownloadButtonContainer className="tablet-icons">
-            <IconButton url="app-store" />
-            <IconButton url="google-play" />
+            <IconButton iconName="app-store" href={appStoreUrl} />
+            <IconButton iconName="google-play" href={googlePlayUrl} />
           </DownloadButtonContainer>
         </ContentWrapper>
         <ButtonContainer>
           <ButtonInnerContainer>
-            <Button variant="secondary" title="IR A LA PÁGINA WEB" />
+            <Button
+              variant="secondary"
+              title="IR A LA PÁGINA WEB"
+              onClick={handleWebsiteClick}
+            />
           </ButtonInnerContainer>
           <DownloadButtonContainer className="default-icons">
-            <IconButton url="app-store" />
-            <IconButton url="google-play" />
+            <IconButton iconName="app-store" href={appStoreUrl} />
+            <IconButton iconName="google-play" href={googlePlayUrl} />
           </DownloadButtonContainer>
         </ButtonContainer>
       </BottomContainer>

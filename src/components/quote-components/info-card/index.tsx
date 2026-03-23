@@ -15,7 +15,7 @@ import {
   BottomSection,
   CTAContainer,
   FeatureItem,
-  IconContainer2
+  IconContainer2,
 } from "./styles";
 import Typography from "../../typography";
 import { theme } from "@/helpers/theme";
@@ -50,30 +50,36 @@ const InfoCard = ({
   description3,
   text,
   showCTA = false,
-  subjectValue
+  subjectValue,
 }: InfoCardProps) => {
-
   const features = description2!
-    .split('\n')
-    .map(line => line.trim())
-    .filter(line => line.length > 0);
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0);
 
   const handleClick = () => {
-      const event = new CustomEvent("setContactSubject", { detail: subjectValue });
-      window.dispatchEvent(event);
-      setTimeout(() => {
-        scrollToSection("contact-section");
-      }, 80);
-    };
+    const event = new CustomEvent("setContactSubject", {
+      detail: subjectValue,
+    });
+    window.dispatchEvent(event);
+    setTimeout(() => {
+      scrollToSection("contact-section");
+    }, 80);
+  };
 
   return (
     <Container>
       <InnerContainer className="info-card" onClick={handleClick}>
         <AvatarContainer>
-          <Image src={avatar} width={275} height={183} alt="" />
+          <Image
+            src={avatar}
+            width={275}
+            height={183}
+            alt={title || "Imagen del servicio"}
+          />
         </AvatarContainer>
 
-        <DescriptionContainer >
+        <DescriptionContainer>
           <TitleContainer>
             <TextTitle>
               <Typography variant="title4" color={theme.background}>
@@ -83,7 +89,7 @@ const InfoCard = ({
             <IconContainer>
               <Icon name={icon as IconName} />
             </IconContainer>
-              
+
             <IconContainer2>
               <Icon name={icon2 as IconName} />
             </IconContainer2>
@@ -109,10 +115,7 @@ const InfoCard = ({
           <BottomSection>
             {showCTA && (
               <CTAContainer>
-                <Button
-                  title="COTIZA CON NOSOTROS"
-                  variant="secondary"
-                />
+                <Button title="COTIZA CON NOSOTROS" variant="secondary" />
               </CTAContainer>
             )}
 
@@ -134,7 +137,6 @@ const InfoCard = ({
               </Typography>
             </TextContent3>
           </BottomSection>
-          
         </DescriptionContainer>
       </InnerContainer>
     </Container>

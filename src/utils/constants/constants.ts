@@ -1,4 +1,5 @@
 export class Constants {
-  static email = "correobacan@gmail.com";
+  static email = "contacto@hardtech.cl";
   static instagram = "@hardtech";
+  static instagramUrl = "https://www.instagram.com/hardtech";
 }

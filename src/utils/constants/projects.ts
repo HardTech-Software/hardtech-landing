@@ -18,10 +18,13 @@ export const projects = [
       "/prueba2.png",
     ],
     logo: "patitas-logo",
+    websiteUrl: "#", // TODO: Agregar URL real del proyecto
+    appStoreUrl: "#", // TODO: Agregar URL real de App Store
+    googlePlayUrl: "#", // TODO: Agregar URL real de Google Play
   },
   {
     title: "Zevent",
-    description: "Administrador de entradas para joditas",
+    description: "Administrador de entradas para eventos",
     urlDesktop: [
       "/prueba3.png",
       "/prueba3.png",
@@ -38,5 +41,8 @@ export const projects = [
       "/prueba4.png",
     ],
     logo: "zevent-logo",
+    websiteUrl: "#", // TODO: Agregar URL real del proyecto
+    appStoreUrl: "#", // TODO: Agregar URL real de App Store
+    googlePlayUrl: "#", // TODO: Agregar URL real de Google Play
   },
 ];

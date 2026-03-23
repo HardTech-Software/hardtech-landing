@@ -76,7 +76,7 @@ const SwiperComponent = ({ urlDesktop, urlMobile }: SwiperComponentProps) => {
               src={url}
               width={isMobile ? 300 : 623}
               height={isMobile ? 300 : 325}
-              alt=""
+              alt={`Captura de pantalla ${index + 1} del proyecto`}
             />
           </SwiperSlideCustom>
         ))}

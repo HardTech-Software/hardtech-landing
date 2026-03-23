@@ -19,8 +19,12 @@ import { Button, Icon, Sidebar, Typography } from "..";
 const Header = () => {
   const { OpenSidebar, isSidebarOpen, CloseSidebar } = useToggle();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Animación de fade-in al cargar
+    setIsVisible(true);
+
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setIsScrolled(true);
@@ -35,7 +39,10 @@ const Header = () => {
 
   return (
     <>
-      <HeaderContainer $isScrolled={isScrolled}>
+      <HeaderContainer
+        $isScrolled={isScrolled}
+        className={isVisible ? "fade-in" : ""}
+      >
         <LeftContainer>
           <LogoIcon onClick={() => scrollToSection("home-section")}>
             <Icon name="logo" />
@@ -44,7 +51,7 @@ const Header = () => {
             <Icon name="menu" />
           </MenuIcon>
         </LeftContainer>
-        
+
         <RightContainer>
           <Nav>
             {navItemsHeader.map((item, index) => (
