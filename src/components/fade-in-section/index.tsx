@@ -1,6 +1,12 @@
 "use client";
-import { motion, useInView, Variants } from "framer-motion";
+import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
+
+type ViewportMargin =
+  | `${number}px`
+  | `${number}px ${number}px`
+  | `${number}px ${number}px ${number}px`
+  | `${number}px ${number}px ${number}px ${number}px`;
 
 interface FadeInSectionProps {
   children: React.ReactNode;
@@ -8,6 +14,8 @@ interface FadeInSectionProps {
   duration?: number;
   direction?: "up" | "down" | "left" | "right" | "none";
   className?: string;
+  fullWidth?: boolean;
+  viewportMargin?: ViewportMargin;
 }
 
 export const FadeInSection = ({
@@ -16,9 +24,11 @@ export const FadeInSection = ({
   duration = 0.6,
   direction = "up",
   className,
+  fullWidth = false,
+  viewportMargin = "-100px",
 }: FadeInSectionProps) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: false, margin: viewportMargin });
 
   const directionOffset = {
     up: { y: 40 },
@@ -52,6 +62,7 @@ export const FadeInSection = ({
       animate={isInView ? "visible" : "hidden"}
       variants={variants}
       className={className}
+      style={fullWidth ? { width: "100%" } : undefined}
     >
       {children}
     </motion.div>

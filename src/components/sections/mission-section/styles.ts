@@ -5,10 +5,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 11rem 0 48rem 0;
+  padding: 11rem 0 54rem 0;
   margin-top: -35rem;
   display: flex;
-  min-height: 75vh;
+  min-height: 100vh;
   gap: 220px;
   z-index: 2;
 

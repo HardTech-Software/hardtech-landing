@@ -39,7 +39,7 @@ export const Row = styled.div<RowProps>`
     display: flex;
     flex-direction: column;
     gap: 30px;
-    
+
     & > :nth-child(2) {
       transform: none;
     }

@@ -37,15 +37,12 @@ const ambientPulse = `
   @keyframes ambientPulse {
     0% {
       transform: translate3d(0, 0, 0) scale(1);
-      opacity: 0.86;
     }
     50% {
       transform: translate3d(0, -18px, 0) scale(1.04);
-      opacity: 1;
     }
     100% {
       transform: translate3d(0, 0, 0) scale(1);
-      opacity: 0.9;
     }
   }
 `;
@@ -81,7 +78,7 @@ export const BlurCircle1 = styled.div<{ $variant?: HomeIntroVariant }>`
     introLeft ${(props) => (props.$variant === "impact" ? "1.5s" : "1.15s")}
       cubic-bezier(0.22, 1, 0.36, 1)
       ${(props) => (props.$variant === "impact" ? "0.04s" : "0.1s")} forwards,
-    ambientPulse ${(props) => (props.$variant === "impact" ? "6.2s" : "8.2s")}
+    ambientPulse ${(props) => (props.$variant === "impact" ? "5s" : "8.2s")}
       ease-in-out
       ${(props) => (props.$variant === "impact" ? "1.55s" : "1.35s")} infinite;
 

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import {
   Background,
@@ -27,10 +27,7 @@ interface HomeSectionProps {
 const HomeSection = ({ id }: HomeSectionProps) => {
   const [scrolled, setScrolled] = useState(false);
   const [clickedHide, setClickedHide] = useState(false);
-  const [topDelayHidden, setTopDelayHidden] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const previousScrolled = useRef(false);
-  const topDelayTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     setIsMounted(true);
@@ -50,34 +47,12 @@ const HomeSection = ({ id }: HomeSectionProps) => {
   }, []);
 
   useEffect(() => {
-    if (previousScrolled.current && !scrolled) {
-      setTopDelayHidden(true);
-      if (topDelayTimeout.current) {
-        clearTimeout(topDelayTimeout.current);
-      }
-      topDelayTimeout.current = setTimeout(() => {
-        setTopDelayHidden(false);
-      }, 220);
-    }
-
     if (scrolled) {
       setClickedHide(false);
-      setTopDelayHidden(false);
-      if (topDelayTimeout.current) {
-        clearTimeout(topDelayTimeout.current);
-      }
     }
-
-    previousScrolled.current = scrolled;
-
-    return () => {
-      if (topDelayTimeout.current) {
-        clearTimeout(topDelayTimeout.current);
-      }
-    };
   }, [scrolled]);
 
-  const isScrollCueHidden = scrolled || clickedHide || topDelayHidden;
+  const isScrollCueHidden = scrolled || clickedHide;
 
   return (
     <>

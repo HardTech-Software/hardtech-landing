@@ -40,7 +40,11 @@ const ServicesSection = ({ id }: ServicesSectionProps) => {
       <FadeInSection delay={0.2} direction="up">
         <InformationCardSection data={ServicesSectionData} />
       </FadeInSection>
-      <FadeInSection delay={0.3} direction="up">
+      <FadeInSection
+        delay={0.3}
+        direction="up"
+        viewportMargin="0px 0px 160px 0px"
+      >
         <CTAContainer>
           <Button
             title="COTIZA CON NOSOTROS"

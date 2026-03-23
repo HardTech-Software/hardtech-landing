@@ -1,14 +1,14 @@
-export const headerHeight = 0;
-
 export const scrollToSection = (sectionId: string) => {
   const section = document.getElementById(sectionId);
-  if (section) {
-    const offsetTop = section.offsetTop - headerHeight;
-    window.scrollTo({
-      top: offsetTop,
-      behavior: "smooth",
-    });
-  }
+  if (!section) return;
+
+  const header = document.querySelector("header") as HTMLElement | null;
+  const headerHeight = header?.offsetHeight ?? 0;
+
+  const rect = section.getBoundingClientRect();
+  const scrollTop = window.scrollY + rect.top - headerHeight;
+
+  window.scrollTo({ top: scrollTop, behavior: "smooth" });
 };
 
 export const navItemsSidebar = [

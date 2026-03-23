@@ -4,9 +4,9 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
   position: relative;
-  padding: 14rem clamp(1rem, 5%, 4rem) 16rem;
+  padding: 10rem clamp(1rem, 5%, 4rem) 16rem;
   width: 100%;
-  margin-top: -50rem; 
+  margin-top: -50rem;
   min-height: 75vh;
   display: flex;
   flex-direction: column;
@@ -14,16 +14,16 @@ export const Container = styled.div`
   z-index: 2;
 
   @media (max-width: 1350px) {
-    padding-top: 12rem;
+    padding-top: 10rem;
   }
-  
+
   @media (max-width: 1100px) {
     gap: 50px;
-    padding: 9rem 1rem;
+    padding: 9rem 1rem 9rem;
   }
 
   @media (max-width: 768px) {
-    padding: 8rem 1rem;
+    padding: 8rem 1rem 8rem;
   }
 `;
 
@@ -33,13 +33,15 @@ export const TitleContainer = styled.div`
   text-align: center;
   white-space: nowrap;
 
-  h2, h1, span {
+  h2,
+  h1,
+  span {
     display: inline-block;
     width: 100%;
   }
 
   @media (max-width: 480px) {
-    font-size: 0.8rem; 
+    font-size: 0.8rem;
   }
 `;
 
@@ -69,7 +71,8 @@ export const LogoContainer = styled.div`
   width: 100%;
   max-width: 296px;
 
-  svg, img {
+  svg,
+  img {
     width: 100%;
     height: auto;
   }
@@ -87,8 +90,8 @@ export const RightContainer = styled.div`
   flex-direction: column;
   padding: 31px 23px;
   border-radius: 5px;
-  
-  box-shadow: 0px 0px 25px 0px #2441FF;
+
+  box-shadow: 0px 0px 25px 0px #2441ff;
   box-sizing: border-box;
 
   @media (max-width: 768px) {
@@ -116,9 +119,9 @@ export const TypographyCustom = styled(Typography)`
   padding-bottom: 6px;
   margin-bottom: 15px;
   align-self: flex-start;
-  
+
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;

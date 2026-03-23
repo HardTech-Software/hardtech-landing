@@ -31,34 +31,30 @@ const BackgroundSVG = ({
           <stop offset="100%" stopColor={theme.black} />
         </linearGradient>
       </defs>
-      <path d="M0 320 L720 0 L1440 320 Z" fill="url(#gradient)" />
-      {/* <motion.path
-        d="M0 320 L720 0 L1440 320 Z"
-        fill="url(#gradient)"
-        initial={
-          animateOnMount
-            ? {
-                opacity: 0,
-                y: isImpact ? 72 : 38,
-                scaleY: isImpact ? 0.84 : 0.94,
-              }
-            : false
-        }
-        animate={
-          animateOnMount
-            ? {
-                opacity: 1,
-                y: 0,
-                scaleY: 1,
-                transition: {
-                  duration: isImpact ? 1.35 : 0.95,
-                  delay: isImpact ? 0.22 : 0.18,
-                  ease: [0.22, 1, 0.36, 1],
-                },
-              }
-            : undefined
-        }
-      /> */}
+      {animateOnMount ? (
+        <motion.path
+          d="M0 320 L720 0 L1440 320 Z"
+          fill="url(#gradient)"
+          initial={{
+            opacity: 0,
+            y: isImpact ? 240 : 180,
+            scaleY: isImpact ? 1.06 : 1.03,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            scaleY: 1,
+            transition: {
+              duration: isImpact ? 1.3 : 1,
+              delay: isImpact ? 0.18 : 0.12,
+              ease: [0.22, 1, 0.36, 1],
+            },
+          }}
+          style={{ transformOrigin: "50% 100%" }}
+        />
+      ) : (
+        <path d="M0 320 L720 0 L1440 320 Z" fill="url(#gradient)" />
+      )}
     </svg>
   );
 };

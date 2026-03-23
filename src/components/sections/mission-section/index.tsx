@@ -18,7 +18,7 @@ const MissionSection = ({ id }: MissionSectionProps) => {
       <FadeInSection delay={0.1} direction="up">
         <Title title="Visión & misión" />
       </FadeInSection>
-      <FadeInSection delay={0.2} direction="up">
+      <FadeInSection delay={0.2} direction="up" fullWidth>
         <InformationCardMission2 data={MissionSectionData} />
       </FadeInSection>
     </Container>
