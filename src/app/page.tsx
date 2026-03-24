@@ -3,7 +3,7 @@ import {
   ContactSection,
   HomeSection,
   ProjectsSection,
-  TeamSection,
+  // TeamSection,
   QuoteSection,
   MissionSection,
   ServicesSection,
