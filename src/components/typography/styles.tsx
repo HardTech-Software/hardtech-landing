@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 interface Props {
   $variant:
@@ -25,10 +26,10 @@ const variantStyles = {
     font-size: 50px;
     font-weight: 800;
 
-    @media (max-width: 1250px) {
+    @media ${media.max.xl} {
       font-size: 40px;
     }
-    @media (max-width: 760px) {
+    @media ${media.max.md} {
       font-size: 32px;
     }
   `,
@@ -37,10 +38,10 @@ const variantStyles = {
     font-size: 35px;
     font-weight: 900;
 
-    @media (max-width: 1250px) {
+    @media ${media.max.xl} {
       font-size: 30px;
     }
-    @media (max-width: 760px) {
+    @media ${media.max.md} {
       font-size: 24px;
     }
   `,
@@ -53,7 +54,7 @@ const variantStyles = {
     font-family: "Inter", sans-serif;
     font-size: 20px;
     font-weight: 500;
-    @media (max-width: 760px) {
+    @media ${media.max.md} {
       font-size: 14px;
     }
   `,
@@ -66,11 +67,11 @@ const variantStyles = {
     font-family: "Inter", sans-serif;
     font-size: 35px;
     font-weight: 800;
-    @media (max-width: 1250px) {
+    @media ${media.max.xl} {
       font-size: 36px;
       font-weight: 700;
     }
-    @media (max-width: 760px) {
+    @media ${media.max.md} {
       font-size: 32px;
       font-weight: 700;
     }
@@ -89,7 +90,7 @@ const variantStyles = {
     font-family: "Inter", sans-serif;
     font-size: 25px;
     font-weight: 400;
-    @media (max-width: 760px) {
+    @media ${media.max.md} {
       font-size: 20px;
     }
   `,

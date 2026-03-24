@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 export const GridContainer = styled.div`
   display: grid;
@@ -6,11 +7,11 @@ export const GridContainer = styled.div`
   transition: gap 0.4s ease;
   justify-content: center;
   
-  @media (min-width: 1400px) {
+  @media ${media.min.xxl} {
     grid-template-columns: repeat(5, 220px);
   }
 
-  @media (min-width: 768px) and (max-width: 1399px) {
+  @media ${media.min.md} and (max-width: 1399px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -18,7 +19,7 @@ export const GridContainer = styled.div`
     width: 100%;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     grid-template-columns: 1fr;
     gap: 20px;
     justify-items: center;
@@ -34,7 +35,7 @@ export const Container = styled.div`
   padding: 0px 20px;
   min-height: 600px;
 
-  @media (min-width: 1080px) {
+  @media ${media.min.lg} {
     &::before {
       content: '';
       position: absolute;

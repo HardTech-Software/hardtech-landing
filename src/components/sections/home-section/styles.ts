@@ -1,6 +1,7 @@
 import Typography from "@/components/typography";
 import { theme } from "@/helpers/theme";
 import styled, { css, keyframes } from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 const scrollFadeIn = keyframes`
   from { opacity: 0; }
@@ -21,11 +22,11 @@ export const Container = styled.div`
   z-index: 0;
   padding: 15rem 0 60rem 0;
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     padding: 0rem 0 52rem 0;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     padding: 0rem 0 50rem 0;
   }
 `;
@@ -48,14 +49,14 @@ export const CircuitsContainer = styled.div`
   opacity: 0.7;
   z-index: 1;
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     left: -20px;
     width: 110px;
     height: 130px;
     opacity: 0.5;
   }
 
-  @media (max-width: 480px) {
+  @media ${media.max.xs} {
     display: none;
   }
 `;
@@ -69,10 +70,10 @@ export const InnerContainer = styled.div`
   z-index: 2;
   padding-top: 9vh;
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     padding-top: 24vh;
   }
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     padding-top: 30vh;
   }
 `;
@@ -83,14 +84,14 @@ export const LeftContainer = styled.div`
   align-items: center;
   gap: 15px;
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     width: 100%;
     max-width: 760px;
     padding: 0 24px;
     margin: 0 auto;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     order: 2;
   }
 `;
@@ -109,13 +110,13 @@ export const TypographyTitleCustom = styled(Typography)`
   width: 100%;
   margin: 0 auto;
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     max-width: 760px;
     white-space: normal;
     word-wrap: break-word;
   }
 
-  @media (min-width: 1025px) {
+  @media ${media.min.lg} {
     white-space: nowrap;
   }
 `;
@@ -123,7 +124,7 @@ export const TypographyTitleCustom = styled(Typography)`
 export const SecondLine = styled.span`
   display: inline;
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     display: block;
   }
 `;
@@ -151,13 +152,13 @@ export const TypographyCustom = styled(Typography)`
   margin: auto;
   width: 100%;
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     max-width: 520px;
     padding: 0 20px;
     margin: 20px;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     max-width: 300px;
     padding: 0 20px;
   }
@@ -203,11 +204,11 @@ export const ScrollCue = styled.button<{ $hidden?: boolean }>`
     border-radius: 4px;
   }
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     top: calc(100vh - 7rem);
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     top: auto;
     bottom: 1.15rem;
     left: 0;
@@ -228,7 +229,7 @@ export const ScrollCueLabel = styled.span`
   color: rgba(255, 255, 255, 0.4);
   margin-bottom: 0.2rem;
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     font-size: 0.48rem;
     letter-spacing: 0.22em;
     margin-bottom: 0.08rem;
@@ -244,7 +245,7 @@ export const ScrollCueChevron = styled.span<{ $delay?: number }>`
   animation: ${chevronCascade} 1.8s ease-in-out infinite;
   animation-delay: ${({ $delay = 0 }) => $delay}s;
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     width: 0.5rem;
     height: 0.5rem;
     border-right-width: 1.4px;

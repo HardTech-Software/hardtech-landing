@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 export const Container = styled.div`
   background-color: transparent;
@@ -13,11 +14,11 @@ export const Container = styled.div`
   overflow: hidden;
   z-index: 2;
 
-  @media (max-width: 1350px) {
+  @media ${media.max.xxl} {
     padding-top: 7rem;
   } 
     
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     padding-top: 7rem;
   }
 `;

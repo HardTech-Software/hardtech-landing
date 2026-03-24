@@ -1,5 +1,6 @@
 import { theme } from "@/helpers/theme";
 import styled from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 export const Container = styled.div`
   margin-top: 100px;
@@ -9,11 +10,11 @@ export const Container = styled.div`
   height: 75px;
   padding: 0 clamp(1rem, 10vw, 18rem);
 
-  @media (max-width: 1350px) {
+  @media ${media.max.xxl} {
     height: 90px;
   }
 
-  @media (max-width: 760px) {
+  @media ${media.max.md} {
     height: 70px;
   }
 `;

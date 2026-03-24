@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { theme } from "@/helpers/theme";
+import { media } from "@/utils/constants/breakpoints";
 
 const driftLeft = keyframes`
   0% {
@@ -88,7 +89,7 @@ export const Screen = styled.div`
     ),
     linear-gradient(180deg, #050505 0%, ${theme.black} 55%, #080d38 100%);
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     background:
       radial-gradient(
         circle at 18% 82%,
@@ -123,7 +124,7 @@ export const GlowLeft = styled.div`
     animation: none;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     width: 42rem;
     height: 42rem;
     left: -14rem;
@@ -156,7 +157,7 @@ export const GlowRight = styled.div`
     animation: none;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     width: 38rem;
     height: 38rem;
     right: -11rem;

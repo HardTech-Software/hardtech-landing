@@ -1,5 +1,6 @@
 import { theme } from "@/helpers/theme";
 import { styled } from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 export const Container = styled.div`
   position: relative;
@@ -9,7 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 22px;
 
-  @media (min-width: 761px) {
+  @media ${media.min.md} {
     display: none;
   }
 `;

@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { SwiperSlide } from "swiper/react";
+import { media } from "@/utils/constants/breakpoints";
 
 export const SwiperContainer = styled.div`
   width: 680px;
   height: 325px;
   position: relative;
 
-  @media (max-width: 760px) {
+  @media ${media.max.md} {
     width: 350px;
   }
 `;
@@ -17,7 +18,7 @@ export const SwiperSlideCustom = styled(SwiperSlide)`
   background-color: transparent;
   height: 325px;
 
-  @media (max-width: 760px) {
+  @media ${media.max.md} {
     height: 300px;
   }
 `;
@@ -46,11 +47,11 @@ export const NavButton = styled.button<{
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     ${({ position }) => (position === "left" ? "left: -8px;" : "right: -8px;")}
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     ${({ position }) =>
       position === "left" ? "left: -10px;" : "right: -10px;"}
   }

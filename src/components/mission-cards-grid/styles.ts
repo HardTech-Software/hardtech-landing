@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 interface RowProps {
   $index: number;
@@ -10,7 +11,7 @@ export const GridContainer = styled.div`
   flex-direction: column;
   gap: 6px;
   background-color: red;
-  @media (max-width: 1350px) {
+  @media ${media.max.xxl} {
     // gap: 180px;
   }
 `;
@@ -26,7 +27,7 @@ export const Row = styled.div<RowProps>`
     $index % 2 === 1 &&
     css`
       --offset: -75px;
-      @media (max-width: 1024px) {
+      @media ${media.max.lg} {
         --offset: 0;
       }
     `}
@@ -36,7 +37,7 @@ export const Row = styled.div<RowProps>`
     transition: transform 0.3s ease;
   }
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -61,7 +62,7 @@ export const Row = styled.div<RowProps>`
 export const EmptySpace = styled.div`
   width: 100%;
   height: 100%;
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     // display: none;
   }
 `;

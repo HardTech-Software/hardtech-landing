@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 interface HeaderProps {
   $isScrolled: boolean;
@@ -64,7 +65,7 @@ export const HeaderContainer = styled.div<HeaderProps>`
     }
   }
 
-  @media (max-width: 1250px) {
+  @media ${media.max.xl} {
     padding: 0 16px;
   }
 `;
@@ -73,7 +74,7 @@ export const LeftContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  @media (max-width: 1250px) {
+  @media ${media.max.xl} {
     gap: 0;
     flex: 1;
     width: 100%;
@@ -103,7 +104,7 @@ export const LogoIcon = styled.button`
     transform: scale(0.95);
   }
 
-  @media (max-width: 1250px) {
+  @media ${media.max.xl} {
     margin-left: 0;
   }
 `;
@@ -122,10 +123,10 @@ export const MenuIcon = styled.button`
     transform: scale(0.9);
   }
 
-  @media (min-width: 1251px) {
+  @media ${media.min.xl} {
     display: none;
   }
-  @media (max-width: 1250px) {
+  @media ${media.max.xl} {
     margin-left: 0;
     margin-right: 0;
   }
@@ -136,7 +137,7 @@ export const RightContainer = styled.div`
   align-items: center;
   margin-right: 5rem;
 
-  @media (max-width: 1250px) {
+  @media ${media.max.xl} {
     display: none;
     margin-right: 0;
   }
@@ -147,7 +148,7 @@ export const Nav = styled.nav`
   align-items: center;
   margin-right: 1rem;
 
-  @media (max-width: 1250px) {
+  @media ${media.max.xl} {
     display: none;
   }
 `;
@@ -190,7 +191,7 @@ export const ButtonContainer = styled.div`
   height: 38px;
   width: 160px;
   margin-left: 40px;
-  @media (max-width: 1250px) {
+  @media ${media.max.xl} {
     display: none;
   }
 `;
@@ -229,10 +230,10 @@ export const SidebarContainer = styled.div<{ $isOpen: boolean }>`
     props.$isOpen ? "translateX(0)" : "translateX(100%)"};
   opacity: ${(props) => (props.$isOpen ? "1" : "0")};
 
-  @media (min-width: 1251px) {
+  @media ${media.min.xl} {
     display: none;
   }
-  @media (max-width: 750px) {
+  @media ${media.max.md} {
     width: 188px;
   }
 `;

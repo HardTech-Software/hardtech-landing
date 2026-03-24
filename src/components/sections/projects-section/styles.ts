@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 export const Container = styled.div`
   background-color: transparent;
@@ -10,18 +11,18 @@ export const Container = styled.div`
   margin-top: -38rem;
   gap: 150px;
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     margin-top: -24rem;
     padding-top: 7rem;
     gap: 110px;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     margin-top: -30rem;
     padding-top: 6rem;
   }
 
-  @media (max-width: 1350px) {
+  @media ${media.max.xxl} {
     padding-top: 6rem;
   }
 `;

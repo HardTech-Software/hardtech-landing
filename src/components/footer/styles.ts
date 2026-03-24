@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Typography from "../typography";
 import { theme } from "@/helpers/theme";
+import { media } from "@/utils/constants/breakpoints";
 
 export const Container = styled.div`
   background: linear-gradient(
@@ -16,7 +17,7 @@ export const Container = styled.div`
   width: 100%;
   z-index: -1;
 
-  @media (max-width: 760px) {
+  @media ${media.max.md} {
     flex-direction: column;
   }
 `;
@@ -32,7 +33,7 @@ export const CenterContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 760px) {
+  @media ${media.max.md} {
     align-items: center;
   }
 `;

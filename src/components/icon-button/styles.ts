@@ -1,5 +1,6 @@
 import { theme } from "@/helpers/theme";
 import styled from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 export const Container = styled.div`
   border: 2px solid #fff;
@@ -21,7 +22,7 @@ export const Container = styled.div`
     background-color: ${theme.background};
   }
 
-  @media (max-width: 430px) {
+  @media ${media.max.xxs} {
     width: 135px;
     height: 40px;
 

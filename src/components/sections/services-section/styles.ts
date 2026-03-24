@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 interface ContainerProps {
   $viewportWidth?: number;
@@ -35,14 +36,14 @@ export const Container = styled.div<ContainerProps>`
   min-height: 75vh;
   gap: 150px;
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     margin-top: -38rem;
     min-height: 100vh;
     padding: 6.5rem 0 34rem 0;
     gap: 56px;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     margin-top: ${({ $viewportWidth = 375, $viewportHeight = 667 }) =>
       getMobileMarginTop($viewportWidth, $viewportHeight)};
     padding: 5.8rem 0 42rem 0;
@@ -55,11 +56,11 @@ export const CTAContainer = styled.div`
   height: 45px;
   margin-top: -5rem;
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     margin-top: -2.5rem;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     margin-top: -2rem;
     width: 240px;
     height: 40px;

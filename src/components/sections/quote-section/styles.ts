@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 export const Container = styled.div`
   background-color: transparent;
@@ -12,10 +13,10 @@ export const Container = styled.div`
   gap: 120px;
   z-index: 2;
 
-  @media (max-width: 1350px) {
+  @media ${media.max.xxl} {
     padding-top: 5rem;
   }
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     gap: 100px;
   }
 `;

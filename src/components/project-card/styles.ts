@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "@/helpers/theme";
+import { media } from "@/utils/constants/breakpoints";
 
 export const Container = styled.div`
   background: linear-gradient(
@@ -14,7 +15,7 @@ export const Container = styled.div`
   justify-content: center;
   padding: 66px clamp(1rem, 5vw, 7rem) 55rem;
   gap: 100px;
-  @media (max-width: 1350px) {
+  @media ${media.max.xxl} {
     flex-direction: column;
     gap: 30px;
   }
@@ -25,7 +26,7 @@ export const BottomContainer = styled.div`
   flex-direction: column;
   max-width: 326px;
   gap: 20px;
-  @media (max-width: 1350px) {
+  @media ${media.max.xxl} {
     max-width: 680px;
     width: 100%;
   }
@@ -35,7 +36,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  @media (max-width: 1350px) and (min-width: 768px) {
+  @media ${media.max.xxl} and (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
     gap: 30px;
@@ -55,7 +56,7 @@ export const ButtonContainer = styled.div`
   align-items: flex-start;
   gap: 30px;
 
-  @media (max-width: 767px) {
+  @media ${media.max.md} {
     margin-top: 30px;
     width: 100%;
   }
@@ -72,7 +73,7 @@ export const DownloadButtonContainer = styled.div`
 
   &.tablet-icons {
     display: none;
-    @media (max-width: 1350px) and (min-width: 768px) {
+    @media ${media.max.xxl} and (min-width: 768px) {
       display: flex;
       flex-direction: column;
     }
@@ -80,10 +81,10 @@ export const DownloadButtonContainer = styled.div`
 
   &.default-icons {
     display: flex;
-    @media (max-width: 1350px) and (min-width: 768px) {
+    @media ${media.max.xxl} and (min-width: 768px) {
       display: none;
     }
-    @media (max-width: 767px) {
+    @media ${media.max.md} {
       gap: 16px;
       justify-content: center;
     }

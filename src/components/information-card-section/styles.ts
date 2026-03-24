@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 interface RowProps {
   $index: number;
@@ -10,7 +11,7 @@ export const GridContainer = styled.div`
   flex-direction: column;
   gap: 60px;
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     gap: 36px;
   }
 `;
@@ -22,7 +23,7 @@ export const Row = styled.div<RowProps>`
   gap: 60px;
   flex-wrap: wrap;
 
-  @media (max-width: 1024px) and (min-width: 641px) {
+  @media ${media.max.lg} and (min-width: 641px) {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 231px));
     justify-content: center;
@@ -31,7 +32,7 @@ export const Row = styled.div<RowProps>`
     row-gap: 38px;
   }
 
-  @media (max-width: 640px) {
+  @media ${media.max.sm} {
     flex-direction: column;
     gap: 60px;
   }

@@ -1,5 +1,6 @@
 import { theme } from "@/helpers/theme";
 import styled from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 type HomeIntroVariant = "subtle" | "impact";
 
@@ -87,21 +88,21 @@ export const BlurCircle1 = styled.div<{ $variant?: HomeIntroVariant }>`
     opacity: 0.9;
   }
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     width: 1120px;
     height: 1120px;
     left: -420px;
     bottom: -340px;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     width: 1320px;
     height: 1320px;
     left: -560px;
     bottom: -470px;
   }
 
-  @media (max-width: 480px) {
+  @media ${media.max.xs} {
     width: 1300px;
     height: 1300px;
     left: -560px;
@@ -138,21 +139,21 @@ export const BlurCircle2 = styled.div<{ $variant?: HomeIntroVariant }>`
     opacity: 0.9;
   }
 
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
     width: 1020px;
     height: 1100px;
     right: -680px;
     top: -470px;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     width: 1260px;
     height: 1320px;
     right: -920px;
     top: -620px;
   }
 
-  @media (max-width: 480px) {
+  @media ${media.max.xs} {
     width: 1300px;
     height: 1300px;
     right: -900px;

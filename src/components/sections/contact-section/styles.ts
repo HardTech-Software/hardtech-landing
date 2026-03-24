@@ -1,6 +1,7 @@
 import Typography from "@/components/typography";
 import { theme } from "@/helpers/theme";
 import { styled } from "styled-components";
+import { media } from "@/utils/constants/breakpoints";
 
 export const Container = styled.div`
   position: relative;
@@ -13,16 +14,16 @@ export const Container = styled.div`
   gap: 80px;
   z-index: 2;
 
-  @media (max-width: 1350px) {
+  @media ${media.max.xxl} {
     padding-top: 10rem;
   }
 
-  @media (max-width: 1100px) {
+  @media ${media.max.lg} {
     gap: 50px;
     padding: 9rem 1rem 9rem;
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     padding: 8rem 1rem 8rem;
   }
 `;
@@ -40,7 +41,7 @@ export const TitleContainer = styled.div`
     width: 100%;
   }
 
-  @media (max-width: 480px) {
+  @media ${media.max.xs} {
     font-size: 0.8rem;
   }
 `;
@@ -54,7 +55,7 @@ export const InnerContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
 
-  @media (max-width: 1100px) {
+  @media ${media.max.lg} {
     flex-direction: column;
     gap: 40px;
   }
@@ -77,7 +78,7 @@ export const LogoContainer = styled.div`
     height: auto;
   }
 
-  @media (max-width: 1100px) {
+  @media ${media.max.lg} {
     max-width: 220px;
   }
 `;
@@ -94,7 +95,7 @@ export const RightContainer = styled.div`
   box-shadow: 0px 0px 25px 0px #2441ff;
   box-sizing: border-box;
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     padding: 25px 15px;
   }
 `;
@@ -108,7 +109,7 @@ export const MainTitle = styled(Typography)`
     color: ${theme.white};
   }
 
-  @media (max-width: 768px) {
+  @media ${media.max.md} {
     text-align: center;
   }
 `;

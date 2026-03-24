@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { theme } from "@/helpers/theme";
+import { media } from "@/utils/constants/breakpoints";
 
 export const Container = styled.div`
   margin-top: 60px;
-  @media (max-width: 1024px) {
+  @media ${media.max.lg} {
   }
 `;
 
@@ -46,7 +47,7 @@ export const DescriptionContainer = styled.div`
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 
-  @media (max-width: 728px) {
+  @media ${media.max.md} {
     margin-right: 2%;
   }
 `;
@@ -71,7 +72,7 @@ export const TextContainer = styled.div`
   position: relative;
   max-width: 340px;
 
-  @media (max-width: 728px) {
+  @media ${media.max.md} {
     gap: 8px;
   }
 `;
