@@ -10,7 +10,7 @@ export const HeaderContainer = styled.div<HeaderProps>`
   justify-content: space-between;
   padding: 0 4rem;
   position: fixed;
-  z-index: 4;
+  z-index: 6;
   width: 100%;
   top: 0;
 
@@ -65,7 +65,7 @@ export const HeaderContainer = styled.div<HeaderProps>`
   }
 
   @media (max-width: 1250px) {
-    padding: 0 30px;
+    padding: 0 16px;
   }
 `;
 
@@ -76,6 +76,8 @@ export const LeftContainer = styled.div`
   @media (max-width: 1250px) {
     gap: 0;
     flex: 1;
+    width: 100%;
+    justify-content: space-between;
   }
 `;
 
@@ -102,7 +104,7 @@ export const LogoIcon = styled.button`
   }
 
   @media (max-width: 1250px) {
-    margin-left: 40px;
+    margin-left: 0;
   }
 `;
 
@@ -124,8 +126,8 @@ export const MenuIcon = styled.button`
     display: none;
   }
   @media (max-width: 1250px) {
-    margin-left: auto;
-    margin-right: -6rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 `;
 
@@ -133,6 +135,11 @@ export const RightContainer = styled.div`
   display: flex;
   align-items: center;
   margin-right: 5rem;
+
+  @media (max-width: 1250px) {
+    display: none;
+    margin-right: 0;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -211,7 +218,7 @@ export const Overlay = styled.div`
 
 export const SidebarContainer = styled.div<{ $isOpen: boolean }>`
   position: fixed;
-  z-index: 5;
+  z-index: 7;
   top: 5.4rem;
   right: 0;
   width: 235px;

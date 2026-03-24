@@ -9,6 +9,18 @@ export const Container = styled.div`
   padding: 10rem 0 0rem 0;
   margin-top: -38rem;
   gap: 150px;
+
+  @media (max-width: 1024px) {
+    margin-top: -24rem;
+    padding-top: 7rem;
+    gap: 110px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: -30rem;
+    padding-top: 6rem;
+  }
+
   @media (max-width: 1350px) {
     padding-top: 6rem;
   }

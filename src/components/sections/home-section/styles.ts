@@ -26,7 +26,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding: 0rem 0 58rem 0;
+    padding: 0rem 0 50rem 0;
   }
 `;
 
@@ -70,10 +70,10 @@ export const InnerContainer = styled.div`
   padding-top: 9vh;
 
   @media (max-width: 1024px) {
-    padding-top: 20vh;
+    padding-top: 24vh;
   }
   @media (max-width: 768px) {
-    padding-top: 28vh;
+    padding-top: 30vh;
   }
 `;
 
@@ -82,6 +82,13 @@ export const LeftContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 15px;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    max-width: 760px;
+    padding: 0 24px;
+    margin: 0 auto;
+  }
 
   @media (max-width: 768px) {
     order: 2;
@@ -103,6 +110,7 @@ export const TypographyTitleCustom = styled(Typography)`
   margin: 0 auto;
 
   @media (max-width: 1024px) {
+    max-width: 760px;
     white-space: normal;
     word-wrap: break-word;
   }
@@ -144,7 +152,7 @@ export const TypographyCustom = styled(Typography)`
   width: 100%;
 
   @media (max-width: 1024px) {
-    max-width: 400px;
+    max-width: 520px;
     padding: 0 20px;
     margin: 20px;
   }
@@ -200,7 +208,15 @@ export const ScrollCue = styled.button<{ $hidden?: boolean }>`
   }
 
   @media (max-width: 768px) {
-    top: calc(100vh - 6rem);
+    top: auto;
+    bottom: 1.15rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: max-content;
+    transform: none;
+    gap: 0.3rem;
+    padding: 0.25rem 0.65rem;
   }
 `;
 
@@ -211,6 +227,12 @@ export const ScrollCueLabel = styled.span`
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.4);
   margin-bottom: 0.2rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.48rem;
+    letter-spacing: 0.22em;
+    margin-bottom: 0.08rem;
+  }
 `;
 
 export const ScrollCueChevron = styled.span<{ $delay?: number }>`
@@ -221,4 +243,11 @@ export const ScrollCueChevron = styled.span<{ $delay?: number }>`
   transform: rotate(45deg);
   animation: ${chevronCascade} 1.8s ease-in-out infinite;
   animation-delay: ${({ $delay = 0 }) => $delay}s;
+
+  @media (max-width: 768px) {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-right-width: 1.4px;
+    border-bottom-width: 1.4px;
+  }
 `;

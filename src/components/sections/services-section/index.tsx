@@ -17,20 +17,34 @@ interface ServicesSectionProps {
 }
 const ServicesSection = ({ id }: ServicesSectionProps) => {
   const [isTop, setIsTop] = useState(true);
+  const [viewport, setViewport] = useState({ width: 375, height: 667 });
 
   useEffect(() => {
     const updateTopState = () => {
       setIsTop(window.scrollY < 60);
     };
 
-    updateTopState();
-    window.addEventListener("scroll", updateTopState, { passive: true });
+    const updateViewport = () => {
+      setViewport({ width: window.innerWidth, height: window.innerHeight });
+    };
 
-    return () => window.removeEventListener("scroll", updateTopState);
+    updateTopState();
+    updateViewport();
+    window.addEventListener("scroll", updateTopState, { passive: true });
+    window.addEventListener("resize", updateViewport, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", updateTopState);
+      window.removeEventListener("resize", updateViewport);
+    };
   }, []);
 
   return (
-    <Container id={id}>
+    <Container
+      id={id}
+      $viewportWidth={viewport.width}
+      $viewportHeight={viewport.height}
+    >
       <BackgroundSVG animateOnMount animationVariant={HOME_INTRO_VARIANT} />
       <TitleSlot $hidden={isTop}>
         <FadeInSection delay={0.1} direction="up">

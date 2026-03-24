@@ -1,6 +1,29 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface ContainerProps {
+  $viewportWidth?: number;
+  $viewportHeight?: number;
+}
+
+const getMobileMarginTop = (width = 375, height = 667) => {
+  const clampedWidth = Math.max(320, Math.min(width, 430));
+  const clampedHeight = Math.max(640, Math.min(height, 920));
+
+  // Base calibrado para iPhone SE; en pantallas mas altas se reduce mas el solapamiento.
+  const basePx = -38 * 16;
+  const heightAdjust = (clampedHeight - 667) * 0.55;
+  const widthAdjust = (clampedWidth - 375) * 0.18;
+
+  // Limites para mantener estabilidad visual entre SE y mobiles altos.
+  const minPx = -38 * 16;
+  const maxPx = -29 * 16;
+  const computed = basePx + heightAdjust + widthAdjust;
+  const clampedResult = Math.max(minPx, Math.min(maxPx, computed));
+
+  return `${clampedResult}px`;
+};
+
+export const Container = styled.div<ContainerProps>`
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -13,13 +36,17 @@ export const Container = styled.div`
   gap: 150px;
 
   @media (max-width: 1024px) {
-    padding: 7rem 0 42rem 0;
-    gap: 100px;
+    margin-top: -38rem;
+    min-height: 100vh;
+    padding: 6.5rem 0 34rem 0;
+    gap: 56px;
   }
 
   @media (max-width: 768px) {
-    padding: 6rem 0 42rem 0;
-    gap: 80px;
+    margin-top: ${({ $viewportWidth = 375, $viewportHeight = 667 }) =>
+      getMobileMarginTop($viewportWidth, $viewportHeight)};
+    padding: 5.8rem 0 42rem 0;
+    gap: 76px;
   }
 `;
 

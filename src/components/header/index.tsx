@@ -72,9 +72,9 @@ const Header = () => {
         </RightContainer>
       </HeaderContainer>
 
+      {isSidebarOpen && <Overlay onClick={CloseSidebar} />}
       <SidebarContainer $isOpen={isSidebarOpen}>
         <Sidebar onClick={CloseSidebar} scrollToSection={scrollToSection} />
-        {isSidebarOpen && <Overlay onClick={CloseSidebar} />}
       </SidebarContainer>
     </>
   );

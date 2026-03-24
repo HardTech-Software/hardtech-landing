@@ -60,8 +60,8 @@ export const Container = styled.div`
 
 export const BlurCircle1 = styled.div<{ $variant?: HomeIntroVariant }>`
   position: absolute;
-  width: 1600px;
-  height: 1600px;
+  width: 1240px;
+  height: 1240px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -70,8 +70,8 @@ export const BlurCircle1 = styled.div<{ $variant?: HomeIntroVariant }>`
     transparent 100%
   );
   z-index: 1;
-  left: -600px;
-  bottom: -500px;
+  left: -470px;
+  bottom: -390px;
   opacity: 0;
   will-change: transform, opacity;
   animation:
@@ -86,12 +86,33 @@ export const BlurCircle1 = styled.div<{ $variant?: HomeIntroVariant }>`
     animation: none;
     opacity: 0.9;
   }
+
+  @media (max-width: 1024px) {
+    width: 1120px;
+    height: 1120px;
+    left: -420px;
+    bottom: -340px;
+  }
+
+  @media (max-width: 768px) {
+    width: 1320px;
+    height: 1320px;
+    left: -560px;
+    bottom: -470px;
+  }
+
+  @media (max-width: 480px) {
+    width: 1300px;
+    height: 1300px;
+    left: -560px;
+    bottom: -450px;
+  }
 `;
 
 export const BlurCircle2 = styled.div<{ $variant?: HomeIntroVariant }>`
   position: absolute;
-  width: 1380px;
-  height: 1480px;
+  width: 1120px;
+  height: 1220px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -100,8 +121,8 @@ export const BlurCircle2 = styled.div<{ $variant?: HomeIntroVariant }>`
     transparent 100%
   );
   z-index: 1;
-  right: -500px;
-  top: -600px;
+  right: -390px;
+  top: -500px;
   opacity: 0;
   will-change: transform, opacity;
   animation:
@@ -118,6 +139,23 @@ export const BlurCircle2 = styled.div<{ $variant?: HomeIntroVariant }>`
   }
 
   @media (max-width: 1024px) {
+    width: 1020px;
+    height: 1100px;
+    right: -680px;
+    top: -470px;
+  }
+
+  @media (max-width: 768px) {
+    width: 1260px;
+    height: 1320px;
+    right: -920px;
+    top: -620px;
+  }
+
+  @media (max-width: 480px) {
+    width: 1300px;
+    height: 1300px;
     right: -900px;
+    top: -610px;
   }
 `;

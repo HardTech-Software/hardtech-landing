@@ -6,7 +6,37 @@ export const scrollToSection = (sectionId: string) => {
   const headerHeight = header?.offsetHeight ?? 0;
 
   const rect = section.getBoundingClientRect();
-  const scrollTop = window.scrollY + rect.top - headerHeight;
+  let scrollTop = window.scrollY + rect.top - headerHeight;
+
+  // En servicios, centra visualmente el bloque de cards dentro del viewport.
+  // Evita que al navegar quede demasiado arriba en tablet.
+  if (sectionId === "services-section" && window.innerWidth <= 1024) {
+    const cards = section.querySelectorAll(".info-card");
+
+    if (cards.length > 0) {
+      let top = Number.POSITIVE_INFINITY;
+      let bottom = Number.NEGATIVE_INFINITY;
+
+      cards.forEach((card) => {
+        const cardRect = card.getBoundingClientRect();
+        const absoluteTop = window.scrollY + cardRect.top;
+        const absoluteBottom = window.scrollY + cardRect.bottom;
+
+        if (absoluteTop < top) top = absoluteTop;
+        if (absoluteBottom > bottom) bottom = absoluteBottom;
+      });
+
+      const cardsCenter = (top + bottom) / 2;
+      const viewportCenter =
+        headerHeight + (window.innerHeight - headerHeight) / 2;
+
+      scrollTop = cardsCenter - viewportCenter;
+    }
+  }
+
+  if (scrollTop < 0) {
+    scrollTop = 0;
+  }
 
   window.scrollTo({ top: scrollTop, behavior: "smooth" });
 };
