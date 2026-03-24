@@ -3,7 +3,7 @@ import { Container } from "./styles";
 import { MissionSectionData } from "@/utils/constants/information-card";
 import {
   BackgroundSVG,
-  InformationCardMission2,
+  MissionCardsGrid,
   Title,
   FadeInSection,
 } from "@/components";
@@ -19,7 +19,7 @@ const MissionSection = ({ id }: MissionSectionProps) => {
         <Title title="Visión & misión" />
       </FadeInSection>
       <FadeInSection delay={0.2} direction="up" fullWidth>
-        <InformationCardMission2 data={MissionSectionData} />
+        <MissionCardsGrid data={MissionSectionData} />
       </FadeInSection>
     </Container>
   );

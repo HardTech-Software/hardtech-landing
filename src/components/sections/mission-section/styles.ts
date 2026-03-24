@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding: 11rem 0 54rem 0;
   margin-top: -35rem;
   display: flex;
-  min-height: 100vh;
+  min-height: 190vh;
   gap: 220px;
   z-index: 2;
 

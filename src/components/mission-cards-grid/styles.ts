@@ -9,8 +9,9 @@ export const GridContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 6px;
+  background-color: red;
   @media (max-width: 1350px) {
-    gap: 180px;
+    // gap: 180px;
   }
 `;
 
@@ -61,6 +62,6 @@ export const EmptySpace = styled.div`
   width: 100%;
   height: 100%;
   @media (max-width: 1024px) {
-    display: none;
+    // display: none;
   }
 `;

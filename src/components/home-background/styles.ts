@@ -65,20 +65,20 @@ export const BlurCircle1 = styled.div<{ $variant?: HomeIntroVariant }>`
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    ${theme.secondary} 0%,
+    ${theme.secondary} -25%,
     transparent 70%,
     transparent 100%
   );
   z-index: 1;
-  left: -470px;
-  bottom: -390px;
+  left: -370px;
+  bottom: -190px;
   opacity: 0;
   will-change: transform, opacity;
   animation:
     introLeft ${(props) => (props.$variant === "impact" ? "1.5s" : "1.15s")}
       cubic-bezier(0.22, 1, 0.36, 1)
       ${(props) => (props.$variant === "impact" ? "0.04s" : "0.1s")} forwards,
-    ambientPulse ${(props) => (props.$variant === "impact" ? "5s" : "8.2s")}
+    ambientPulse ${(props) => (props.$variant === "impact" ? "6.8s" : "8.2s")}
       ease-in-out
       ${(props) => (props.$variant === "impact" ? "1.55s" : "1.35s")} infinite;
 
@@ -111,8 +111,8 @@ export const BlurCircle1 = styled.div<{ $variant?: HomeIntroVariant }>`
 
 export const BlurCircle2 = styled.div<{ $variant?: HomeIntroVariant }>`
   position: absolute;
-  width: 1120px;
-  height: 1220px;
+  width: 1520px;
+  height: 1520px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -121,8 +121,8 @@ export const BlurCircle2 = styled.div<{ $variant?: HomeIntroVariant }>`
     transparent 100%
   );
   z-index: 1;
-  right: -390px;
-  top: -500px;
+  right: -450px;
+  top: -800px;
   opacity: 0;
   will-change: transform, opacity;
   animation:

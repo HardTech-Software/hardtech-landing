@@ -18,7 +18,8 @@ export const ServicesSectionData = [
     icon: "branding-icon",
     icon2: "branding-icon2",
     title: "BRANDING",
-    description: "Diseño o rediseño y desarrollo de sitios web a través de wordpress",
+    description:
+      "Diseño o rediseño y desarrollo de sitios web a través de wordpress",
   },
 ];
 
@@ -26,14 +27,12 @@ export const MissionSectionData = [
   {
     icon: "mision-icon",
     title: "MISIÓN",
-    description: `En Hardtech, diseñar y programar de una manera **innovadora y con personalidad** 
-    es nuestra prioridad.
-Comunicando lo que tu empresa desea a través del diseño.`,
+    description: `Ayudamos a empresas y emprendedores a crear productos digitales y páginas web de forma simple, rápida y con alto estándar de calidad.
+Nos enfocamos en entender cada necesidad y convertirla en soluciones tecnológicas claras, funcionales y listas para crecer.`,
   },
   {
     icon: "vision-icon",
     title: "VISIÓN",
-    description: `Buscamos diseñar y programar de una manera innovadora y con personalidad. Comunicando lo que tu empresa desea a través del diseño.`,
+    description: `Ser una empresa referente en el desarrollo de soluciones digitales en Latinoamérica, destacando por la calidad de nuestro servicio, la cercanía con nuestros clientes y la capacidad de transformar ideas en productos reales.`,
   },
 ];
-
