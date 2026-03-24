@@ -16,7 +16,11 @@ export const Container = styled.div`
   @media ${media.max.xxl} {
     padding-top: 7rem;
   }
-  @media ${media.max.lg} {
+  @media ${media.max.xl} {
     gap: 150px;
+    min-height: 130vh;
   }
+  @media ${media.max.sm} {
+   gap: 100px;
+   min-height: 150vh;
 `;

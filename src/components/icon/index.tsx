@@ -1,5 +1,8 @@
+"use client";
+
 import { IconProps } from "@/utils/icon-props";
 import React from "react";
+import useIsMobile from "@/hooks/use-is-mobile";
 import {
   AppStoreIcon,
   ChevronLeftIcon,
@@ -19,7 +22,7 @@ import {
   BrandingIcon,
   CommerceIcon,
   BrandingIcon2,
-  HexaIcon
+  HexaIcon,
 } from "../icons";
 
 const icons = (props?: IconProps) => ({
@@ -50,8 +53,23 @@ interface IconComponentProps extends IconProps {
   name: IconName;
 }
 
-const Icon = ({ name, ...props }: IconComponentProps) => {
-  const IconComponent = icons({ ...props })[name];
+const Icon = ({
+  name,
+  width,
+  height,
+  mobileWidth,
+  mobileHeight,
+  color,
+}: IconComponentProps) => {
+  const { isMobile } = useIsMobile();
+
+  const iconProps: IconProps = {
+    width: isMobile && mobileWidth ? mobileWidth : width,
+    height: isMobile && mobileHeight ? mobileHeight : height,
+    color,
+  };
+
+  const IconComponent = icons(iconProps)[name];
 
   if (!IconComponent) return <></>;
 

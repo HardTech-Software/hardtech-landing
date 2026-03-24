@@ -4,7 +4,13 @@ import { media } from "@/utils/constants/breakpoints";
 
 export const Container = styled.div`
   margin-top: 60px;
-  @media ${media.max.lg} {
+  @media ${media.max.xl} {
+    min-width: 650px;
+  }
+
+  @media ${media.max.sm} {
+    margin-top: 0px;
+    min-width: 95%;
   }
 `;
 
@@ -32,7 +38,7 @@ export const DescriptionContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  padding: 20px;
+  2
   padding-right: 40px;
   margin-right: 3%;
 
@@ -50,18 +56,36 @@ export const DescriptionContainer = styled.div`
   @media ${media.max.md} {
     margin-right: 2%;
   }
+
+  @media ${media.max.sm} {
+    justify-content: flex-start;
+    padding: 20px 10px;
+  }
 `;
 
 export const RelativeImageContainer = styled.div`
   position: relative;
   width: 200px;
   height: 100px;
+
+  @media ${media.max.sm} {
+    width: inherit;
+    height: inherit;
+    padding-right: 20px;
+    padding-left: 10px;
+  }
 `;
 
 export const ImageContainer = styled.div`
   position: absolute;
   right: 30px;
   bottom: -35px;
+
+  @media ${media.max.sm} {
+    position: relative;
+    right: inherit;
+    bottom: inherit;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -74,6 +98,12 @@ export const TextContainer = styled.div`
 
   @media ${media.max.md} {
     gap: 8px;
+  }
+
+  @media ${media.max.sm} {
+    max-width: 100%;
+    gap: 6px;
+    flex: 1;
   }
 `;
 

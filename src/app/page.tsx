@@ -16,7 +16,7 @@ const Root = () => {
       <HomeSection id="home-section" />
       <ServicesSection id="services-section" />
       <ProjectsSection id="projects-section" />
-      <TeamSection id="team-section" />
+      {/* <TeamSection id="team-section" /> */}
       <MissionSection id="mission-section" />
       <QuoteSection id="quote-section" />
       <ContactSection id="contact-section" />

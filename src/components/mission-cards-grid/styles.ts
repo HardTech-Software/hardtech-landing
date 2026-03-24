@@ -10,9 +10,8 @@ export const GridContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 6px;
-  background-color: red;
   @media ${media.max.xxl} {
-    // gap: 180px;
+    gap: 180px;
   }
 `;
 
@@ -27,8 +26,18 @@ export const Row = styled.div<RowProps>`
     $index % 2 === 1 &&
     css`
       --offset: -75px;
+      & > :nth-child(2) {
+        grid-column: 2;
+      }
+
       @media ${media.max.lg} {
         --offset: 0;
+      }
+
+      @media ${media.max.md} {
+        & > :nth-child(2) {
+          grid-column: 1;
+        }
       }
     `}
 
@@ -37,32 +46,16 @@ export const Row = styled.div<RowProps>`
     transition: transform 0.3s ease;
   }
 
-  @media ${media.max.lg} {
-    display: flex;
-    flex-direction: column;
+  @media ${media.max.md} {
+    grid-template-columns: 1fr;
     gap: 30px;
-
-    & > :nth-child(2) {
-      transform: none;
-    }
-
-    ${({ $index }) =>
-      $index % 2 === 1 &&
-      css`
-        & > :nth-child(1) {
-          order: 2;
-        }
-        & > :nth-child(2) {
-          order: 1;
-        }
-      `}
   }
 `;
 
 export const EmptySpace = styled.div`
   width: 100%;
   height: 100%;
-  @media ${media.max.lg} {
-    // display: none;
+  @media ${media.max.md} {
+    display: none;
   }
 `;

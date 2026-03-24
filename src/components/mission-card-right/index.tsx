@@ -11,6 +11,7 @@ import {
 import Typography from "../typography";
 import { theme } from "@/helpers/theme";
 import Icon, { IconName } from "../icon";
+import useIsMobile from "@/hooks/use-is-mobile";
 
 export interface MissionCardRightProps {
   icon: string;
@@ -23,13 +24,25 @@ const MissionCardRight = ({
   title,
   description,
 }: MissionCardRightProps) => {
+  const { isMobile } = useIsMobile();
+
+  const mobileIconWidth = "77px";
+  const mobileIconHeight = "105px";
+
+  const currentIconWidth = isMobile ? mobileIconWidth : undefined;
+  const currentIconHeight = isMobile ? mobileIconHeight : undefined;
+
   return (
     <Container>
       <InnerContainer>
         <DescriptionContainer className="info-card">
           <RelativeImageContainer>
             <ImageContainer>
-              <Icon name={icon as IconName} />
+              <Icon
+                name={icon as IconName}
+                width={currentIconWidth}
+                height={currentIconHeight}
+              />
             </ImageContainer>
           </RelativeImageContainer>
 
@@ -44,6 +57,7 @@ const MissionCardRight = ({
               variant="description1"
               color={theme.white}
               fontWeight={200}
+              style={{ flex: 1, paddingTop: isMobile ? "5px" : undefined }}
             >
               {description}
             </Typography>
