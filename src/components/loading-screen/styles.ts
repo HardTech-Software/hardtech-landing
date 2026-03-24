@@ -87,6 +87,21 @@ export const Screen = styled.div`
       transparent 30%
     ),
     linear-gradient(180deg, #050505 0%, ${theme.black} 55%, #080d38 100%);
+
+  @media (max-width: 768px) {
+    background:
+      radial-gradient(
+        circle at 18% 82%,
+        rgba(36, 65, 255, 0.28),
+        transparent 36%
+      ),
+      radial-gradient(
+        circle at 82% 16%,
+        rgba(36, 65, 255, 0.26),
+        transparent 34%
+      ),
+      linear-gradient(180deg, #050505 0%, ${theme.black} 62%, #070a2a 100%);
+  }
 `;
 
 export const GlowLeft = styled.div`
@@ -107,6 +122,19 @@ export const GlowLeft = styled.div`
   @media (prefers-reduced-motion: reduce) {
     animation: none;
   }
+
+  @media (max-width: 768px) {
+    width: 42rem;
+    height: 42rem;
+    left: -14rem;
+    bottom: -16rem;
+    background: radial-gradient(
+      circle,
+      rgba(36, 65, 255, 0.42) 0%,
+      rgba(36, 65, 255, 0) 72%
+    );
+    filter: blur(20px);
+  }
 `;
 
 export const GlowRight = styled.div`
@@ -126,6 +154,19 @@ export const GlowRight = styled.div`
 
   @media (prefers-reduced-motion: reduce) {
     animation: none;
+  }
+
+  @media (max-width: 768px) {
+    width: 38rem;
+    height: 38rem;
+    right: -11rem;
+    top: -13rem;
+    background: radial-gradient(
+      circle,
+      rgba(36, 65, 255, 0.4) 0%,
+      rgba(36, 65, 255, 0) 74%
+    );
+    filter: blur(18px);
   }
 `;
 
