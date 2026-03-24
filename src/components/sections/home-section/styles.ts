@@ -39,6 +39,27 @@ export const Background = styled.div`
   left: 0;
 `;
 
+export const CircuitsContainer = styled.div`
+  position: absolute;
+  top: 15%;
+  left: 0px;
+  width: 160px;
+  height: 240px;
+  opacity: 0.7;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    left: -20px;
+    width: 110px;
+    height: 130px;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+`;
+
 export const InnerContainer = styled.div`
   display: flex;
   width: 100%;

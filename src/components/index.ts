@@ -38,3 +38,4 @@ export {
   StaggerContainer,
   CardAnimation,
 } from "./animations/stagger-container";
+export { default as AnimatedCircuits } from "./animated-circuits";

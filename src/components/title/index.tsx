@@ -15,20 +15,17 @@ const Title = ({ title }: TitleProps) => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.4, 0, 0.2, 1],
+        ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
       },
     },
   };
 
   return (
-    <Container
-      as={motion.div}
-      variants={titleVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <Typography variant="h2">{title}</Typography>
-    </Container>
+    <motion.div variants={titleVariants} initial="hidden" animate="visible">
+      <Container>
+        <Typography variant="h2">{title}</Typography>
+      </Container>
+    </motion.div>
   );
 };
 

@@ -14,9 +14,14 @@ import {
   TypographyTitleCustom,
   HighlightedText,
   SecondLine,
+  // CircuitsContainer,
 } from "./styles";
 import { theme } from "@/helpers/theme";
-import { HomeBackground, FadeInSection } from "@/components";
+import {
+  HomeBackground,
+  FadeInSection,
+  // , AnimatedCircuits
+} from "@/components";
 import { HOME_INTRO_VARIANT } from "@/utils/constants/ui-motion";
 import { scrollToSection } from "@/utils/constants/nav-items";
 
@@ -60,6 +65,19 @@ const HomeSection = ({ id }: HomeSectionProps) => {
         <Background>
           <HomeBackground variant={HOME_INTRO_VARIANT} />
         </Background>
+        {/* <CircuitsContainer>
+          <AnimatedCircuits
+            width={160}
+            height={240}
+            viewBox="0 0 130 110"
+            duration={0.5}
+            staggerDelay={0.15}
+            glowColor={theme.secondary}
+            strokeColor={theme.secondary}
+            glow={false}
+            animateOnView={false}
+          />
+        </CircuitsContainer> */}
 
         <InnerContainer>
           <LeftContainer>
