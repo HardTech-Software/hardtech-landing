@@ -6,6 +6,7 @@ import {
   Container,
   ContentWrapper,
   DownloadButtonContainer,
+  SubtitleText,
   TextContent,
 } from "./styles";
 import { theme } from "@/helpers/theme";
@@ -13,6 +14,7 @@ import { Button, IconButton, SwiperComponent, Typography } from "..";
 
 interface ProjectCardProps {
   title: string;
+  subtitle?: string;
   description: string;
   urlDesktop: string[];
   urlmobile: string[];
@@ -23,6 +25,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({
   title,
+  subtitle,
   description,
   urlDesktop,
   urlmobile,
@@ -45,6 +48,11 @@ const ProjectCard = ({
         </Typography>
         <ContentWrapper>
           <TextContent>
+            {subtitle && (
+              <SubtitleText variant="description1" fontWeight={600}>
+                {subtitle}
+              </SubtitleText>
+            )}
             <Typography variant="description1" color={theme.white}>
               {description}
             </Typography>

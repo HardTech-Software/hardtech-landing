@@ -19,4 +19,7 @@ export const Container = styled.div`
   @media ${media.max.lg} {
     gap: 100px;
   }
+  @media ${media.max.md} {
+    padding-top: 6.5rem;
+  }
 `;

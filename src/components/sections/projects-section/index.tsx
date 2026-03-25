@@ -32,6 +32,7 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
           urlDesktop={activeProject.urlDesktop}
           urlmobile={activeProject.urlMobile}
           title={activeProject.title}
+          subtitle={activeProject.subtitle}
           description={activeProject.description}
           websiteUrl={activeProject.websiteUrl}
           appStoreUrl={activeProject.appStoreUrl}

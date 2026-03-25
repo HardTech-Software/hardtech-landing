@@ -71,4 +71,8 @@ export const TitleSlot = styled.div<{ $hidden: boolean }>`
   opacity: ${({ $hidden }) => ($hidden ? 0 : 1)};
   pointer-events: ${({ $hidden }) => ($hidden ? "none" : "auto")};
   transition: opacity 0.25s ease;
+
+  @media ${media.max.md} {
+    margin-top: 1.25rem;
+  }
 `;

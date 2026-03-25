@@ -131,11 +131,11 @@ const InfoCard = ({
               </Typography>
             </PriceContent>
 
-            <TextContent3>
+            {/* <TextContent3>
               <Typography variant="description3" color={theme.white2}>
                 {description3}
               </Typography>
-            </TextContent3>
+            </TextContent3> */}
           </BottomSection>
         </DescriptionContainer>
       </InnerContainer>

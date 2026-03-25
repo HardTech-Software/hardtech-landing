@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { theme } from "@/helpers/theme";
 import { media } from "@/utils/constants/breakpoints";
+import Typography from "@/components/typography";
 
 export const Container = styled.div`
   background: linear-gradient(
@@ -25,7 +26,7 @@ export const BottomContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 326px;
-  gap: 20px;
+  gap: 14px;
   @media ${media.max.xxl} {
     max-width: 680px;
     width: 100%;
@@ -46,8 +47,20 @@ export const ContentWrapper = styled.div`
 export const TextContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 16px;
   flex: 1;
+`;
+
+export const SubtitleText = styled(Typography)`
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.2;
+  margin-top: -2px;
+
+  @media ${media.max.md} {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.15;
+  }
 `;
 
 export const ButtonContainer = styled.div`

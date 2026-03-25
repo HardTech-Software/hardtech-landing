@@ -32,4 +32,8 @@ export const InnerContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
+
+  @media ${media.max.md} {
+    padding-top: 24px;
+  }
 `;

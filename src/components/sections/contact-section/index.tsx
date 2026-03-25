@@ -114,7 +114,15 @@ const ContactSection = ({ id }: ContactSectionProps) => {
 
       <FadeInSection delay={0.1} direction="up">
         <TitleContainer>
-          <Title title="Contáctate con nosotros" />
+          <Title
+            title={
+              <>
+                Contáctate
+                <br />
+                con nosotros
+              </>
+            }
+          />
         </TitleContainer>
       </FadeInSection>
 

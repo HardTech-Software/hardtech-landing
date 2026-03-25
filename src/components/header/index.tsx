@@ -12,14 +12,21 @@ import {
   SidebarContainer,
 } from "./styles";
 import useToggle from "@/hooks/use-toggle";
+import useIsMobile from "@/hooks/use-is-mobile";
 import { navItemsHeader, scrollToSection } from "@/utils/constants/nav-items";
+import { breakpoints } from "@/utils/constants/breakpoints";
 import { theme } from "@/helpers/theme";
 import { Button, Icon, Sidebar, Typography } from "..";
 
 const Header = () => {
   const { OpenSidebar, isSidebarOpen, CloseSidebar } = useToggle();
+  const { isMobile } = useIsMobile(breakpoints.xl);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+
+  const isEmbeddedInHome = !isScrolled;
+  const shouldShowScrolledStyle =
+    isScrolled || (isMobile && isSidebarOpen && isEmbeddedInHome);
 
   useEffect(() => {
     // Animación de fade-in al cargar
@@ -40,7 +47,8 @@ const Header = () => {
   return (
     <>
       <HeaderContainer
-        $isScrolled={isScrolled}
+        id="site-header"
+        $isScrolled={shouldShowScrolledStyle}
         className={isVisible ? "fade-in" : ""}
       >
         <LeftContainer>

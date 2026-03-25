@@ -31,7 +31,10 @@ const Sidebar = ({ onClick, scrollToSection }: SidebarProps) => {
           <Button
             title="CONTÁCTANOS"
             variant="secondary"
-            onClick={() => scrollToSection("contact-section")}
+            onClick={() => {
+              onClick();
+              scrollToSection("contact-section");
+            }}
           />
         </ButtonContainer>
       </Nav>

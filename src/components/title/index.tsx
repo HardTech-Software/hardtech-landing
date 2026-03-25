@@ -4,7 +4,7 @@ import Typography from "../typography";
 import { motion } from "framer-motion";
 
 interface TitleProps {
-  title: string;
+  title: React.ReactNode;
 }
 
 const Title = ({ title }: TitleProps) => {

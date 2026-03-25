@@ -219,8 +219,8 @@ export const Overlay = styled.div`
 
 export const SidebarContainer = styled.div<{ $isOpen: boolean }>`
   position: fixed;
-  z-index: 7;
-  top: 5.4rem;
+  z-index: 5;
+  top: 5rem;
   right: 0;
   width: 235px;
   transition:

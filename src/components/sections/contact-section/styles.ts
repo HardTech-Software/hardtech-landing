@@ -24,7 +24,7 @@ export const Container = styled.div`
   }
 
   @media ${media.max.md} {
-    padding: 8rem 1rem 8rem;
+    padding: 6.5rem 1rem 8rem;
   }
 `;
 
@@ -43,6 +43,11 @@ export const TitleContainer = styled.div`
 
   @media ${media.max.xs} {
     font-size: 0.8rem;
+  }
+
+  @media ${media.max.md} {
+    white-space: pre-line;
+    line-height: 1.2;
   }
 `;
 
