@@ -96,17 +96,34 @@ export const BlurCircle1 = styled.div<{ $variant?: HomeIntroVariant }>`
   }
 
   @media ${media.max.md} {
-    width: 1320px;
-    height: 1320px;
+    width: 1120px;
+    height: 1120px;
     left: -560px;
-    bottom: -470px;
+    top: 280px;
+    bottom: auto;
+    background: radial-gradient(
+      circle,
+      rgba(36, 65, 255, 0.92) 0%,
+      rgba(36, 65, 255, 0.62) 28%,
+      rgba(36, 65, 255, 0.18) 52%,
+      transparent 74%
+    );
   }
 
   @media ${media.max.xs} {
-    width: 1300px;
-    height: 1300px;
-    left: -560px;
-    bottom: -450px;
+    width: 980px;
+    height: 980px;
+    left: -490px;
+    top: 310px;
+    bottom: auto;
+  }
+
+  @media ${media.max.xxs} {
+    width: 900px;
+    height: 900px;
+    left: -600px;
+    top: 330px;
+    bottom: auto;
   }
 `;
 
@@ -147,16 +164,26 @@ export const BlurCircle2 = styled.div<{ $variant?: HomeIntroVariant }>`
   }
 
   @media ${media.max.md} {
-    width: 1260px;
-    height: 1320px;
-    right: -920px;
-    top: -620px;
+    width: 1180px;
+    height: 1240px;
+    right: -800px;
+    top: -540px;
+    opacity: 0.74;
   }
 
   @media ${media.max.xs} {
-    width: 1300px;
-    height: 1300px;
-    right: -900px;
-    top: -610px;
+    width: 1060px;
+    height: 1060px;
+    right: -700px;
+    top: -460px;
+    opacity: 0.68;
+  }
+
+  @media ${media.max.xxs} {
+    width: 960px;
+    height: 960px;
+    right: -640px;
+    top: -420px;
+    opacity: 0.62;
   }
 `;
