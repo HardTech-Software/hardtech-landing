@@ -96,12 +96,69 @@ const SwiperComponent = ({
                 onClick={() => openLightboxAt(index)}
                 aria-label={`Ver captura ${index + 1} en pantalla completa`}
               >
-                <Image
-                  src={url}
-                  width={isMobile ? 320 : 623}
-                  height={isMobile ? 300 : 325}
-                  alt={`Captura de pantalla ${index + 1} del proyecto`}
-                />
+                {isMobile ? (
+                  <div
+                    style={{
+                      width: 320,
+                      height: 300,
+                      position: "relative",
+                      overflow: "hidden",
+                      borderRadius: "4px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      backgroundColor: "#000",
+                    }}
+                  >
+                    {/* Background blur */}
+                    <Image
+                      src={url}
+                      alt=""
+                      fill
+                      aria-hidden
+                      style={{
+                        objectFit: "cover",
+                        filter: "blur(15px)",
+                        transform: "scale(1)",
+
+                        // opacity: 0.35,
+                      }}
+                    />
+
+                    {/* Dark overlay */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        inset: 0,
+                        background:
+                          "linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.2))",
+                        zIndex: 1,
+                      }}
+                    />
+
+                    {/* Main image */}
+                    <Image
+                      src={url}
+                      alt={`Captura de pantalla ${index + 1} del proyecto`}
+                      width={320}
+                      height={300}
+                      style={{
+                        objectFit: "contain",
+                        height: "auto",
+                        width: "100%",
+                        position: "relative",
+                        zIndex: 2,
+                      }}
+                    />
+                  </div>
+                ) : (
+                  <Image
+                    src={url}
+                    alt={`Captura de pantalla ${index + 1} del proyecto`}
+                    width={isMobile ? 320 : 623}
+                    height={isMobile ? 300 : 325}
+                  />
+                )}
               </SlideImageTrigger>
             ) : (
               <Image

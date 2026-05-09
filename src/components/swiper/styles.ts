@@ -9,7 +9,7 @@ export const SwiperContainer = styled.div`
   position: relative;
 
   @media ${media.max.md} {
-    width: 350px;
+    width: 100%;
   }
 `;
 
