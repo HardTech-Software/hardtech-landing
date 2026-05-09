@@ -37,6 +37,7 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
           websiteUrl={activeProject.websiteUrl}
           appStoreUrl={activeProject.appStoreUrl}
           googlePlayUrl={activeProject.googlePlayUrl}
+          lightboxEnabled={activeProject.lightboxEnabled === true}
         />
         {/* </FadeInSection> */}
       </InnerContainer>

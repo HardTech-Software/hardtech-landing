@@ -1,19 +1,32 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useEffect, useRef, useState } from "react";
-import { NavButton, SwiperContainer, SwiperSlideCustom } from "./styles";
+import {
+  NavButton,
+  SlideImageTrigger,
+  SwiperContainer,
+  SwiperSlideCustom,
+} from "./styles";
 import { Swiper } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper/modules";
 import Image from "next/image";
 import Icon from "../icon";
+import ImageLightbox from "../image-lightbox";
 
 interface SwiperComponentProps {
   urlDesktop: string[];
   urlMobile: string[];
+  lightboxEnabled?: boolean;
 }
 
-const SwiperComponent = ({ urlDesktop, urlMobile }: SwiperComponentProps) => {
+const SwiperComponent = ({
+  urlDesktop,
+  urlMobile,
+  lightboxEnabled = false,
+}: SwiperComponentProps) => {
   const [isMobile, setIsMobile] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
 
@@ -28,6 +41,11 @@ const SwiperComponent = ({ urlDesktop, urlMobile }: SwiperComponentProps) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   const imagesToShow = (isMobile ? urlMobile : urlDesktop) || [];
+
+  const openLightboxAt = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
 
   return (
     <SwiperContainer>
@@ -72,15 +90,39 @@ const SwiperComponent = ({ urlDesktop, urlMobile }: SwiperComponentProps) => {
       >
         {imagesToShow.map((url, index) => (
           <SwiperSlideCustom key={index}>
-            <Image
-              src={url}
-              width={isMobile ? 300 : 623}
-              height={isMobile ? 300 : 325}
-              alt={`Captura de pantalla ${index + 1} del proyecto`}
-            />
+            {lightboxEnabled ? (
+              <SlideImageTrigger
+                type="button"
+                onClick={() => openLightboxAt(index)}
+                aria-label={`Ver captura ${index + 1} en pantalla completa`}
+              >
+                <Image
+                  src={url}
+                  width={isMobile ? 320 : 623}
+                  height={isMobile ? 300 : 325}
+                  alt={`Captura de pantalla ${index + 1} del proyecto`}
+                />
+              </SlideImageTrigger>
+            ) : (
+              <Image
+                src={url}
+                width={isMobile ? 300 : 623}
+                height={isMobile ? 300 : 325}
+                alt={`Captura de pantalla ${index + 1} del proyecto`}
+              />
+            )}
           </SwiperSlideCustom>
         ))}
       </Swiper>
+      {lightboxEnabled && (
+        <ImageLightbox
+          isOpen={lightboxOpen}
+          onClose={() => setLightboxOpen(false)}
+          images={imagesToShow}
+          activeIndex={lightboxIndex}
+          onActiveIndexChange={setLightboxIndex}
+        />
+      )}
     </SwiperContainer>
   );
 };

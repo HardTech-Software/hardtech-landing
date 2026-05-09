@@ -7,14 +7,21 @@ interface ButtonProps {
   title: string;
   variant?: "primary" | "secondary";
   onClick?: () => void;
+  disabled?: boolean;
 }
 
-const Button = ({ title, variant = "primary", onClick }: ButtonProps) => {
+const Button = ({
+  title,
+  variant = "primary",
+  onClick,
+  disabled,
+}: ButtonProps) => {
   return (
     <ButtonContainer
       as={motion.button}
       $variant={variant}
       onClick={onClick}
+      disabled={disabled}
       whileHover={{
         scale: 1.05,
         boxShadow:

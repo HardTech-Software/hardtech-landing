@@ -1,52 +1,32 @@
 export const projects = [
   {
-    title: "Patitas app",
-    subtitle: "La red social para amantes de las mascotas",
-    description:
-      "Red social enfocada en los usuarios y sus mascotas. Podrás interactuar con gente que ama los animales, encontrar mascotas para adoptar o dar en adopción, y ayuda a reunir mascotas perdidas con sus familias.",
-    urlDesktop: [
-      "/prueba1.png",
-      "/prueba1.png",
-      "/prueba1.png",
-      "/prueba1.png",
-      "/prueba1.png",
-    ],
-    urlMobile: [
-      "/prueba2.png",
-      "/prueba2.png",
-      "/prueba2.png",
-      "/prueba2.png",
-      "/prueba2.png",
-    ],
-    logo: "patitas-logo",
-    websiteUrl: "#", // TODO: Agregar URL real del proyecto
-    appStoreUrl: "#", // TODO: Agregar URL real de App Store
-    googlePlayUrl: "#", // TODO: Agregar URL real de Google Play
-  },
-  {
     title: "Zevent",
+    lightboxEnabled: true,
     subtitle:
-      "Gestiona, promociona y vende entradas para tus eventos desde un solo lugar.",
+      "Todo lo que necesitas para gestionar tus eventos en una sola plataforma.",
     description:
-      "Crea eventos en minutos, controla tus asistentes y lleva el seguimiento de tus ventas en tiempo real.\nZevent simplifica todo el proceso para que te enfoques en lo importante: hacer crecer tus eventos.",
+      "Crea eventos, vende entradas, controla asistentes y monitorea tus ventas en tiempo real. Zevent simplifica la operación para que puedas enfocarte en hacer crecer tus eventos.",
     urlDesktop: [
-      "/prueba3.png",
-      "/prueba3.png",
-      "/prueba3.png",
-      "/prueba3.png",
-      "/prueba3.png",
-      "/prueba3.png",
+      "/zevent/portada.png",
+      "/zevent/events.png",
+      "/zevent/event-detail.png",
+      "/zevent/tickets.png",
+      "/zevent/checkout.png",
+      "/zevent/organizacion-eventos.png",
+      "/zevent/organizacion-evento-detalle.png",
     ],
     urlMobile: [
-      "/prueba4.png",
-      "/prueba4.png",
-      "/prueba4.png",
-      "/prueba4.png",
-      "/prueba4.png",
+      "/zevent/portada.png",
+      "/zevent/events.png",
+      "/zevent/event-detail.png",
+      "/zevent/tickets.png",
+      "/zevent/checkout.png",
+      "/zevent/organizacion-eventos.png",
+      "/zevent/organizacion-evento-detalle.png",
     ],
     logo: "zevent-logo",
-    websiteUrl: "#", // TODO: Agregar URL real del proyecto
-    appStoreUrl: "#", // TODO: Agregar URL real de App Store
-    googlePlayUrl: "#", // TODO: Agregar URL real de Google Play
+    websiteUrl: null, // TODO: Agregar URL real del proyecto
+    appStoreUrl: null, // TODO: Agregar URL real de App Store
+    googlePlayUrl: null, // TODO: Agregar URL real de Google Play
   },
 ];

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { SwiperSlide } from "swiper/react";
 import { media } from "@/utils/constants/breakpoints";
+import { theme } from "@/helpers/theme";
 
 export const SwiperContainer = styled.div`
   width: 680px;
@@ -20,6 +21,24 @@ export const SwiperSlideCustom = styled(SwiperSlide)`
 
   @media ${media.max.md} {
     height: 300px;
+  }
+`;
+
+export const SlideImageTrigger = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+
+  &:focus-visible {
+    outline: 2px solid ${theme.secondary};
+    outline-offset: 3px;
   }
 `;
 

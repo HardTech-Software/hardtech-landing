@@ -18,9 +18,10 @@ interface ProjectCardProps {
   description: string;
   urlDesktop: string[];
   urlmobile: string[];
-  websiteUrl?: string;
-  appStoreUrl?: string;
-  googlePlayUrl?: string;
+  websiteUrl: string | null;
+  appStoreUrl: string | null;
+  googlePlayUrl: string | null;
+  lightboxEnabled?: boolean;
 }
 
 const ProjectCard = ({
@@ -32,6 +33,7 @@ const ProjectCard = ({
   websiteUrl,
   appStoreUrl,
   googlePlayUrl,
+  lightboxEnabled,
 }: ProjectCardProps) => {
   const handleWebsiteClick = () => {
     if (websiteUrl && websiteUrl !== "#") {
@@ -41,7 +43,11 @@ const ProjectCard = ({
 
   return (
     <Container>
-      <SwiperComponent urlDesktop={urlDesktop} urlMobile={urlmobile} />
+      <SwiperComponent
+        urlDesktop={urlDesktop}
+        urlMobile={urlmobile}
+        lightboxEnabled={lightboxEnabled}
+      />
       <BottomContainer>
         <Typography variant="title2" color={theme.white}>
           {title}
@@ -58,21 +64,33 @@ const ProjectCard = ({
             </Typography>
           </TextContent>
           <DownloadButtonContainer className="tablet-icons">
-            <IconButton iconName="app-store" href={appStoreUrl} />
-            <IconButton iconName="google-play" href={googlePlayUrl} />
+            {appStoreUrl && (
+              <IconButton iconName="app-store" href={appStoreUrl} />
+            )}
+            {googlePlayUrl && (
+              <IconButton iconName="google-play" href={googlePlayUrl} />
+            )}
           </DownloadButtonContainer>
         </ContentWrapper>
         <ButtonContainer>
           <ButtonInnerContainer>
-            <Button
-              variant="secondary"
-              title="IR A LA PÁGINA WEB"
-              onClick={handleWebsiteClick}
-            />
+            {websiteUrl ? (
+              <Button
+                variant="secondary"
+                title="IR A LA PÁGINA WEB"
+                onClick={handleWebsiteClick}
+              />
+            ) : (
+              <Button variant="secondary" title="Próximamente" disabled />
+            )}
           </ButtonInnerContainer>
           <DownloadButtonContainer className="default-icons">
-            <IconButton iconName="app-store" href={appStoreUrl} />
-            <IconButton iconName="google-play" href={googlePlayUrl} />
+            {appStoreUrl && (
+              <IconButton iconName="app-store" href={appStoreUrl} />
+            )}
+            {googlePlayUrl && (
+              <IconButton iconName="google-play" href={googlePlayUrl} />
+            )}
           </DownloadButtonContainer>
         </ButtonContainer>
       </BottomContainer>
