@@ -10,7 +10,7 @@ import {
   TextContent,
   TextContent2,
   PriceContent,
-  // TextContent3,
+  TextContent3,
   Text,
   BottomSection,
   CTAContainer,
@@ -47,7 +47,7 @@ const InfoCard = ({
   avatar,
   description2,
   price,
-  // description3,
+  description3,
   text,
   showCTA = false,
   subjectValue,
@@ -131,11 +131,11 @@ const InfoCard = ({
               </Typography>
             </PriceContent>
 
-            {/* <TextContent3>
+            <TextContent3>
               <Typography variant="description3" color={theme.white2}>
                 {description3}
               </Typography>
-            </TextContent3> */}
+            </TextContent3>
           </BottomSection>
         </DescriptionContainer>
       </InnerContainer>

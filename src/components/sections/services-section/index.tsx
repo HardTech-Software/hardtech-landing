@@ -61,7 +61,7 @@ const ServicesSection = ({ id }: ServicesSectionProps) => {
       >
         <CTAContainer>
           <Button
-            title="COTIZA CON NOSOTROS"
+            title="HABLEMOS DE TU PROYECTO"
             variant="secondary"
             onClick={() => scrollToSection("contact-section")}
           />

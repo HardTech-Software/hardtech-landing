@@ -161,7 +161,7 @@ const ContactSection = ({ id }: ContactSectionProps) => {
             />
 
             <TypographyCustom variant="title3" color={theme.primary}>
-              ASUNTO{" "}
+              SERVICIO{" "}
               {errors.subject && (
                 <span style={{ color: "#ff4444", fontSize: "12px" }}>
                   - {errors.subject}
@@ -195,7 +195,7 @@ const ContactSection = ({ id }: ContactSectionProps) => {
               )}
             </TypographyCustom>
             <DescriptionTextInput
-              placeholder="Cuéntanos sobre tu proyecto..."
+              placeholder="Cuéntanos qué necesitas, qué problema quieres resolver o qué proyecto tienes en mente..."
               value={description}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
                 setDescription(e.target.value);

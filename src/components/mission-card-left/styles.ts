@@ -94,7 +94,8 @@ export const TextContainer = styled.div`
   gap: 10px;
   white-space: pre-line;
   position: relative;
-  max-width: 340px;
+  max-width: 350px;
+  margin-right: 20px;
 
   @media ${media.max.md} {
     gap: 8px;

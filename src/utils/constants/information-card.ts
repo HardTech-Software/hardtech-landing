@@ -2,24 +2,25 @@ export const ServicesSectionData = [
   {
     icon: "app-icon",
     title: "APPS A MEDIDA",
-    description: "Diseño y desarrollo de aplicaciones mobile Android e iOS.",
+    description: "Aplicaciones web y móviles creadas para impulsar tu negocio.",
   },
   {
     icon: "web-icon",
-    title: "WEB",
-    description: "Diseño, rediseño y desarrollo de sitios web.",
+    title: "SITIOS WEB",
+    description:
+      "Sitios web modernos, rápidos y optimizados para tu marca o empresa.",
   },
   {
     icon: "commerce-icon",
     title: "E-COMMERCE",
-    description: "Diseño y desarrollo de sitios web a través de shopify.",
+    description:
+      "Tiendas online profesionales enfocadas en aumentar tus ventas.",
   },
   {
     icon: "branding-icon",
     icon2: "branding-icon2",
     title: "BRANDING",
-    description:
-      "Diseño o rediseño y desarrollo de sitios web a través de wordpress",
+    description: "Identidades visuales modernas y memorables para tu marca.",
   },
 ];
 
@@ -27,12 +28,13 @@ export const MissionSectionData = [
   {
     icon: "mision-icon",
     title: "MISIÓN",
-    description: `Ayudamos a empresas y emprendedores a crear productos digitales y páginas web de forma simple, rápida y con alto estándar de calidad.
-Nos enfocamos en entender cada necesidad y convertirla en soluciones tecnológicas claras, funcionales y listas para crecer.`,
+    description: `Creamos soluciones digitales modernas, funcionales y escalables para ayudar a empresas y emprendedores a crecer con tecnología sólida y diseño de calidad.
+Nos enfocamos en desarrollar productos claros, eficientes y pensados para resolver problemas reales de forma simple y efectiva.`,
   },
   {
     icon: "vision-icon",
     title: "VISIÓN",
-    description: `Ser una empresa referente en el desarrollo de soluciones digitales en Latinoamérica, destacando por la calidad de nuestro servicio, la cercanía con nuestros clientes y la capacidad de transformar ideas en productos reales.`,
+    description: `Queremos construir productos y experiencias digitales que generen impacto real en las personas y negocios que confían en nosotros.
+Buscamos crear tecnología moderna y funcional, enfocada en resolver problemas reales y transformar ideas en productos digitales sólidos.`,
   },
 ];

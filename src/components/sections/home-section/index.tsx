@@ -84,7 +84,7 @@ const HomeSection = ({ id }: HomeSectionProps) => {
             <FadeInSection delay={0.2} direction="up">
               <TitleContainer>
                 <TypographyTitleCustom variant="h1" color={theme.white}>
-                  Apps y sitios web{" "}
+                  Apps y plataformas web{" "}
                   <SecondLine>
                     con <HighlightedText>impacto real.</HighlightedText>
                   </SecondLine>
@@ -94,7 +94,7 @@ const HomeSection = ({ id }: HomeSectionProps) => {
 
             <FadeInSection delay={0.4} direction="up">
               <TypographyCustom variant="h4" color={theme.white}>
-                En Hardtech trabajamos con diseño atractivo y desarrollo sólido.
+                Diseño moderno. Desarrollo sólido. Resultados reales.
               </TypographyCustom>
             </FadeInSection>
           </LeftContainer>

@@ -1,7 +1,7 @@
 export const SUBJECT_OPTIONS = [
-  { value: "alternativa1", label: "APPS A MEDIDA" },
-  { value: "alternativa2", label: "WORDPRESS" },
-  { value: "alternativa3", label: "E-COMMERCE" },
-  { value: "alternativa4", label: "BRANDING" },
-  { value: "alternativa5", label: "OTRO" },
+  { value: "APPS_A_MEDIDA", label: "APPS A MEDIDA" },
+  { value: "SITIOS_WEB", label: "SITIOS WEB" },
+  { value: "E_COMMERCE", label: "E-COMMERCE" },
+  { value: "BRANDING", label: "BRANDING" },
+  { value: "OTRO", label: "OTRO" },
 ];
