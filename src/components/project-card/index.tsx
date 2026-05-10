@@ -6,7 +6,6 @@ import {
   Container,
   ContentWrapper,
   DownloadButtonContainer,
-  SubtitleText,
   TextContent,
 } from "./styles";
 import { theme } from "@/helpers/theme";

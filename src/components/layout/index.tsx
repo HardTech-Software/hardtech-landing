@@ -50,7 +50,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
           position fixed, inset 0) covers it visually. */}
       <div
         aria-hidden={loading ? "true" : undefined}
-        // @ts-expect-error — `inert` is a valid HTML boolean attribute but not yet in React's types
         inert={loading ? true : undefined}
       >
         <Header />
