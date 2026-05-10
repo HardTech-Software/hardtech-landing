@@ -12,16 +12,19 @@ interface SidebarProps {
 const Sidebar = ({ onClick, scrollToSection }: SidebarProps) => {
   return (
     <Container>
-      <Nav>
+      <Nav aria-label="Navegación móvil">
         {navItemsSidebar.map((item, index) => (
           <Item
             key={index}
-            onClick={() => {
+            href={`#${item.sectionId}`}
+            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+              e.preventDefault();
               onClick();
               scrollToSection(item.sectionId);
+              window.history.pushState(null, "", `#${item.sectionId}`);
             }}
           >
-            <Typography variant="h3" color={theme.white}>
+            <Typography variant="description1" color={theme.white}>
               {item.label}
             </Typography>
           </Item>

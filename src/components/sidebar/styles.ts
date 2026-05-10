@@ -21,12 +21,13 @@ export const Nav = styled.nav`
   flex-direction: column;
 `;
 
-export const Item = styled.div`
+export const Item = styled.a`
+  text-decoration: none;
+  color: inherit;
   padding-bottom: 36px;
   cursor: pointer;
   width: 100%;
   transition: background-color 0.3s ease;
-  
 `;
 
 export const ButtonContainer = styled.div`

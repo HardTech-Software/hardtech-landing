@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { media } from "@/utils/constants/breakpoints";
 
-export const Container = styled.div`
+export const Container = styled.section`
   background-color: transparent;
   flex-direction: column;
   align-items: center;

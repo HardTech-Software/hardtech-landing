@@ -24,7 +24,7 @@ const getMobileMarginTop = (width = 375, height = 667) => {
   return `${clampedResult}px`;
 };
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.section<ContainerProps>`
   background-color: transparent;
   display: flex;
   flex-direction: column;

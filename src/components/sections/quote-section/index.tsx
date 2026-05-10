@@ -13,10 +13,10 @@ interface QuoteSectionProps {
 }
 const QuoteSection = ({ id }: QuoteSectionProps) => {
   return (
-    <Container id={id}>
+    <Container id={id} aria-labelledby={`${id}-title`}>
       <BackgroundSVG />
       <FadeInSection delay={0.1} direction="up">
-        <Title title="Cotiza con nosotros" />
+        <Title title="Cotiza con nosotros" headingId={`${id}-title`} />
       </FadeInSection>
       <FadeInSection delay={0.2} direction="up">
         <InfoCardSection data={QuoteSectionData} />

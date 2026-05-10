@@ -1,6 +1,7 @@
 "use client";
 import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
+import { useIsLoading } from "@/lib/loading-context";
 
 type ViewportMargin =
   | `${number}px`
@@ -27,6 +28,7 @@ export const FadeInSection = ({
   fullWidth = false,
   viewportMargin = "-100px",
 }: FadeInSectionProps) => {
+  const isLoading = useIsLoading();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: viewportMargin });
 
@@ -59,7 +61,7 @@ export const FadeInSection = ({
     <motion.div
       ref={ref}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      animate={!isLoading && isInView ? "visible" : "hidden"}
       variants={variants}
       className={className}
       style={fullWidth ? { width: "100%" } : undefined}

@@ -5,7 +5,7 @@ interface HeaderProps {
   $isScrolled: boolean;
 }
 
-export const HeaderContainer = styled.div<HeaderProps>`
+export const HeaderContainer = styled.header<HeaderProps>`
   height: 5.3rem;
   display: flex;
   justify-content: space-between;
@@ -153,7 +153,9 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Item = styled.div`
+export const Item = styled.a`
+  text-decoration: none;
+  color: inherit;
   cursor: pointer;
   padding: 20px;
   position: relative;

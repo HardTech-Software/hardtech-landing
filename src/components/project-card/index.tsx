@@ -11,6 +11,7 @@ import {
 } from "./styles";
 import { theme } from "@/helpers/theme";
 import { Button, IconButton, SwiperComponent, Typography } from "..";
+import Image from "next/image";
 
 interface ProjectCardProps {
   title: string;
@@ -22,6 +23,7 @@ interface ProjectCardProps {
   appStoreUrl: string | null;
   googlePlayUrl: string | null;
   lightboxEnabled?: boolean;
+  logo2: string;
 }
 
 const ProjectCard = ({
@@ -34,6 +36,7 @@ const ProjectCard = ({
   appStoreUrl,
   googlePlayUrl,
   lightboxEnabled,
+  logo2,
 }: ProjectCardProps) => {
   const handleWebsiteClick = () => {
     if (websiteUrl && websiteUrl !== "#") {
@@ -49,15 +52,13 @@ const ProjectCard = ({
         lightboxEnabled={lightboxEnabled}
       />
       <BottomContainer>
-        <Typography variant="title2" color={theme.white}>
-          {title}
-        </Typography>
+        <Image src={logo2} width={170} height={115} alt={title} />
         <ContentWrapper>
           <TextContent>
             {subtitle && (
-              <SubtitleText variant="description1" fontWeight={600}>
+              <Typography variant="description1" color={theme.white}>
                 {subtitle}
-              </SubtitleText>
+              </Typography>
             )}
             <Typography variant="description1" color={theme.white}>
               {description}

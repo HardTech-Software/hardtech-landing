@@ -13,7 +13,7 @@ const scrollFadeOut = keyframes`
   to   { opacity: 0; }
 `;
 
-export const Container = styled.div`
+export const Container = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
@@ -151,6 +151,9 @@ export const TypographyCustom = styled(Typography)`
   text-align: center;
   margin: auto;
   width: 100%;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
 
   @media ${media.max.lg} {
     max-width: 520px;

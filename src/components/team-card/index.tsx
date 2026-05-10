@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   AvatarContainer,
@@ -23,9 +22,8 @@ const TeamCard = ({ name, profession, avatar }: TeamCardProps) => {
     <CardShadow className="info-card">
       <CardContainer>
         <InnerContainer>
-
           <AvatarContainer>
-                <Image src={avatar} width={135} height={135} alt={name} />
+            <Image src={avatar} width={135} height={135} alt={name} />
           </AvatarContainer>
 
           <InfoContainer>
@@ -38,7 +36,6 @@ const TeamCard = ({ name, profession, avatar }: TeamCardProps) => {
               {profession}
             </Typography>
           </InfoContainer>
-
         </InnerContainer>
       </CardContainer>
     </CardShadow>

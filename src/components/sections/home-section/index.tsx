@@ -61,7 +61,7 @@ const HomeSection = ({ id }: HomeSectionProps) => {
 
   return (
     <>
-      <Container id={id}>
+      <Container id={id} aria-labelledby={`${id}-title`}>
         <Background>
           <HomeBackground variant={HOME_INTRO_VARIANT} />
         </Background>
@@ -83,7 +83,11 @@ const HomeSection = ({ id }: HomeSectionProps) => {
           <LeftContainer>
             <FadeInSection delay={0.2} direction="up">
               <TitleContainer>
-                <TypographyTitleCustom variant="h1" color={theme.white}>
+                <TypographyTitleCustom
+                  variant="h1"
+                  color={theme.white}
+                  id={`${id}-title`}
+                >
                   Apps y plataformas web{" "}
                   <SecondLine>
                     con <HighlightedText>impacto real.</HighlightedText>
@@ -93,7 +97,7 @@ const HomeSection = ({ id }: HomeSectionProps) => {
             </FadeInSection>
 
             <FadeInSection delay={0.4} direction="up">
-              <TypographyCustom variant="h4" color={theme.white}>
+              <TypographyCustom as="p" variant="h4" color={theme.white}>
                 Diseño moderno. Desarrollo sólido. Resultados reales.
               </TypographyCustom>
             </FadeInSection>

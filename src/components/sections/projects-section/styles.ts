@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { media } from "@/utils/constants/breakpoints";
 
-export const Container = styled.div`
+export const Container = styled.section`
   background-color: transparent;
   display: flex;
   z-index: 2;

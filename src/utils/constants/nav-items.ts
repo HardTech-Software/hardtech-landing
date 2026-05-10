@@ -23,7 +23,7 @@ export const scrollToSection = (sectionId: string) => {
 
 export const navItemsSidebar = [
   { label: "HOME", sectionId: "home-section" },
-  { label: "QUE OFRECEMOS", sectionId: "services-section" },
+  { label: "QUÉ OFRECEMOS", sectionId: "services-section" },
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },
   // { label: "NUESTRO EQUIPO", sectionId: "team-section" },
   { label: "VISIÓN & MISIÓN", sectionId: "mission-section" },
@@ -32,7 +32,7 @@ export const navItemsSidebar = [
 
 export const navItemsHeader = [
   { label: "HOME", sectionId: "home-section" },
-  { label: "QUE OFRECEMOS", sectionId: "services-section" },
+  { label: "QUÉ OFRECEMOS", sectionId: "services-section" },
   { label: "NUESTROS PROYECTOS", sectionId: "projects-section" },
   // { label: "NUESTRO EQUIPO", sectionId: "team-section" },
   { label: "VISIÓN & MISIÓN", sectionId: "mission-section" },

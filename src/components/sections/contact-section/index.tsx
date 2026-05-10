@@ -22,21 +22,25 @@ import {
   FadeInSection,
 } from "@/components";
 import { SUBJECT_OPTIONS } from "@/utils/constants/contact-options";
-import { Constants } from "@/utils/constants/constants";
 
 interface ContactSectionProps {
   id: string;
 }
 
+type SubmitStatus = "idle" | "loading" | "success" | "error";
+
 const ContactSection = ({ id }: ContactSectionProps) => {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
+  const [honeypot, setHoneypot] = useState("");
   const [errors, setErrors] = useState({
     email: "",
     subject: "",
     description: "",
   });
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
+  const [submitMessage, setSubmitMessage] = useState("");
 
   useEffect(() => {
     const handleSetSubject = (event: CustomEvent<string>) => {
@@ -94,22 +98,50 @@ const ContactSection = ({ id }: ContactSectionProps) => {
     return isValid;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!validateForm()) {
       return;
     }
 
-    // Construir el mailto link con los datos del formulario
-    const subject = encodeURIComponent(selectedSubject);
-    const body = encodeURIComponent(
-      `Correo del cliente: ${email}\n\nAsunto: ${selectedSubject}\n\nDescripción:\n${description}`,
-    );
+    setSubmitStatus("loading");
+    setSubmitMessage("");
 
-    window.location.href = `mailto:${Constants.email}?subject=${subject}&body=${body}`;
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          subject: selectedSubject,
+          description,
+          honeypot,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setSubmitStatus("success");
+        setSubmitMessage("¡Mensaje enviado! Nos pondremos en contacto pronto.");
+        setEmail("");
+        setSelectedSubject("");
+        setDescription("");
+        setHoneypot("");
+        setErrors({ email: "", subject: "", description: "" });
+      } else {
+        setSubmitStatus("error");
+        setSubmitMessage(
+          data.error ?? "Ocurrió un error. Inténtalo nuevamente.",
+        );
+      }
+    } catch {
+      setSubmitStatus("error");
+      setSubmitMessage("Ocurrió un error de red. Inténtalo nuevamente.");
+    }
   };
 
   return (
-    <Container id={id}>
+    <Container id={id} aria-labelledby={`${id}-title`}>
       <BackgroundSVG />
 
       <FadeInSection delay={0.1} direction="up">
@@ -122,6 +154,7 @@ const ContactSection = ({ id }: ContactSectionProps) => {
                 con nosotros
               </>
             }
+            headingId={`${id}-title`}
           />
         </TitleContainer>
       </FadeInSection>
@@ -141,7 +174,12 @@ const ContactSection = ({ id }: ContactSectionProps) => {
               ¿Tienes un proyecto en mente? <strong>¡Contáctanos!</strong>
             </MainTitle>
 
-            <TypographyCustom variant="title3" color={theme.primary}>
+            <TypographyCustom
+              as="label"
+              htmlFor="contact-email"
+              variant="title3"
+              color={theme.primary}
+            >
               TU CORREO{" "}
               {errors.email && (
                 <span style={{ color: "#ff4444", fontSize: "12px" }}>
@@ -150,6 +188,7 @@ const ContactSection = ({ id }: ContactSectionProps) => {
               )}
             </TypographyCustom>
             <TextInput
+              id="contact-email"
               type="email"
               placeholder="ejemplo@tuempresa.cl"
               value={email}
@@ -160,7 +199,12 @@ const ContactSection = ({ id }: ContactSectionProps) => {
               style={{ borderColor: errors.email ? "#ff4444" : undefined }}
             />
 
-            <TypographyCustom variant="title3" color={theme.primary}>
+            <TypographyCustom
+              as="label"
+              htmlFor="contact-subject"
+              variant="title3"
+              color={theme.primary}
+            >
               SERVICIO{" "}
               {errors.subject && (
                 <span style={{ color: "#ff4444", fontSize: "12px" }}>
@@ -169,6 +213,7 @@ const ContactSection = ({ id }: ContactSectionProps) => {
               )}
             </TypographyCustom>
             <SelectInput
+              id="contact-subject"
               value={selectedSubject}
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
                 setSelectedSubject(e.target.value);
@@ -186,7 +231,12 @@ const ContactSection = ({ id }: ContactSectionProps) => {
               ))}
             </SelectInput>
 
-            <TypographyCustom variant="title3" color={theme.primary}>
+            <TypographyCustom
+              as="label"
+              htmlFor="contact-description"
+              variant="title3"
+              color={theme.primary}
+            >
               DESCRIPCIÓN{" "}
               {errors.description && (
                 <span style={{ color: "#ff4444", fontSize: "12px" }}>
@@ -195,6 +245,7 @@ const ContactSection = ({ id }: ContactSectionProps) => {
               )}
             </TypographyCustom>
             <DescriptionTextInput
+              id="contact-description"
               placeholder="Cuéntanos qué necesitas, qué problema quieres resolver o qué proyecto tienes en mente..."
               value={description}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -208,11 +259,39 @@ const ContactSection = ({ id }: ContactSectionProps) => {
 
             <ButtonContainer>
               <Button
-                title="ENVIAR CORREO"
+                title={
+                  submitStatus === "loading" ? "ENVIANDO..." : "ENVIAR CORREO"
+                }
                 variant="secondary"
                 onClick={handleSubmit}
+                disabled={submitStatus === "loading"}
               />
             </ButtonContainer>
+
+            {/* Hidden honeypot field — must remain empty */}
+            <input
+              type="text"
+              name="website"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              style={{ display: "none" }}
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+            />
+
+            {submitMessage && (
+              <p
+                style={{
+                  marginTop: "16px",
+                  fontSize: "14px",
+                  textAlign: "center",
+                  color: submitStatus === "success" ? "#4caf50" : "#ff4444",
+                }}
+              >
+                {submitMessage}
+              </p>
+            )}
           </RightContainer>
         </FadeInSection>
       </InnerContainer>

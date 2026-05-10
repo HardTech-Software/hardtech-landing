@@ -13,10 +13,10 @@ interface MissionSectionProps {
 }
 const MissionSection = ({ id }: MissionSectionProps) => {
   return (
-    <Container id={id}>
+    <Container id={id} aria-labelledby={`${id}-title`}>
       <BackgroundSVG />
       <FadeInSection delay={0.1} direction="up">
-        <Title title="Visión & misión" />
+        <Title title="Visión & misión" headingId={`${id}-title`} />
       </FadeInSection>
       <FadeInSection delay={0.2} direction="up" fullWidth>
         <MissionCardsGrid data={MissionSectionData} />

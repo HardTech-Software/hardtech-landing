@@ -17,11 +17,11 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
   const [activeTab, setActivTab] = useState(0);
   const activeProject = projects[activeTab];
   return (
-    <Container id={id}>
+    <Container id={id} aria-labelledby={`${id}-title`}>
       <BackgroundSVG />
       <InnerContainer>
         <FadeInSection delay={0.1} direction="up">
-          <Title title="Nuestros proyectos" />
+          <Title title="Nuestros proyectos" headingId={`${id}-title`} />
         </FadeInSection>
         {/* <FadeInSection delay={0.2} direction="up"> */}
         <Tab activeTab={activeTab} onTabClick={setActivTab} />
@@ -38,6 +38,7 @@ const ProjectsSection = ({ id }: ProjectsSectionProps) => {
           appStoreUrl={activeProject.appStoreUrl}
           googlePlayUrl={activeProject.googlePlayUrl}
           lightboxEnabled={activeProject.lightboxEnabled === true}
+          logo2={activeProject.logo2}
         />
         {/* </FadeInSection> */}
       </InnerContainer>

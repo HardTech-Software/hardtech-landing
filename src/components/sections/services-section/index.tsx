@@ -42,13 +42,14 @@ const ServicesSection = ({ id }: ServicesSectionProps) => {
   return (
     <Container
       id={id}
+      aria-labelledby={`${id}-title`}
       $viewportWidth={viewport.width}
       $viewportHeight={viewport.height}
     >
       <BackgroundSVG animateOnMount animationVariant={HOME_INTRO_VARIANT} />
       <TitleSlot $hidden={isTop}>
         <FadeInSection delay={0.1} direction="up">
-          <Title title="Que ofrecemos" />
+          <Title title="Qué ofrecemos" headingId={`${id}-title`} />
         </FadeInSection>
       </TitleSlot>
       <FadeInSection delay={0.2} direction="up">

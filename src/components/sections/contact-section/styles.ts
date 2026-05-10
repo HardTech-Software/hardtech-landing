@@ -3,7 +3,7 @@ import { theme } from "@/helpers/theme";
 import { styled } from "styled-components";
 import { media } from "@/utils/constants/breakpoints";
 
-export const Container = styled.div`
+export const Container = styled.section`
   position: relative;
   padding: 10rem clamp(1rem, 5%, 4rem) 16rem;
   width: 100%;
@@ -125,6 +125,9 @@ export const TypographyCustom = styled(Typography)`
   padding-bottom: 6px;
   margin-bottom: 15px;
   align-self: flex-start;
+  color: ${theme.primary};
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
 
   &::after {
     content: "";

@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 
 interface TitleProps {
   title: React.ReactNode;
+  headingId?: string;
 }
 
-const Title = ({ title }: TitleProps) => {
+const Title = ({ title, headingId }: TitleProps) => {
   const titleVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -23,7 +24,9 @@ const Title = ({ title }: TitleProps) => {
   return (
     <motion.div variants={titleVariants} initial="hidden" animate="visible">
       <Container>
-        <Typography variant="h2">{title}</Typography>
+        <Typography variant="h2" id={headingId}>
+          {title}
+        </Typography>
       </Container>
     </motion.div>
   );

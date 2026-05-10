@@ -116,6 +116,7 @@ const SwiperComponent = ({
                       alt=""
                       fill
                       aria-hidden
+                      sizes="320px"
                       style={{
                         objectFit: "cover",
                         filter: "blur(15px)",

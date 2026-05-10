@@ -55,12 +55,6 @@ export const SubtitleText = styled(Typography)`
   color: rgba(255, 255, 255, 0.88);
   line-height: 1.2;
   margin-top: -2px;
-
-  @media ${media.max.md} {
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.15;
-  }
 `;
 
 export const ButtonContainer = styled.div`
