@@ -4,10 +4,11 @@ export const QuoteSectionData = [
     icon: "app-icon",
     title: "APPS A MEDIDA",
     description:
-      "Desarrollamos aplicaciones web y móviles adaptadas a las necesidades de tu negocio.",
-    description2: `Diseño personalizado (UI/UX)
+      "Transformamos ideas y procesos de negocio en productos digitales modernos, seguros y escalables.",
+    description2: `Aplicaciones web y móviles
     Integración con APIs
-    Arquitectura escalable`,
+    Arquitectura escalable
+    Soluciones personalizadas`,
     text: "",
     price: ``,
     description3: "",
@@ -15,10 +16,12 @@ export const QuoteSectionData = [
   {
     avatar: "/quote2.jpg",
     icon: "web-icon",
-    title: "WORDPRESS",
+    title: "SITIOS WEB",
     description:
       "Sitios web administrables y optimizados para empresas, negocios y marcas.",
-    description2: `Diseño responsive
+    description2: `
+    WordPress o CMS administrable
+    Diseño responsive
     Optimización SEO
     Panel autoadministrable
     Diseño personalizado o basado en plantilla`,

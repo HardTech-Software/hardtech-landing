@@ -35,7 +35,7 @@ const InformationCard = ({
     });
     window.dispatchEvent(event);
     setTimeout(() => {
-      scrollToSection("contact-section");
+      scrollToSection("quote-section");
     }, 80);
   };
 
