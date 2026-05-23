@@ -22,8 +22,8 @@ export const QuoteSectionData = [
     Optimización SEO
     Panel autoadministrable
     Diseño personalizado o basado en plantilla`,
-    text: "A partir de",
-    price: `$250.000`,
+    text: "Desde",
+    price: `$600.000`,
     description3:
       "Depende de si se usa una plantilla o un diseño personalizado.",
   },
@@ -37,8 +37,8 @@ export const QuoteSectionData = [
     Gestión de productos
     Optimización SEO
     Diseño personalizado o basado en plantilla`,
-    text: "A partir de",
-    price: `$600.000`,
+    text: "Desde",
+    price: `$1.200.000`,
     description3:
       "Depende de si se usa una plantilla o un diseño personalizado.",
   },
@@ -53,8 +53,9 @@ export const QuoteSectionData = [
     Aplicaciones de marca
     Manual de marca
     2 Correcciones incluidas`,
-    text: "A partir de",
-    price: `$300.000`,
-    description3: "Depende de si se agregan correcciones adicionales.",
+    text: "Desde",
+    price: `$400.000`,
+    description3:
+      "El valor final dependerá de los entregables y revisiones solicitadas.",
   },
 ];
