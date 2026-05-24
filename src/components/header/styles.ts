@@ -79,6 +79,8 @@ export const LeftContainer = styled.div`
     flex: 1;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+    min-height: 100%;
   }
 `;
 
@@ -113,14 +115,24 @@ export const MenuIcon = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin: -8px;
+  border-radius: 10px;
+  transition:
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s ease;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.06);
+    background-color: rgba(255, 255, 255, 0.06);
   }
 
   &:active {
-    transform: scale(0.9);
+    transform: scale(0.94);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   @media ${media.min.xl} {
@@ -128,7 +140,7 @@ export const MenuIcon = styled.button`
   }
   @media ${media.max.xl} {
     margin-left: 0;
-    margin-right: 0;
+    margin-right: -4px;
   }
 `;
 
@@ -199,22 +211,25 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Overlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.22);
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 4;
-  backdrop-filter: blur(4px);
-  animation: fadeInOverlay 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  animation: fadeInOverlay 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 
   @keyframes fadeInOverlay {
     from {
       opacity: 0;
+      backdrop-filter: blur(0);
     }
     to {
       opacity: 1;
+      backdrop-filter: blur(10px) saturate(120%);
     }
   }
 `;
@@ -222,20 +237,22 @@ export const Overlay = styled.div`
 export const SidebarContainer = styled.div<{ $isOpen: boolean }>`
   position: fixed;
   z-index: 5;
-  top: 5rem;
+  top: calc(5rem + 12px);
   right: 0;
-  width: 235px;
+  width: min(300px, calc(100vw - 1.5rem));
   transition:
-    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.3s ease;
+    transform 0.42s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.32s ease;
   transform: ${(props) =>
     props.$isOpen ? "translateX(0)" : "translateX(100%)"};
   opacity: ${(props) => (props.$isOpen ? "1" : "0")};
+  pointer-events: ${(props) => (props.$isOpen ? "auto" : "none")};
 
   @media ${media.min.xl} {
     display: none;
   }
   @media ${media.max.md} {
-    width: 188px;
+    width: min(272px, calc(100vw - 1rem));
+    top: calc(4.85rem + 12px);
   }
 `;
